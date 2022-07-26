@@ -14,6 +14,7 @@ import { EducationComponent } from './education/education.component';
 import { LawyerComponent } from './lawyer/lawyer.component';
 import { ArtComponent } from './art/art.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
+import { CommoncomponentComponent } from './commoncomponent/commoncomponent.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { EntertainmentComponent } from './entertainment/entertainment.component'
     EducationComponent,
     LawyerComponent,
     ArtComponent,
-    EntertainmentComponent
+    EntertainmentComponent,
+    CommoncomponentComponent
   ],
   imports: [
     BrowserModule,
