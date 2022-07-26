@@ -52,7 +52,6 @@ export class NewsApiService {
   weatherApi(): Observable<any> {
     return this.http.get(this.weatherApiUrl);
   }
-
   congDoanApi(): Observable<any> {
     return this.http.get(this.congDoanApiUrl)
   }
@@ -86,6 +85,4 @@ export class NewsApiService {
   thiTruongtApi(): Observable<any> {
     return this.http.get(this.thiTruongApiUrl)
   }
-
-
 }
