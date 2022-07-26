@@ -1,0 +1,1703 @@
+<section class="body">
+  <div class="body-content">
+    <div class="logo-text fl">
+            {{todayString     }},
+
+        {{weatherResult.name}}
+        {{weatherResult.main?.temp - 273.15}}°C,
+        {{weatherResult.weather?.main}}
+
+    </div>
+    <div class="hot-news fr clearfix">
+      <div class="icon-hot-news"></div>
+
+      <div class="hot-news-item">
+        <a href="/" title="Xung đột Nga - Ukraine"># Xung đột Nga -
+          Ukraine</a>
+      </div>
+
+      <div class="hot-news-item">
+        <a href="/" title="Kit xét nghiệm Công ty Việt Á"># Kit xét
+          nghiệm Công ty Việt Á</a>
+      </div>
+
+      <div class="hot-news-item">
+        <a href="/" title="Diễn biến dịch Covid-19"># Diễn biến dịch
+          Covid-19</a>
+      </div>
+
+    </div>
+    <div class="clearfix"></div>
+    <div class="box-content mg_t22 clearfix">
+      <div class="box-left">
+        <div class="top-news clearfix">
+          <div class="main-news">
+            <ng-container *ngFor="let latestItem of latestNewsResult.slice(0,1)">
+            <div class="top1-focus">
+
+              <a href="{{latestItem.link}}"
+                 title="{{latestItem.title}}"
+                 class="img544x340">
+
+                <img
+                  src="{{latestItem.content.slice(latestItem.content.search('http'),latestItem.content.search('jpg'|| 'png')+3) || latestItem.content.slice(latestItem.content.search('http'),latestItem.content.search('jpeg')+4) }}"
+                  alt="{{latestItem.title}}"
+                  class="img544x340">
+
+              </a>
+
+
+              <div class="gradient">
+                <h3 class="news-title" >
+<!--                  <a-->
+<!--                    href="{{latestItem.link}}"-->
+<!--                    title="{{latestItem.title}}">-->
+<!--                    {{latestItem.title}}-->
+
+<!--                  </a>-->
+                </h3>
+                <p class="sapo">
+                  {{latestItem.content.slice(latestItem.content.search('">') + 2)}}
+                </p>
+
+
+              </div>
+
+            </div>
+            </ng-container>
+
+          </div>
+          <div class="list-news-thumb">
+
+            <div class="tabs clearfix">
+              <a href="" title="Tin nóng" class="tab-item active"
+                 data-id="content-newest">Tin nóng</a>
+              <span class="line-middle"></span>
+              <a href="" title="Tin mới" class="tab-item"
+                 style="width: 113px; text-align: center;">Tin mới</a>
+
+            </div>
+            <div class="tab-content" style="height: unset; overflow: unset;">
+
+
+              <div class="tab-content-newest active" id="content-newest" style="display: block;">
+                <div class="slimScrollDiv"
+                     style="position: relative; overflow: hidden; width: auto; height: 424px;">
+                  <div class="scroll" style="overflow: auto; width: auto; height: 424px;">
+
+                    <div class="item-news-thumb" *ngFor="let lastedNews of latestNewsResult">
+                      <div class="news-thumb-title">
+                        <a href="{{lastedNews.link}}"
+                           title="{{lastedNews.title}}"
+                        >{{lastedNews.title}}</a>
+                      </div>
+                    </div>
+
+
+                  </div>
+                  <div class="slimScrollBar"
+                       style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 205.458px;">
+                  </div>
+                  <div class="slimScrollRail"
+                       style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="tab-content-view" id="content-most-views" style="display: none;">
+                <div class="slimScrollDiv"
+                     style="position: relative; overflow: hidden; width: auto; height: 424px;">
+                  <div class="scroll" style="overflow: hidden; width: auto; height: 424px;">
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a href="/cong-doan/nguoi-lao-dong-thac-mac-ve-ho-tro-tien-thue-nha-20220628155828612.htm"
+                           title="Người lao động thắc mắc về hỗ trợ tiền thuê nhà"
+                           data-newstypetitle="0" data-newsid="20220628155828612">Người lao
+                          động thắc mắc về hỗ trợ tiền thuê nhà</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/mien-tay/cong-ty-cp-bat-dong-san-can-tho-duoc-vinh-danh-top-10-san-giao-dich-bds-20220628155512615.htm"
+                          title="Công ty CP Bất động sản Cần Thơ được vinh danh tốp 10 sàn giao dịch BĐS"
+                          data-newstypetitle="0" data-newsid="20220628155512615">Công ty
+                          CP Bất động sản Cần Thơ được vinh danh tốp 10 sàn giao dịch
+                          BĐS</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/phap-luat/dieu-tra-nghi-van-be-gai-8-tuoi-bi-nam-thanh-nien-xong-vao-nha-ham-hiep-20220628151123548.htm"
+                          title="Điều tra nghi vấn bé gái 8 tuổi bị nam thanh niên xông vào nhà hãm hiếp"
+                          data-newstypetitle="0" data-newsid="20220628151123548">Điều tra
+                          nghi vấn bé gái 8 tuổi bị nam thanh niên xông vào nhà hãm
+                          hiếp</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/suc-khoe/tang-can-kho-kiem-soat-hoa-ra-mac-benh-da-u-mo-hiem-gap-20220628151707596.htm"
+                          title="Tăng cân khó kiểm soát, hoá ra mắc bệnh đa u mỡ hiếm gặp"
+                          data-newstypetitle="0" data-newsid="20220628151707596">Tăng cân
+                          khó kiểm soát, hoá ra mắc bệnh đa u mỡ hiếm gặp</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/kinh-te/my-la-thi-truong-so-1-chiem-hon-27-thi-phan-nong-san-viet-20220628145629723.htm"
+                          title="Mỹ là thị trường số 1, chiếm hơn 27% thị phần nông sản Việt"
+                          data-newstypetitle="0" data-newsid="20220628145629723">Mỹ là thị
+                          trường số 1, chiếm hơn 27% thị phần nông sản Việt</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/phap-luat/dan-canh-danh-ghen-nu-hoc-vien-va-dong-bon-cuong-doat-700-trieu-dong-20220628144836165.htm"
+                          title="Dàn cảnh đánh ghen, nữ học viên và đồng bọn cưỡng đoạt 700 triệu đồng"
+                          data-newstypetitle="0" data-newsid="20220628144836165">Dàn cảnh
+                          đánh ghen, nữ học viên và đồng bọn cưỡng đoạt 700 triệu đồng</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/thoi-su/clip-nghi-van-nhom-tin-dung-den-xong-vao-nha-cu-ba-78-tuoi-dap-pha-20220628145103429.htm"
+                          title="CLIP: Nghi vấn nhóm tín dụng đen xông vào nhà cụ bà 78 tuổi đập phá"
+                          data-newstypetitle="2" data-newsid="20220628145103429">CLIP:
+                          Nghi vấn nhóm tín dụng đen xông vào nhà cụ bà 78 tuổi đập
+                          phá</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a href="/giai-tri/nu-ca-si-bi-chong-ban-chet-ngay-trong-nha-hang-20220628134905633.htm"
+                           title="Nữ ca sĩ bị chồng bắn chết ngay trong nhà hàng"
+                           data-newstypetitle="0" data-newsid="20220628134905633">Nữ ca sĩ
+                          bị chồng bắn chết ngay trong nhà hàng</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/cong-nghe/microsoft-dinh-ngay-dep-windows-81-nguoi-dung-phai-lo-nang-cap-20220627145602062.htm"
+                          title="Microsoft định ngày &quot;dẹp&quot; Windows 8.1, người dùng phải lo nâng cấp"
+                          data-newstypetitle="0" data-newsid="20220627145602062">Microsoft
+                          định ngày "dẹp" Windows 8.1, người dùng phải lo nâng cấp</a>
+                      </div>
+                    </div>
+
+                    <div class="item-news-thumb">
+                      <div class="news-thumb-title">
+                        <a
+                          href="/dia-phuong/tu-ha-noi-vao-thanh-hoa-gay-ra-hang-loat-vu-trom-cap-tien-vang-20220628130428645.htm"
+                          title="Từ Hà Nội vào Thanh Hóa gây ra hàng loạt vụ trộm cắp tiền vàng"
+                          data-newstypetitle="0" data-newsid="20220628130428645">Từ Hà Nội
+                          vào Thanh Hóa gây ra hàng loạt vụ trộm cắp tiền vàng</a>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="slimScrollBar"
+                       style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;">
+                  </div>
+                  <div class="slimScrollRail"
+                       style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="news-horizontal  clearfix">
+            <div class="news-horizontal-item " *ngFor="let lastedNews of latestNewsResult; let i = index ;">
+
+              <div *ngIf="i <= 4 && i!=0">
+                <a href="{{lastedNews.link}}"
+                   title="{{lastedNews.title}}"
+                   class="img203x127" data-newstype="0">
+
+                  <img
+                    src="{{lastedNews.content.slice(lastedNews.content.search('http'),lastedNews.content.search('jpg'|| 'png')+3) || lastedNews.content.slice(lastedNews.content.search('http'),lastedNews.content.search('jpeg')+4) }}"
+                    alt="{{lastedNews.title}}"
+                    class="img203x127">
+
+                </a>
+
+                <div class="news-horizontal-title">
+                  <a data-linktype="newsdetail" data-newstypetitle="0" data-newsid="2022062811380381"
+                     data-id="2022062811380381" data-adr="h1-2022062811380381"
+                     href="/chinh-tri/ky-luat-8-uy-vien-nguyen-uy-vien-trung-uong-va-20-si-quan-cap-tuong-2022062811380381.htm"
+                     title="Kỷ luật 8 Ủy viên, nguyên Ủy viên Trung ương và 20 sĩ quan cấp tướng">
+                    {{lastedNews.title}}
+                  </a>
+                </div>
+              </div>
+
+
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="box-right">
+
+      </div>
+    </div>
+    <div class="box-content mg_t22 clearfix">
+      <div class="box-left">
+        <div class="box-news-with-cate">
+          <div class="fl">
+            <div data-marked-zoneid="nld_home_s1">
+
+
+              <div class="box-news-list">
+
+                <div>
+
+                </div>
+
+                <div class="news-item " *ngFor="let lastedNews of latestNewsResult.slice(1,5);let i =index">
+
+                  <a
+                    href="/phap-luat/tong-giam-doc-cong-ty-cong-trinh-cong-cong-hoi-an-nhan-hoi-lo-400-trieu-dong-20220628133948409.htm"
+                    title="{{lastedNews.title}}"
+                    class="img220x139" data-newstype="0">
+
+                    <img
+                      src="{{lastedNews.content.slice(lastedNews.content.search('http'),lastedNews.content.search('jpg'|| 'png')+3) || lastedNews.content.slice(lastedNews.content.search('http'),lastedNews.content.search('jpeg')+4) }}"
+                      alt="{{lastedNews.title}}"
+                      class="img220x139">
+                  </a>
+
+                  <h3><a class="title"
+                         href="{{lastedNews.link}}"
+                         title="{{lastedNews.title}}">{{lastedNews.title}}</a></h3>
+                  <div class="news-info">
+                    <ul class="news-relate">
+
+                      <li>
+                        <a href="{{lastedNews.link}}"
+                           title="{{lastedNews.title}}"
+                           class="title">{{lastedNews.content.slice(lastedNews.content.search('(NLĐO)') + 7)}}</a>
+                      </li>
+
+
+                    </ul>
+
+                  </div>
+
+                  <div class="clearfix"></div>
+                </div>
+
+
+              </div>
+
+            </div>
+            <div class="clearfix"></div>
+            <div id="Multimedia"></div>
+          </div>
+          <div class="box-cate-list">
+            <div class="box-cate box-noithang">
+              <div class="box-cate-content">
+                <div class="header-cate clearfix">
+                  <a href="/noi-thang.htm" title="Nói thẳng" class="title">Nói thẳng</a>
+                  <a href="/noi-thang.htm" title="Xem tất cả" class="view-more">Xem tất cả</a>
+                </div>
+                <ng-container *ngFor="let noiThangItem of noiThangResult.slice(0,1)">
+                <div class="news-item">
+
+                  <a href="{{noiThangItem.link}}"
+                     title="{{noiThangItem.title}}" class="img216x133"
+                  >
+
+                      <img
+                        src="{{noiThangItem.description.slice(noiThangItem.description.search('http'),noiThangItem.description.search('jpg'|| 'png')+3) || noiThangItem.description.slice(noiThangItem.description.search('http'),noiThangItem.description.search('jpeg')+4) }}"
+                        alt="Thu phí ôtô &quot;không đặt nặng lời, lỗ&quot;: Khó nghe quá!" class="img216x133">
+
+                  </a>
+
+                  <h3 style="margin-bottom: 0px;"><a href="/noiThang" class="title"
+                                                     title="{{noiThangItem.title}}">{{noiThangItem.title}}</a>
+                  </h3>
+                  <div class="news-info clearfix">
+                    <div class="icon-views" style="display: none;"></div>
+                    <div class="number-views get-views" style="display: none;"><span>0</span> người quan tâm</div>
+                  </div>
+                </div>
+                </ng-container>
+              </div>
+            </div>
+            <div class="box-cate box-docquyen mg_t10">
+              <div class="box-cate-content">
+                <div class="header-cate clearfix">
+                  <div class="header-cate-content fl">
+                    <a href="/tin-doc-quyen" title="Tin độc quyền" class="title">Tin độc quyền</a>
+                  </div>
+
+                  <a href="/tin-doc-quyen" title="Xem tất cả" class="view-more">Xem tất cả</a>
+                </div>
+
+                <div class="news-item">
+                  <ng-container *ngFor="let docQuyenItem of docQuyenResult.slice(0,1)">
+                    <a href="{{docQuyenItem.link}}" title="{{docQuyenItem.title}}" class="img216x133">
+
+                      <img
+                        src="{{docQuyenItem.content.slice(docQuyenItem.content.search('http'),docQuyenItem.content.search('jpg'|| 'png')+3) || docQuyenItem.content.slice(docQuyenItem.content.search('http'),docQuyenItem.content.search('jpeg')+4) }}"
+                        alt="3 người chết trong xử lý vụ cháy công ty ở KCN Sóng Thần 1" class="img216x133">
+                    </a>
+
+                    <h3 style="margin-bottom: 0px;"><a href="{{docQuyenItem.link}}" class="title"
+                                                       title="{{docQuyenItem.title}}">{{docQuyenItem.title}}</a></h3>
+                  </ng-container>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+
+              <h2><a routerLink="/trong-nuoc" title="Trong nước" class="title">Trong nước</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/thoi-su/chinh-tri.htm" title="Chính trị">Chính trị</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su/xa-hoi.htm" title="Xã hội">Xã hội</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su/mien-tay.htm" title="Miền Tây">Miền Tây</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su/mien-trung-tay-nguyen.htm"
+                     title="Miền Trung - Tây Nguyên">Miền Trung - Tây Nguyên</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su/ha-noi.htm" title="Hà Nội">Hà Nội</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su/phong-su-but-ky.htm" title="Phóng sự - Bút ký">Phóng sự - Bút
+                    ký</a>
+                </li>
+
+
+                <li>
+                  <a href="/bien-dao.htm" title="Biển đảo">Biển đảo</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(0,1); let i =index">
+                    <a href="{{thoiSuItem.link}}"
+                       title="{{thoiSuItem.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpg'|| 'png')+3) || thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpeg')+4) }}"
+                        alt="{{thoiSuItem.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{thoiSuItem.link}}"
+
+                         title="{{thoiSuItem.title}}"
+                         class="title">
+                        {{thoiSuItem.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{thoiSuItem.link}}"
+                         title="{{thoiSuItem.title}}" class="img114x71">
+
+                        <img
+                          src="{{thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpg')+3) || thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpeg')+4)|| thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('png')+3) }}"
+                          alt="{{thoiSuItem.title}}"
+                          class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{thoiSuItem.link}}"
+                        title="{{thoiSuItem.title}}"
+                        class="title">{{thoiSuItem.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-covid-vaccine">
+                  <div class="box-covid-vaccine-banner">
+                    <div class="bcvb-title">
+                      Tiêm vắc-xin ngừa covid-19
+                    </div>
+                  </div>
+
+                  <div class="box-covid-vaccine-content">
+                    <div class="bcvc-item">
+                      <ul>
+                        <li>
+                          <span>Số liều tiêm</span>
+                        </li>
+                        <li>
+                          <span class="bcvci-left">Người từ 18 tuổi trở lên</span>
+                          <span class="bcvci-right">205.411.924 liều: Mũi 1 là 71.500.915
+                                                            liều; Mũi 2 là 68.867.849 liều; Mũi 3 là 1.509.495 liều; Mũi
+                                                            bổ sung là 14.834.995 liều; Mũi nhắc lại lần 1 là 44.867.465
+                                                            liều; Mũi nhắc lại lần 2 là 3.831.205 liều</span>
+                        </li>
+                        <li>
+                          <span class="bcvci-left">Trẻ từ 12 đến 17 tuổi</span>
+                          <span class="bcvci-right">18.241.615 liều: Mũi 1 là 8.989.618
+                                                            liều; Mũi 2 là 8.624.860 liều; Mũi nhắc lại lần 1 là 627.137
+                                                            liều</span>
+                        </li>
+                        <li>
+                          <span class="bcvci-left">Trẻ từ 5 đến 11 tuổi</span>
+                          <span class="bcvci-right">7.807.540 liều: Mũi 1 là 5.817.745
+                                                            liều; Mũi 2 là 1.989.795 liều</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="box-covid-vaccine-bottom">
+                    <div class="bcvb-left">
+                      Cập nhật 28-6-2022
+                      <span>Dân số Việt Nam 96,5 triệu người, theo báo cáo tổng<br>
+                                                    điều tra dân số &amp; nhà ở năm 2019 của Tổng cục Thống kê
+                                                </span>
+                    </div>
+                    <div class="bcvb-right">
+                      <img src="https://static.mediacdn.vn/nld/Images/solieucovid19-3.png">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="Quốc tế" class="title">Quốc tế</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/thoi-su-quoc-te/tin-hay-anh-la.htm" title="Tin hay, ảnh lạ">Tin hay, ảnh lạ</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su-quoc-te/van-de-nong.htm" title="Vấn đề nóng">Vấn đề nóng</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su-quoc-te/ho-so.htm" title="Hồ sơ">Hồ sơ</a>
+                </li>
+
+                <li>
+                  <a href="/thoi-su-quoc-te/video-clip.htm" title="Video clip">Video clip</a>
+                </li>
+
+
+                <li>
+                  <a href="/khoa-hoc.htm" title="Khoa học">Khoa học</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let thoiSuItem of thoiSuQuocTeResult.slice(0,1); let i =index">
+                    <a href="{{thoiSuItem.link}}"
+                       title="{{thoiSuItem.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpg'|| 'png')+3) || thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpeg')+4) }}"
+                        alt="{{thoiSuItem.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{thoiSuItem.link}}"
+
+                         title="{{thoiSuItem.title}}"
+                         class="title">
+                        {{thoiSuItem.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let thoiSuItem of thoiSuQuocTeResult.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{thoiSuItem.link}}"
+                         title="{{thoiSuItem.title}}" class="img114x71">
+
+                        <img
+                          src="{{thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpg')+3) || thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpeg')+4)|| thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('png')+3) }}"
+                          alt="{{thoiSuItem.title}}"
+                          class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{thoiSuItem.link}}"
+                        title="{{thoiSuItem.title}}"
+                        class="title">{{thoiSuItem.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Dư luận</a>
+
+
+                  <ng-container *ngFor="let thoiSuItem of thoiSuQuocTeResult.slice(0,1); let i =index">
+                    <a href="{{thoiSuItem.link}}">
+
+                      <img
+                        src="{{thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpg')+3) || thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('jpeg')+4)|| thoiSuItem.content.slice(thoiSuItem.content.search('http'),thoiSuItem.content.search('png')+3) }}"
+                        alt="{{thoiSuItem.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{thoiSuItem.link}}"
+                             title="{{thoiSuItem.title}}" class="title">{{thoiSuItem.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="Công đoàn" class="title">Công đoàn</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/cong-doan/doi-song-cong-nhan.htm" title="Đời sống công nhân">Đời sống công nhân</a>
+                </li>
+
+                <li>
+                  <a href="/cong-doan/doi-thoai.htm" title="Đối thoại">Đối thoại</a>
+                </li>
+
+                <li>
+                  <a href="https://vieclam.nld.com.vn/" title="Việc làm">Việc làm</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of congDoanResult.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of congDoanResult.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Chính sách</a>
+
+
+                  <ng-container *ngFor="let newsItems of congDoanResult.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="BẠN ĐỌC" class="title">BẠN ĐỌC</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/ban-doc/cuoc-song-nhan-ai.htm" title="Cuộc sống nhân ái">Cuộc sống nhân ái</a>
+                </li>
+
+                <li>
+                  <a href="/ban-doc/toi-len-tieng.htm" title="Tôi lên tiếng">Tôi lên tiếng</a>
+                </li>
+
+                <li>
+                  <a href="/ban-doc/net-dep-doi-thuong.htm" title="Nét đẹp đời thường">Nét đẹp đời thường</a>
+                </li>
+
+                <li>
+                  <a href="/ban-doc/goc-anh-ban-doc.htm" title="Góc ảnh bạn đọc">Góc ảnh bạn đọc</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of banDocReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of banDocReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Dư luận</a>
+
+
+                  <ng-container *ngFor="let newsItems of banDocReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="KINH TẾ" class="title">KINH TẾ</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/kinh-te/doanh-nghiep.htm" title="Doanh nghiệp">Doanh nghiệp</a>
+                </li>
+
+                <li>
+                  <a href="/kinh-te/chuyen-quan-ly.htm" title="Chuyện quản lý">Chuyện quản lý</a>
+                </li>
+
+                <li>
+                  <a href="/kinh-te/tieu-dung.htm" title="Tiêu dùng">Tiêu dùng</a>
+                </li>
+
+                <li>
+                  <a href="/kinh-te/oto-xe-dien-may.htm" title="Ôtô - Xe - Điện máy">Ôtô - Xe - Điện máy</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of kinhTeReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of kinhTeReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Tài chính - Địa ốc</a>
+
+
+                  <ng-container *ngFor="let newsItems of kinhTeReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="SỨC KHỎE" class="title">SỨC KHỎE</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/suc-khoe/chuyen-dong-y-hoc.htm" title="Chuyển động y học">Chuyển động y học</a>
+                </li>
+
+                <li>
+                  <a href="/suc-khoe/gioi-tinh.htm" title="Giới tính">Giới tính</a>
+                </li>
+
+                <li>
+                  <a href="/suc-khoe/phong-mach-covid-19.htm" title="Phòng mạch Covid-19">Phòng mạch Covid-19</a>
+                </li>
+
+                <li>
+                  <a href="/suc-khoe/thuoc-dinh-duong.htm" title="Thuốc &amp; Dinh dưỡng">Thuốc &amp; Dinh dưỡng</a>
+                </li>
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of sucKhoeReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of sucKhoeReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">BÁC SĨ CỦA BẠN</a>
+
+
+                  <ng-container *ngFor="let newsItems of sucKhoeReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="GIÁO DỤC" class="title">GIÁO DỤC</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/giao-duc-khoa-hoc/du-hoc.htm" title="Du học">Du học</a>
+                </li>
+
+                <li>
+                  <a href="/giao-duc-khoa-hoc/sau-buc-giang.htm" title="Sau bục giảng">Sau bục giảng</a>
+                </li>
+
+
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of giaoDucReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of giaoDucReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">TUYỂN SINH</a>
+
+
+                  <ng-container *ngFor="let newsItems of giaoDucReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="PHÁP LUẬT" class="title">PHÁP LUẬT</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/phap-luat/hoi-dap-phap-luat.htm" title="Hỏi đáp">Hỏi đáp</a>
+                </li>
+
+                <li>
+                  <a href="/phap-luat/truy-na.htm" title="Truy nã">Truy nã</a>
+                </li>
+
+                <li>
+                  <a href="/phap-luat/chuyen-phap-dinh.htm" title="Chuyện pháp đình">Chuyện pháp đình</a>
+                </li>
+
+
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of phapLuatReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of phapLuatReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">KỲ ÁN</a>
+
+
+                  <ng-container *ngFor="let newsItems of phapLuatReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="GIẢI TRÍ" class="title">GIẢI TRÍ</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/giai-tri/hau-truong-showbiz.htm" title="Hậu trường showbiz">Hậu trường showbiz</a>
+                </li>
+
+                <li>
+                  <a href="/giai-tri/moi-tuan-mot-nhan-vat.htm" title="Mỗi tuần một nhân vật">Mỗi tuần một nhân vật</a>
+                </li>
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of giaiTriReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of giaiTriReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">KỲ ÁN</a>
+
+
+                  <ng-container *ngFor="let newsItems of giaiTriReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="CÔNG NGHỆ" class="title">CÔNG NGHỆ</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/cong-nghe/thiet-bi-so.htm" title="Thiết bị số">Thiết bị số</a>
+                </li>
+
+                <li>
+                  <a href="/cong-nghe/bao-mat.htm" title="Bảo mật">Bảo mật</a>
+                </li>
+
+
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of congNgheReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of congNgheReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">CƯ DÂN MẠNG</a>
+
+
+                  <ng-container *ngFor="let newsItems of congNgheReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="DU LỊCH XANH" class="title">DU LỊCH XANH</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/du-lich-xanh/tieu-diem.htm" title="Tiêu điểm">Tiêu điểm</a>
+                </li>
+
+                <li>
+                  <a href="/du-lich-xanh/diem-den.htm" title="Điểm đến">Điểm đến</a>
+                </li>
+
+                <li>
+                  <a href="/du-lich-xanh/dung-bo-lo.htm" title="Đừng bỏ lỡ">Đừng bỏ lỡ</a>
+                </li>
+
+
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of duLichXanhReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of duLichXanhReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">ẨM THỰC</a>
+
+
+                  <ng-container *ngFor="let newsItems of duLichXanhReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="box-cate-home mg_t15 clearfix">
+          <div class="box-cate-container">
+            <div class="box-cate-title">
+              <h2><a href="/trongNuoc" title="THỊ TRƯỜNG" class="title">THỊ TRƯỜNG</a></h2>
+              <ul class="sub-cate">
+
+                <li>
+                  <a href="/du-lich-xanh/tieu-diem.htm" title="Tiêu điểm">Tiêu điểm</a>
+                </li>
+
+                <li>
+                  <a href="/du-lich-xanh/diem-den.htm" title="Điểm đến">Điểm đến</a>
+                </li>
+
+                <li>
+                  <a href="/du-lich-xanh/dung-bo-lo.htm" title="Đừng bỏ lỡ">Đừng bỏ lỡ</a>
+                </li>
+
+
+
+
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+
+            <div class="box-cate-detail">
+
+              <div class="news-left">
+
+                <div class="news-main ">
+                  <ng-container *ngFor="let newsItems of thiTruongReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}"
+                       title="{{newsItems.title}}"
+                       data-newstype="0" class="img256x160">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg'|| 'png')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4) }}"
+                        alt="{{newsItems.title}}"
+                        class="img256x160">
+                    </a>
+                    <h3 class="">
+                      <a href="{{newsItems.link}}"
+
+                         title="{{newsItems.title}}"
+                         class="title">
+                        {{newsItems.title}}
+                      </a>
+                    </h3>
+                    <p class="sapo"> {{newsItems.content.slice(newsItems.content.search('">') + 2)}}</p>
+                  </ng-container>
+                </div>
+
+                <ul class="sub-news">
+                  <ng-container *ngFor="let newsItems of thiTruongReuslt.slice(1,5); let i =index">
+                    <li class="clearfix" *ngIf="i>0">
+
+                      <a href="{{newsItems.link}}"
+                         title="{{newsItems.title}}" class="img114x71">
+
+                        <img src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3)
+                        || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                             alt="{{newsItems.title}}"
+                             class="img114x71">
+                      </a>
+
+                      <h3 class=""><a
+                        href="{{newsItems.link}}"
+                        title="{{newsItems.title}}"
+                        class="title">{{newsItems.title}}</a></h3>
+                    </li>
+                  </ng-container>
+                </ul>
+
+              </div>
+
+              <div class="news-right">
+                <div class="box-sub-cate">
+                  <a href="" title="Dư luận" class="title-cate">TIN TỨC</a>
+
+
+                  <ng-container *ngFor="let newsItems of thiTruongReuslt.slice(0,1); let i =index">
+                    <a href="{{newsItems.link}}">
+
+                      <img
+                        src="{{newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpg')+3) || newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('jpeg')+4)|| newsItems.content.slice(newsItems.content.search('http'),newsItems.content.search('png')+3) }}"
+                        alt="{{newsItems.title}}" class="img208x130">
+                    </a>
+
+                    <div class="news-info">
+                      <h3><a href="{{newsItems.link}}"
+                             title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
+
+
+                      <p class="sapo">
+                        {{newsItems.content.slice(newsItems.content.search('">') + 2)}}
+                      </p>
+
+                    </div>
+
+                  </ng-container>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="box-right">
+
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
