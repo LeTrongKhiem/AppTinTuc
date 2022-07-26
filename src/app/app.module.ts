@@ -9,6 +9,11 @@ import {NewsApiService} from "./Service/news-api.service";
 import {HttpClientModule} from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component';
 import { DomesticComponent } from './domestic/domestic.component';
+import { SportsComponent } from './sports/sports.component';
+import { TechnologyComponent } from './technology/technology.component';
+import { WomenComponent } from './women/women.component';
+import { GreentourismComponent } from './greentourism/greentourism.component';
+import {RealestateComponent} from "./realestate/realestate.component";
 
 @NgModule({
   declarations: [
@@ -16,7 +21,12 @@ import { DomesticComponent } from './domestic/domestic.component';
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    DomesticComponent
+    DomesticComponent,
+    RealestateComponent,
+    SportsComponent,
+    TechnologyComponent,
+    WomenComponent,
+    GreentourismComponent
   ],
   imports: [
     BrowserModule,
