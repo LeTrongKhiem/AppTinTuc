@@ -9,6 +9,7 @@ import {NewsApiService} from "./Service/news-api.service";
 import {HttpClientModule} from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component';
 import { DomesticComponent } from './domestic/domestic.component';
+import {NgxPaginationModule} from "ngx-pagination";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { DomesticComponent } from './domestic/domestic.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]
