@@ -10,6 +10,9 @@ import {HttpClientModule} from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component';
 import { DomesticComponent } from './domestic/domestic.component';
 import {NgxPaginationModule} from "ngx-pagination";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForeignComponent } from './foreign/foreign.component';
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
 
 @NgModule({
   declarations: [
@@ -17,13 +20,16 @@ import {NgxPaginationModule} from "ngx-pagination";
     HeaderComponent,
     HomeComponent,
     FooterComponent,
-    DomesticComponent
+    DomesticComponent,
+    ForeignComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    InfiniteScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -48,6 +48,9 @@ export class NewsApiService {
   thoiSuQuocte(): Observable<any> {
     return this.http.get(this.thoiSUQuocTeUrl)
   }
+  thoiSuQuocteCatelory(params:any): Observable<any> {
+    return this.http.get(this.thoiSUQuocTeUrl,{params})
+  }
 
   weatherApi(): Observable<any> {
     return this.http.get(this.weatherApiUrl);
