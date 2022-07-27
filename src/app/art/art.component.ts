@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-art',
   templateUrl: './art.component.html',
-  styleUrls: ['./art.component.css']
+  styleUrls: ['./art.component.css', '../commoncomponent/commoncomponent.component.css']
 })
 export class ArtComponent implements OnInit {
 
