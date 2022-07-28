@@ -294,7 +294,7 @@
                       <li>
                         <a href="{{lastedNews.link}}"
                            title="{{lastedNews.title}}"
-                           class="title">{{lastedNews.content.slice(lastedNews.content.search('(NLĐO)') + 7)}}</a>
+                           class="title">{{lastedNews.content.slice(lastedNews.content.search('">') + 2)}}</a>
                       </li>
 
 
@@ -1690,4 +1690,6 @@
   </div>
 
 </section>
-
+<ng-container>
+  <app-scroll-to-top></app-scroll-to-top>
+</ng-container>
