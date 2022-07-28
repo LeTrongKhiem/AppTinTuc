@@ -2,183 +2,75 @@
   <div class="body-content body-category">
     <div class="cate-left">
       <div class="sub-cate">
-        <h1 class="title-cate">Trong nước</h1>
+        <h1 class="title-cate">Giải trí</h1>
+        <h2 class="title-cate-child">Chuyển động y học</h2>
+        <h2 class="title-cate-child">Chuyển động y học</h2>
+        <h2 class="title-cate-child">Giới tính</h2>
+        <h2 class="title-cate-child">Sức khỏe của bạn</h2>
+        <h2 class="title-cate-child">Phòng mạch covid-19</h2>
       </div>
       <div class="clearfix"></div>
       <div class="box-cate-focus">
-        <div class="news-info">
-          <h3>
-            <a class="title" href="/thoi-su-chinh-tri.htm" title="Chính trị">RONG RUỔI TÌM MỘ LIỆT SĨ
-              (*): Mệnh lệnh từ trái tim</a>
-          </h3>
-          <p class="sapo">Nhóm tìm đồng đội của cựu chiến binh Nguyễn Tiến Đãi không có tên gọi, không có
-            quy chế hoạt động. Những thành viên trong nhóm đến với nhau bằng mệnh lệnh từ trái tim</p>
-        </div>
-        <a class="img435x273" href="">
-          <img src="https://nld.mediacdn.vn/zoom/435_273/291774122806476800/2022/7/25/5-chot-thuong-binh-2-16587577545351771472821.jpg"
-               alt="RONG RUỔI TÌM MỘ LIỆT SĨ (*): Mệnh lệnh từ trái tim"
-               title="RONG RUỔI TÌM MỘ LIỆT SĨ (*): Mệnh lệnh từ trái tim" class="img435x273">
-        </a>
+        <ng-container *ngFor="let phapluatItem of phapluatResult.slice(0,1)">
+          <div class="news-info">
+            <h3>
+              <a class="title" href="{{phapluatItem.link}}" title="{{phapluatItem.title}}">{{phapluatItem.title}}</a>
+            </h3>
+            <p class="sapo">{{phapluatItem.content.slice(phapluatItem.content.search('">') + 2)}}</p>
+          </div>
+          <a class="img435x273" href="{{phapluatItem.link}}">
+            <img src="{{phapluatItem.thumbnail}}"
+                 alt="{{phapluatItem.alt}}"
+                 title="{{phapluatItem.title}}" class="img435x273">
+          </a>
+        </ng-container>
+
         <div class="clearfix"></div>
         <span class="separator"></span>
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
+
           <ul class="list-news clearfix">
-            <li class="news-item ">
+            <ng-container *ngFor="let phapluatItem of phapluatResult">
+              <li class="news-item ">
+                <a href="{{phapluatItem.link}}"
+                   title="{{phapluatItem.title}}"
+                   class="img220x139">
+                  <img src="{{phapluatItem.thumbnail}}"
+                       class="img220x139">
+                </a>
 
-              <a href=""
-                 title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                 class="img220x139">
-                <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2022/7/26/thu-phi-khong-dung-2-1658807268765409460627.jpg"
-                     class="img220x139">
-              </a>
+                <div class="news-info">
+                  <h3><a href="{{phapluatItem.link}}"
+                         title="{{phapluatItem.title}}"
+                         class="title">{{phapluatItem.title}}</a></h3>
+                  <div class="clearfix"></div>
+                  <ul class="news-relate">
 
-              <div class="news-info">
-                <h3><a href=""
-                       title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                       class="title">Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM –
-                  Long Thành - Dầu Giây</a></h3>
+                    <li>
+                      <a href=""
+                         title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
+                         class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
+                        1-8 tới</a>
+                    </li>
+
+                    <li>
+                      <a href=""
+                         title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
+                         class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
+                        từ ngày 1-8</a>
+                    </li>
+
+                  </ul>
+
+                </div>
                 <div class="clearfix"></div>
-
-
-                <ul class="news-relate">
-
-                  <li>
-                    <a href=""
-                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                       class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
-                      1-8 tới</a>
-                  </li>
-
-                  <li>
-                    <a href=""
-                       title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
-                       class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
-                      từ ngày 1-8</a>
-                  </li>
-
-                </ul>
-
-              </div>
-              <div class="clearfix"></div>
-            </li>
-            <li class="news-item ">
-
-              <a href=""
-                 title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                 class="img220x139">
-                <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2022/7/26/thu-phi-khong-dung-2-1658807268765409460627.jpg"
-                     class="img220x139">
-              </a>
-
-              <div class="news-info">
-                <h3><a href=""
-                       title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                       class="title">Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM –
-                  Long Thành - Dầu Giây</a></h3>
-                <div class="clearfix"></div>
-
-
-                <ul class="news-relate">
-
-                  <li>
-                    <a href=""
-                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                       class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
-                      1-8 tới</a>
-                  </li>
-
-                  <li>
-                    <a href=""
-                       title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
-                       class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
-                      từ ngày 1-8</a>
-                  </li>
-
-                </ul>
-
-              </div>
-              <div class="clearfix"></div>
-            </li>
-            <li class="news-item ">
-
-              <a href=""
-                 title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                 class="img220x139">
-                <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2022/7/26/thu-phi-khong-dung-2-1658807268765409460627.jpg"
-                     class="img220x139">
-              </a>
-
-              <div class="news-info">
-                <h3><a href=""
-                       title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                       class="title">Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM –
-                  Long Thành - Dầu Giây</a></h3>
-                <div class="clearfix"></div>
-
-
-                <ul class="news-relate">
-
-                  <li>
-                    <a href=""
-                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                       class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
-                      1-8 tới</a>
-                  </li>
-
-                  <li>
-                    <a href=""
-                       title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
-                       class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
-                      từ ngày 1-8</a>
-                  </li>
-
-                </ul>
-
-              </div>
-              <div class="clearfix"></div>
-            </li>
-            <li class="news-item ">
-
-              <a href=""
-                 title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                 class="img220x139">
-                <img src="https://nld.mediacdn.vn/zoom/220_139/291774122806476800/2022/7/26/thu-phi-khong-dung-2-1658807268765409460627.jpg"
-                     class="img220x139">
-              </a>
-
-              <div class="news-info">
-                <h3><a href=""
-                       title="Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM – Long Thành - Dầu Giây"
-                       class="title">Cận cảnh ngày đầu thu phí không dừng trên cao tốc TP HCM –
-                  Long Thành - Dầu Giây</a></h3>
-                <div class="clearfix"></div>
-
-
-                <ul class="news-relate">
-
-                  <li>
-                    <a href=""
-                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                       class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
-                      1-8 tới</a>
-                  </li>
-
-                  <li>
-                    <a href=""
-                       title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
-                       class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
-                      từ ngày 1-8</a>
-                  </li>
-
-                </ul>
-
-              </div>
-              <div class="clearfix"></div>
-            </li>
+              </li>
+            </ng-container>
           </ul>
         </div>
+
         <div class="clearfix"></div>
 
       </div>
@@ -236,7 +128,18 @@
         </div>
       </div>
     </div>
-
+    <div class="cate-right">
+        <div class="cate-right-content">
+          <h2>Truyền hình</h2>
+          <div class="news-list">
+            <div class="main-news">
+            </div>
+            <ul class="sub-news">
+              
+            </ul>
+          </div>
+        </div>
+    </div>
   </div>
   <div class="clearfix"></div>
 

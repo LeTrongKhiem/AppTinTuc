@@ -203,3 +203,17 @@
   font-size: 15px;
   margin-left: 10px;
 }
+
+/*Category Right*/
+.cate-right {
+  float: right;
+  background: #e7e9ec;
+  margin-left: 50px;
+}
+.cate-right-content {
+  padding: 19px 20px;
+  border: 1px solid rgba(116,152,189,.35);
+  border-radius: 5px;
+  background: #fff;
+  margin-bottom: 20px;
+}
