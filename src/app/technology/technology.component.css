@@ -13,6 +13,8 @@
   clear: both;
   font-size: 0;
 }
+
+
 .body .body-content {
   width: 1160px;
   margin: 20px auto 0;
@@ -119,6 +121,9 @@
   font-size: 18px;
   line-height: 24px;
   float: none;
+}
+.body-content .cate-left .list-news-container .cate-list-news ul.list-news li.news-item .news-info .news-relate{
+  list-style-type: none;
 }
 .body-content .cate-left .list-news-container .cate-list-news ul.list-news li.news-item .news-info .news-relate li a.title {
   color: #454545;

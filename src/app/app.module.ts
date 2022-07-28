@@ -14,6 +14,7 @@ import { TechnologyComponent } from './technology/technology.component';
 import { WomenComponent } from './women/women.component';
 import { GreentourismComponent } from './greentourism/greentourism.component';
 import {RealestateComponent} from "./realestate/realestate.component";
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import {RealestateComponent} from "./realestate/realestate.component";
     SportsComponent,
     TechnologyComponent,
     WomenComponent,
-    GreentourismComponent
+    GreentourismComponent,
+    ScrollToTopComponent
   ],
   imports: [
     BrowserModule,
