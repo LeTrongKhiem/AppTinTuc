@@ -1,0 +1,134 @@
+<section class="body">
+  <div class="body-content body-category">
+    <div class="cate-left">
+      <div class="sub-cate">
+        <h1 class="title-cate">Sức khỏe</h1>
+        <h2 class="title-cate-child">Chuyển động y học</h2>
+        <h2 class="title-cate-child">Chuyển động y học</h2>
+        <h2 class="title-cate-child">Giới tính</h2>
+        <h2 class="title-cate-child">Sức khỏe của bạn</h2>
+        <h2 class="title-cate-child">Phòng mạch covid-19</h2>
+      </div>
+      <div class="clearfix"></div>
+      <div class="box-cate-focus">
+        <ng-container *ngFor="let suckhoeItem of suckhoeResult.slice(0,1)">
+          <div class="news-info">
+            <h3>
+              <a class="title" href="{{suckhoeItem.link}}" title="{{suckhoeItem.title}}">{{suckhoeItem.title}}</a>
+            </h3>
+            <p class="sapo">{{suckhoeItem.content.slice(suckhoeItem.content.search('">') + 2)}}</p>
+          </div>
+          <a class="img435x273" href="{{suckhoeItem.link}}">
+            <img src="{{suckhoeItem.thumbnail}}"
+                 alt="{{suckhoeItem.alt}}"
+                 title="{{suckhoeItem.title}}" class="img435x273">
+          </a>
+        </ng-container>
+
+        <div class="clearfix"></div>
+        <span class="separator"></span>
+      </div>
+      <div class="list-news-container">
+        <div class="cate-list-news">
+
+          <ul class="list-news clearfix">
+            <ng-container *ngFor="let suckhoeItem of suckhoeResult">
+            <li class="news-item ">
+              <a href="{{suckhoeItem.link}}"
+                 title="{{suckhoeItem.title}}"
+                 class="img220x139">
+                <img src="{{suckhoeItem.thumbnail}}"
+                     class="img220x139">
+              </a>
+
+              <div class="news-info">
+                <h3><a href="{{suckhoeItem.link}}"
+                       title="{{suckhoeItem.title}}"
+                       class="title">{{suckhoeItem.title}}</a></h3>
+                <div class="clearfix"></div>
+                <ul class="news-relate">
+
+                  <li>
+                    <a href=""
+                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
+                       class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
+                      1-8 tới</a>
+                  </li>
+
+                  <li>
+                    <a href=""
+                       title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
+                       class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
+                      từ ngày 1-8</a>
+                  </li>
+
+                </ul>
+
+              </div>
+              <div class="clearfix"></div>
+            </li>
+            </ng-container>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+
+      </div>
+      <div class="list-box-container">
+        <div class="box-news">
+          <h2>
+            <a class="title-cate" href="">Tin nổi bật</a>
+            <span class="bg-right"></span>
+          </h2>
+          <div class="clearfix"></div>
+          <ul class="list-news">
+            <li>
+
+
+              <a href="" class="img216x133">
+                <img src="https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2022/7/26/photo-13-16588046760021458294633.jpg"
+                     class="img216x133">
+              </a>
+
+
+              <h3><a href="" class="title">Lãnh đạo Đảng, Nhà nước tưởng nhớ Chủ tịch Hồ Chí Minh và
+                các Anh
+                hùng liệt sĩ</a>
+              </h3>
+            </li>
+            <li>
+
+
+              <a href="" class="img216x133">
+                <img src="https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2022/7/26/photo-13-16588046760021458294633.jpg"
+                     class="img216x133">
+              </a>
+
+
+              <h3><a href="" class="title">Lãnh đạo Đảng, Nhà nước tưởng nhớ Chủ tịch Hồ Chí Minh và
+                các Anh
+                hùng liệt sĩ</a>
+              </h3>
+            </li>
+            <li>
+
+
+              <a href="" class="img216x133">
+                <img src="https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2022/7/26/photo-13-16588046760021458294633.jpg"
+                     class="img216x133">
+              </a>
+
+
+              <h3><a href="" class="title">Lãnh đạo Đảng, Nhà nước tưởng nhớ Chủ tịch Hồ Chí Minh và
+                các Anh
+                hùng liệt sĩ</a>
+              </h3>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="clearfix"></div>
+
+</section>
