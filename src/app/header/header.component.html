@@ -133,8 +133,10 @@
       </li>
 
       <li class="search">
-        <a href="" class="fr" title="Tìm kiếm" rel="nofollow"></a>
-        <input type="text" id="txtKeyWord" class="search-input fr" placeholder="Nhập từ khóa tìm kiếm">
+        <div class="search-box">
+          <button class="btn-search" (click)="search()"></button>
+          <input [(ngModel)]="enteredSearchValue" type="text" class="input-search" placeholder="Type to Search...">
+        </div>
       </li>
     </ul>
   </div>

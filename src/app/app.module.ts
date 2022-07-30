@@ -14,6 +14,11 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForeignComponent } from './foreign/foreign.component';
 import {InfiniteScrollModule} from "ngx-infinite-scroll";
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { ListNewsSearchComponent } from './list-news-search/list-news-search.component';
+import { SearchComponent } from './search/search.component';
+import {FormsModule} from "@angular/forms";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import { NewsDetailComponent } from './news-detail/news-detail.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +28,10 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     FooterComponent,
     DomesticComponent,
     ForeignComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    ListNewsSearchComponent,
+    SearchComponent,
+    NewsDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +39,9 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     HttpClientModule,
     NgxPaginationModule,
     BrowserAnimationsModule,
-    InfiniteScrollModule
+    InfiniteScrollModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
