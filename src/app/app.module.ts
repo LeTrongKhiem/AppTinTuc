@@ -9,12 +9,17 @@ import {NewsApiService} from "./Service/news-api.service";
 import {HttpClientModule} from "@angular/common/http";
 import { FooterComponent } from './footer/footer.component';
 import { DomesticComponent } from './domestic/domestic.component';
-import { HealthComponent } from './health/health.component';
-import { EducationComponent } from './education/education.component';
-import { LawyerComponent } from './lawyer/lawyer.component';
-import { ArtComponent } from './art/art.component';
-import { EntertainmentComponent } from './entertainment/entertainment.component';
-import { CommoncomponentComponent } from './commoncomponent/commoncomponent.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ForeignComponent } from './foreign/foreign.component';
+import {InfiniteScrollModule} from "ngx-infinite-scroll";
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { ListNewsSearchComponent } from './list-news-search/list-news-search.component';
+import { SearchComponent } from './search/search.component';
+import {FormsModule} from "@angular/forms";
+import {Ng2SearchPipeModule} from "ng2-search-filter";
+import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { RightCateloryComponent } from './right-catelory/right-catelory.component';
 
 @NgModule({
   declarations: [
@@ -23,17 +28,22 @@ import { CommoncomponentComponent } from './commoncomponent/commoncomponent.comp
     HomeComponent,
     FooterComponent,
     DomesticComponent,
-    HealthComponent,
-    EducationComponent,
-    LawyerComponent,
-    ArtComponent,
-    EntertainmentComponent,
-    CommoncomponentComponent
+    ForeignComponent,
+    ScrollToTopComponent,
+    ListNewsSearchComponent,
+    SearchComponent,
+    NewsDetailComponent,
+    RightCateloryComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule,
+    BrowserAnimationsModule,
+    InfiniteScrollModule,
+    FormsModule,
+    Ng2SearchPipeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

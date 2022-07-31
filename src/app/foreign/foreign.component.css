@@ -1,5 +1,18 @@
 
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+  font-size: 0;
+}
 .body .body-content {
   width: 1160px;
   margin: 20px auto 0;
@@ -182,4 +195,10 @@
 .body-content .cate-left .list-box-container .box-news .list-news li:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+.pagination {
+  text-align: center;
+}
+.pagination ::ng-deep .ngx-pagination .current {
+  background: red;
 }

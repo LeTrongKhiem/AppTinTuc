@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
 
 @Component({
@@ -7,6 +7,7 @@ import {NewsApiService} from "../Service/news-api.service";
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  @Output() onSelected = new EventEmitter<any>();
 
   constructor(private service: NewsApiService) {
 

@@ -89,7 +89,7 @@
         <a routerLink="/trong-nuoc" title="Trong nước">Trong nước</a>
       </li>
       <li class="">
-        <a href="/thoi-su-quoc-te.htm" title="Quốc tế">Quốc tế</a>
+        <a routerLink="/thoi-su-quoc-te" title="Quốc tế">Quốc tế</a>
       </li>
       <li class="">
         <a href="/cong-doan.htm" title="Công đoàn">Công đoàn</a>
@@ -101,20 +101,20 @@
         <a href="/kinh-te.htm" title="Kinh tế">Kinh tế</a>
       </li>
       <li class="">
-        <a href="/suc-khoe" title="Sức khỏe">Sức khỏe</a>
+        <a href="/suc-khoe.htm" title="Sức khỏe">Sức khỏe</a>
 
       </li>
       <li class="">
-        <a href="/giao-duc" title="Giáo dục">Giáo dục</a>
+        <a href="/giao-duc-khoa-hoc.htm" title="Giáo dục">Giáo dục</a>
       </li>
       <li class="">
-        <a href="/phap-luat" title="Pháp luật">Pháp luật</a>
+        <a href="/phap-luat.htm" title="Pháp luật">Pháp luật</a>
       </li>
       <li class="">
-        <a href="/nghe-thuat" title="Văn nghệ">Văn nghệ</a>
+        <a href="/van-nghe.htm" title="Văn nghệ">Văn nghệ</a>
       </li>
       <li class="">
-        <a href="/giai-tri" title="Giải trí">Giải trí</a>
+        <a href="/giai-tri.htm" title="Giải trí">Giải trí</a>
       </li>
       <li class="">
         <a href="/the-thao.htm" title="Thể thao">Thể thao</a>
@@ -133,8 +133,10 @@
       </li>
 
       <li class="search">
-        <a href="" class="fr" title="Tìm kiếm" rel="nofollow"></a>
-        <input type="text" id="txtKeyWord" class="search-input fr" placeholder="Nhập từ khóa tìm kiếm">
+        <div class="search-box">
+          <button class="btn-search" (click)="search()"></button>
+          <input [(ngModel)]="enteredSearchValue" type="text" class="input-search" placeholder="Type to Search...">
+        </div>
       </li>
     </ul>
   </div>

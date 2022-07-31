@@ -1,3 +1,10 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Montserrat", sans-serif;
+}
 .clearfix:after {
   content: "";
   visibility: hidden;
@@ -5,4 +12,8 @@
   height: 0;
   clear: both;
   font-size: 0;
+}
+.img216x133 {
+  width: 216px;
+  height: 133px;
 }
