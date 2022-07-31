@@ -20,9 +20,6 @@
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
     "@angular/material": "^14.1.0",
-    "@angular/platform-browser": "^14.0.0",
-    "@angular/platform-browser-dynamic": "^14.0.0",
-    "@angular/router": "^14.0.0",
     "ng2-search-filter": "^0.5.1",
     "ngx-infinite-scroll": "^14.0.0",
     "ngx-infinite-scroller": "^0.6.3",
@@ -33,7 +30,6 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.4",
-
     "@angular/cli": "~14.0.0",
     "@angular/compiler-cli": "^14.0.0",
     "@types/jasmine": "~4.0.0",
