@@ -1,0 +1,43 @@
+<div class="cate-right">
+  <div class="broadcast box-tv mg_t10 clearfix">
+    <h2><a href="" title="Truyền hình" class="title">Tin Mới Nhất</a></h2>
+    <div class="clearfix"></div>
+    <div class="news-list">
+      <ng-container *ngFor="let listItem of lastestNews.slice(0,1)">
+        <div class="main-news"><a
+          routerLink="/detail/{{replaceAll(listItem.link,'/','?')}}"
+          title="{{listItem.title}}">
+          <img
+          src="{{listItem.thumbnail}}"
+          alt="{{listItem.title}}"
+          title="{{listItem.title}}" class="img259x146"></a>
+          <h3>
+            <a
+              routerLink="/detail/{{replaceAll(listItem.link,'/','?')}}"
+            title="{{listItem.title}}" class="title">{{listItem.title}}</a>
+          </h3>
+        </div>
+      </ng-container>
+
+
+      <ul class="sub-news" >
+        <ng-container *ngFor="let listItem of lastestNews.slice(6,8)">
+        <li><a
+          routerLink="/detail/{{replaceAll(listItem.link,'/','?')}}"
+          title="{{listItem.title}}">
+          <img
+          src="{{listItem.thumbnail}}"
+          alt="{{listItem.title}}"
+          title="{{listItem.title}}"
+          class="img120x68"></a><a
+          routerLink="/detail/{{replaceAll(listItem.link,'/','?')}}"
+          title="{{listItem.title}}"
+          class="title">{{listItem.title}}</a>
+        </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+
+
+</div>
