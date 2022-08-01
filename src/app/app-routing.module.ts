@@ -10,6 +10,9 @@ import { EducationComponent } from './education/education.component';
 import { LawyerComponent } from './lawyer/lawyer.component';
 import { ArtComponent } from './art/art.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
+import {RegisterComponent} from "./register/register.component";
+import {LoginComponent} from "./login/login.component";
+
 const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'trong-nuoc',component:DomesticComponent},
@@ -20,7 +23,8 @@ const routes: Routes = [
   {path:'giao-duc', component:EducationComponent},
   {path:'phap-luat', component:LawyerComponent},
   {path:'nghe-thuat', component:ArtComponent},
-  {path:'giai-tri', component:EntertainmentComponent},
+  {path: 'dang-ky', component:RegisterComponent},
+  {path: 'dang-nhap', component:LoginComponent}
 ];
 
 @NgModule({

@@ -26,6 +26,8 @@ import {FormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 // import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { RightCateloryComponent } from './right-catelory/right-catelory.componen
     LawyerComponent,
     ArtComponent,
     EntertainmentComponent,
-    CommoncomponentComponent
+    CommoncomponentComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

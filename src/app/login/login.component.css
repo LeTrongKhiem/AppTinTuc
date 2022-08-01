@@ -1,0 +1,33 @@
+#content__login {
+  width: 980px;
+  margin: 35px auto 0 auto;
+  display: flex;
+}
+#content__login .content__login-cen {
+  flex-shrink: 0;
+  margin-left: 10px;
+  min-width: 150px;
+  margin: 0 auto 0 auto;
+  font-size: 13px;
+  width: 320px;
+}
+#content__login .content__login-cen .title__login {
+  font: normal 18px Roboto-Medium;
+  color: #000;
+  text-align: center;
+  font-weight: 600;
+}
+#content__login .content__login-cen .login__withgg-text {
+  width: 100%;
+  height: 46px;
+  margin-top: 9px;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font: normal 13px Roboto-Medium;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=login.component.css.map */
