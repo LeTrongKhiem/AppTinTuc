@@ -20,6 +20,7 @@ import {FormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RightCateloryComponent } from './right-catelory/right-catelory.componen
     ListNewsSearchComponent,
     SearchComponent,
     NewsDetailComponent,
-    RightCateloryComponent
+    RightCateloryComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
