@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {NewsApiService} from "../Service/news-api.service";
 
 @Component({
   selector: 'app-lawyer',
@@ -6,10 +7,21 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lawyer.component.css', '../commoncomponent/commoncomponent.component.css'],
 })
 export class LawyerComponent implements OnInit {
+  phapluatResult : any = [];
+  totalLenght : any;
+  page : number = 1;
 
-  constructor() { }
+  constructor(private service : NewsApiService) {
+    this.getItems();
+  }
 
   ngOnInit(): void {
   }
-
+  getItems():void{
+    this.service.phapluatApi().subscribe((result) => {
+      this.phapluatResult = result.items;
+      this.totalLenght = result.item.length;
+      console.log(result);
+    })
+  }
 }

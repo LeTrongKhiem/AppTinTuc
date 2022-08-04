@@ -2,73 +2,63 @@
   <div class="body-content body-category">
     <div class="cate-left">
       <div class="sub-cate">
-        <h1 class="title-cate">Giải trí</h1>
-        <h2 class="title-cate-child">Chuyển động y học</h2>
-        <h2 class="title-cate-child">Chuyển động y học</h2>
-        <h2 class="title-cate-child">Giới tính</h2>
-        <h2 class="title-cate-child">Sức khỏe của bạn</h2>
-        <h2 class="title-cate-child">Phòng mạch covid-19</h2>
+        <h1 class="title-cate">Trong nước</h1>
       </div>
       <div class="clearfix"></div>
       <div class="box-cate-focus">
-        <ng-container *ngFor="let giaitriItem of giaitriResult.slice(0,1)">
+        <ng-container *ngFor="let thoiSuItem of thoiSuQuocteResult.slice(0,1)">
           <div class="news-info">
             <h3>
-              <a class="title" href="{{giaitriItem.link}}" title="{{giaitriItem.title}}">{{giaitriItem.title}}</a>
+              <a class="title" href="{{thoiSuItem.link}}" title="{{thoiSuItem.title}}">{{thoiSuItem.title}}</a>
             </h3>
-            <p class="sapo">{{giaitriItem.content.slice(giaitriItem.content.search('">') + 2)}}</p>
+            <p class="sapo">{{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
           </div>
-          <a class="img435x273" href="{{giaitriItem.link}}">
-            <img src="{{giaitriItem.thumbnail}}"
-                 alt="{{giaitriItem.alt}}"
-                 title="{{giaitriItem.title}}" class="img435x273">
+          <a class="img435x273" href="{{thoiSuItem.link}}">
+            <img src="{{thoiSuItem.thumbnail}}"
+                 alt="{{thoiSuItem.title}}"
+                 title="{{thoiSuItem.title}}" class="img435x273">
           </a>
         </ng-container>
-
         <div class="clearfix"></div>
         <span class="separator"></span>
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
+          <ul class="list-news clearfix" *ngFor="let thoiSuItem of thoiSuQuocteResult |
+          paginate: {itemsPerPage:5, currentPage: page, totalItems: totalLength}">
+            <li class="news-item ">
 
-          <ul class="list-news clearfix">
-            <ng-container *ngFor="let giaitriItem of giaitriResult">
-              <li class="news-item ">
-                <a href="{{giaitriItem.link}}"
-                   title="{{giaitriItem.title}}"
-                   class="img220x139">
-                  <img src="{{giaitriItem.thumbnail}}"
-                       class="img220x139">
-                </a>
+              <a href=""
 
-                <div class="news-info">
-                  <h3><a href="{{giaitriItem.link}}"
-                         title="{{giaitriItem.title}}"
-                         class="title">{{giaitriItem.title}}</a></h3>
-                  <div class="clearfix"></div>
-                  <ul class="news-relate">
+                 class="img220x139">
+                <img src="{{thoiSuItem.thumbnail}}"
+                     class="img220x139">
+              </a>
 
-                    <li>
-                      <a href=""
-                         title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                         class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
-                        1-8 tới</a>
-                    </li>
-
-                    <li>
-                      <a href=""
-                         title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
-                         class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
-                        từ ngày 1-8</a>
-                    </li>
-
-                  </ul>
-
-                </div>
+              <div class="news-info">
+                <h3><a href=""
+                       title="{{thoiSuItem.title}}"
+                       class="title">{{thoiSuItem.title}}</a></h3>
                 <div class="clearfix"></div>
-              </li>
-            </ng-container>
+
+
+                <ul class="news-relate">
+
+                  <li>
+                    <a href=""
+                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
+                       class="title">{{thoiSuItem.description.slice(thoiSuItem.description.search('">') + 7)}}</a>
+                  </li>
+
+
+
+                </ul>
+
+              </div>
+              <div class="clearfix"></div>
+            </li>
           </ul>
+          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
         </div>
         <div class="clearfix"></div>
 

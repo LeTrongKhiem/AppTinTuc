@@ -48,10 +48,14 @@ export class NewsApiService {
   thoiSuQuocte(): Observable<any> {
     return this.http.get(this.thoiSUQuocTeUrl)
   }
+  thoiSuQuocteCatelory(params:any): Observable<any> {
+    return this.http.get(this.thoiSUQuocTeUrl,{params})
+  }
 
   weatherApi(): Observable<any> {
     return this.http.get(this.weatherApiUrl);
   }
+
   congDoanApi(): Observable<any> {
     return this.http.get(this.congDoanApiUrl)
   }
@@ -85,4 +89,7 @@ export class NewsApiService {
   thiTruongtApi(): Observable<any> {
     return this.http.get(this.thiTruongApiUrl)
   }
+
+
+
 }

@@ -75,8 +75,13 @@
           </a>
 
         </li>
-      </ul>
 
+      </ul>
+      <div class="login-form">
+        <div class="area__authenticate">
+          <a routerLink="/dang-nhap" class="authen-title">Đăng ký / Đăng nhập</a>
+        </div>
+      </div>
 
     </div>
   </div>
@@ -89,7 +94,7 @@
         <a routerLink="/trong-nuoc" title="Trong nước">Trong nước</a>
       </li>
       <li class="">
-        <a href="/thoi-su-quoc-te.htm" title="Quốc tế">Quốc tế</a>
+        <a routerLink="/thoi-su-quoc-te" title="Quốc tế">Quốc tế</a>
       </li>
       <li class="">
         <a href="/cong-doan.htm" title="Công đoàn">Công đoàn</a>
@@ -133,8 +138,10 @@
       </li>
 
       <li class="search">
-        <a href="" class="fr" title="Tìm kiếm" rel="nofollow"></a>
-        <input type="text" id="txtKeyWord" class="search-input fr" placeholder="Nhập từ khóa tìm kiếm">
+        <div class="search-box">
+          <button class="btn-search" (click)="search()"></button>
+          <input [(ngModel)]="enteredSearchValue" type="text" class="input-search" placeholder="Type to Search...">
+        </div>
       </li>
     </ul>
   </div>

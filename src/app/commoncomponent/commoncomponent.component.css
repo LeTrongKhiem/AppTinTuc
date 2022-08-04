@@ -203,3 +203,55 @@
   font-size: 15px;
   margin-left: 10px;
 }
+
+/*Category Right*/
+.cate-right {
+  float: right;
+  background: #e7e9ec;
+  margin-left: 50px;
+  width: 300px;
+  text-align: inherit;
+}
+.cate-right-content::before {
+  background-image: url("https://static.mediacdn.vn/nld/web_images/spritesV8.png");
+}
+.cate-right-content {
+  padding: 19px 20px;
+  border: 1px solid rgba(116,152,189,.35);
+  border-radius: 5px;
+  background: #fff;
+  margin-bottom: 20px;
+  margin-top: 16px;
+  height: 450px;
+  margin-right: 3px;
+  margin-left: 3px;
+}
+.main-news {
+  margin-top: 19px;
+  width: 259px;
+}
+
+.title {
+  color: #000;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 1.31;
+}
+.sub-news {
+  margin-top: 18px;
+}
+.sub-news li:first-child {
+  margin-right: 10px;
+}
+.sub-news img {
+  width: 120px;
+  height: 68px;
+}
+.sub-news li {
+  list-style-type: none;
+  float: left;
+  width: 120px;
+}
+.sub-news .title {
+  font-size: 12px;
+}
