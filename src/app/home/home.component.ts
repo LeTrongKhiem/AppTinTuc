@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.css','../app.component.css']
 })
 export class HomeComponent implements OnInit {
   @Output() onSelected = new EventEmitter<any>();
@@ -12,7 +12,7 @@ export class HomeComponent implements OnInit {
   constructor(private service: NewsApiService) {
 
   }
-
+  temp : any;
   latestNewsResult: any = []
   noiThangResult: any = []
   docQuyenResult: any = []
@@ -36,6 +36,7 @@ export class HomeComponent implements OnInit {
 
 
   ngOnInit(): void {
+
     this.service.latestNews().subscribe((result) => {
       // console.log(result)
       this.latestNewsResult = result.items;
@@ -57,9 +58,8 @@ export class HomeComponent implements OnInit {
       this.thoiSuQuocTeResult = result.items;
     })
     this.service.weatherApi().subscribe((result) => {
-      console.log(result);
       this.weatherResult = result;
-
+      this.temp =Math.floor(this.weatherResult.main.temp - 273.15);
     })
     this.service.congDoanApi().subscribe((result) => {
       this.congDoanResult = result.items;
@@ -97,6 +97,7 @@ export class HomeComponent implements OnInit {
 
 
   }
+
 
 
 }
