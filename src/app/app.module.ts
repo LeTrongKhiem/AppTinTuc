@@ -14,20 +14,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForeignComponent } from './foreign/foreign.component';
 import {InfiniteScrollModule} from "ngx-infinite-scroll";
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
-import { HealthComponent } from './health/health.component';
-import { EducationComponent } from './education/education.component';
-import { LawyerComponent } from './lawyer/lawyer.component';
-import { ArtComponent } from './art/art.component';
-import { EntertainmentComponent } from './entertainment/entertainment.component';
-import { CommoncomponentComponent } from './commoncomponent/commoncomponent.component';
-// import { ListNewsSearchComponent } from './list-news-search/list-news-search.component';
-// import { SearchComponent } from './search/search.component';
+import { ListNewsSearchComponent } from './list-news-search/list-news-search.component';
+import { SearchComponent } from './search/search.component';
 import {FormsModule} from "@angular/forms";
 import {Ng2SearchPipeModule} from "ng2-search-filter";
-// import { NewsDetailComponent } from './news-detail/news-detail.component';
+import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -38,18 +31,11 @@ import { LoginComponent } from './login/login.component';
     DomesticComponent,
     ForeignComponent,
     ScrollToTopComponent,
-    // ListNewsSearchComponent,
-    // SearchComponent,
-    // NewsDetailComponent,
+    ListNewsSearchComponent,
+    SearchComponent,
+    NewsDetailComponent,
     RightCateloryComponent,
-    HealthComponent,
-    EducationComponent,
-    LawyerComponent,
-    ArtComponent,
-    EntertainmentComponent,
-    CommoncomponentComponent,
-    RegisterComponent,
-    LoginComponent
+    CommentComponent
   ],
   imports: [
     BrowserModule,

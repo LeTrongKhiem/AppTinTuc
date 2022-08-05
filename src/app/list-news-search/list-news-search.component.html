@@ -1,0 +1,45 @@
+<app-search  (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+
+<section class="body">
+  <div class="body-content">
+
+    <div class="grid wide">
+      <div class="row no-gutters">
+        <ng-container *ngFor="let listItems of tiemkiemResult |filter:searchText|  paginate: { itemsPerPage: 8, currentPage: page } ">
+        <div class="col l-3" >
+          <div class="card">
+            <img class="img-fluid w-100"
+                 src="{{listItems.thumbnail}}"
+                 style="object-fit: cover;">
+            <div class="bg-white border border-top-0 p-4">
+              <div class="mb-2">
+                <a class="text-body" href=""><small>{{listItems.pubDate}}</small></a>
+              </div>
+              <a class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold " href="">
+                <p class="txt-title">{{listItems.title}}</p></a>
+              <p class="sapo">{{listItems.content.slice(listItems.content.search('">') + 2)}}</p>
+
+
+            </div>
+            <div class="bg-white border  btn-readmore">
+
+              <a class="read-more-button" routerLink="/detail/{{replaceAll(listItems.link,'/','?')}}">Read More</a>
+
+            </div>
+          </div>
+
+
+        </div>
+
+        </ng-container>
+
+      </div>
+    </div>
+
+
+  </div>
+
+
+</section>
+
+<pagination-controls class="pagination" (pageChange)="page =$event"previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
