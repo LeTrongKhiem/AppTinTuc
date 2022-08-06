@@ -12,6 +12,8 @@ import { ArtComponent } from './art/art.component';
 import { EntertainmentComponent } from './entertainment/entertainment.component';
 import {RegisterComponent} from "./register/register.component";
 import {LoginComponent} from "./login/login.component";
+import {ListNewsSearchComponent} from "./list-news-search/list-news-search.component";
+import {NewsDetailComponent} from "./news-detail/news-detail.component";
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -24,7 +26,9 @@ const routes: Routes = [
   {path:'phap-luat', component:LawyerComponent},
   {path:'nghe-thuat', component:ArtComponent},
   {path: 'dang-ky', component:RegisterComponent},
-  {path: 'dang-nhap', component:LoginComponent}
+  {path: 'dang-nhap', component:LoginComponent},
+  {path:'search/:searchTerm',component:ListNewsSearchComponent},
+  {path:'detail/:link',component:NewsDetailComponent},
 ];
 
 @NgModule({
