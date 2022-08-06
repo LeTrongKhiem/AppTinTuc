@@ -21,6 +21,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
 import { CommentComponent } from './comment/comment.component';
+import { UnionComponent } from './union/union.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { CommentComponent } from './comment/comment.component';
     SearchComponent,
     NewsDetailComponent,
     RightCateloryComponent,
-    CommentComponent
+    CommentComponent,
+    UnionComponent
   ],
   imports: [
     BrowserModule,
