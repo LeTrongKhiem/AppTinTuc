@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-foreign',
   templateUrl: './foreign.component.html',
-  styleUrls: ['./foreign.component.css']
+  styleUrls: ['./foreign.component.css', '../app.component.css']
 })
 export class ForeignComponent implements OnInit {
 
