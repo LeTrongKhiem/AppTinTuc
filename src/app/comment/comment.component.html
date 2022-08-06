@@ -1,0 +1,50 @@
+<div class="comment-container">
+  <div class="comment-input-container">
+    <div class="text-comment">
+      <div class="title">Bình Luận</div>
+      <div class="username-input">
+        <input type="text" placeholder="Tên bạn" class="username" [(ngModel)]="userName">
+      </div>
+      <div class="text-input">
+        <textarea  placeholder="Nội dung bình luận" [(ngModel)]="comment"></textarea>
+      </div>
+    </div>
+    <div class="comment-action clearfix">
+      <div class="total-comment">
+        <div class="icon"></div>
+      </div>
+      <div class="action">
+        <a (click)="post()">Gửi</a>
+      </div>
+
+    </div>
+
+  </div>
+  <div class="comment-list" id="divComment" >
+
+    <div class="comment-item clearfix" *ngFor="let comments of postComment;let i  = index">
+      <ng-container *ngIf="i!==0">
+      <div class="comment-content">
+        <div class="comment-arrow"></div>
+
+        <div class="comment-detail">
+          <div class="comment-info clearfix">
+            <div class="username">
+              <span>{{comments.userName}}</span>
+            </div>
+          </div>
+          <div class="comment-description">
+            {{comments.comment}}
+          </div>
+
+        </div>
+      </div>
+
+      </ng-container>
+    </div>
+
+
+  </div>
+
+  <div class="clearfix"></div>
+</div>
