@@ -1,0 +1,132 @@
+.comment-container {
+  background: #fff;
+  width: 670px;
+  margin-left: 180px;
+  height: 100%;
+}
+.comment-container .comment-input-container {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f6f6f6;
+}
+.comment-container .comment-input-container .text-comment .title {
+  color: #0959ab;
+  font: normal 15px/normal Roboto-Bold;
+  text-transform: uppercase;
+  margin-bottom: 17px;
+}
+.comment-container .comment-input-container .text-comment .title:before {
+  width: 5px;
+  height: 13px;
+  background-color: #ff8503;
+  content: '';
+  display: block;
+  float: left;
+  margin-right: 5px;
+  margin-top: 2px;
+}
+.comment-container .comment-input-container .text-comment .text-input textarea {
+  border: 1px solid #e1e1e1;
+  resize: none;
+  width: 600px;
+  border-radius: 2px;
+  padding: 13px 19px;
+  font-size: 13px;
+  outline: none;
+  font-family: Roboto-Regular;
+}
+.comment-container .comment-input-container .comment-action {
+  margin-top: 20px;
+}
+.comment-container .comment-input-container .comment-action .total-comment {
+  float: left;
+}
+.comment-container .comment-input-container .comment-action .total-comment .icon {
+  background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+  display: block;
+  background-repeat: no-repeat;
+  background-position: -492px -56px;
+  width: 14px;
+  height: 14px;
+  margin: 0 auto;
+  float: left;
+  margin-top: 2px;
+}
+.comment-container .comment-input-container .comment-action .total-comment .text {
+  color: #6c6a6a;
+  font: normal 12px/normal Roboto-Bold;
+  color: #6c6a6a;
+  line-height: 18px;
+  margin-left: 7px;
+  float: left;
+}
+.comment-container .comment-input-container .comment-action .action {
+  float: right;
+  margin-top: 5px;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+  font-size: 0;
+}
+.comment-container .comment-input-container .comment-action .action a {
+  padding: 7px 42px;
+  background: #0959ab;
+  border-radius: 3px;
+  color: #fff;
+  font: normal 14px/normal Roboto-Medium;
+}
+.comment-container .comment-list {
+  margin-top: 20px;
+  padding-bottom: 19px;
+}
+.comment-container .comment-list .comment-item .comment-content {
+  border: 1px solid #dfe0e7;
+  border-radius: 5px;
+  float: left;
+  padding: 15px 30px;
+  position: relative;
+  width: 607px;
+  background: #fbfbfb;
+}
+.comment-container .comment-list .comment-item {
+    margin: 10px 0;
+}
+.comment-container .comment-list .comment-item .comment-content .comment-arrow {
+  position: absolute;
+  top: 20px;
+  left: -11px;
+  background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+  display: block;
+  background-repeat: no-repeat;
+  background-position: -492px -20px;
+  width: 11px;
+  height: 21px;
+}
+.comment-container .comment-list .comment-item .comment-content .comment-detail .comment-description {
+  margin-top: 5px;
+  color: #7d7d7d;
+  font: normal 13px/normal Roboto-Medium;
+  line-height: 22px;
+  margin-bottom: 0;
+}
+.comment-container .comment-list .comment-item .comment-content .comment-detail .comment-info .username {
+  float: left;
+  text-transform: capitalize;
+  color: #303030;
+  font: normal 13px/normal Roboto-Bold;
+}
+.username-input input{
+  border: 1px solid #e1e1e1;
+  resize: none;
+  width: 600px;
+  border-radius: 2px;
+  padding: 10px 19px;
+  font-size: 13px;
+  outline: none;
+  font-family: Roboto-Regular;
+  margin-bottom: 20px;
+}

@@ -28,6 +28,7 @@ import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -38,10 +39,6 @@ import { LoginComponent } from './login/login.component';
     DomesticComponent,
     ForeignComponent,
     ScrollToTopComponent,
-    // ListNewsSearchComponent,
-    // SearchComponent,
-    // NewsDetailComponent,
-    RightCateloryComponent,
     HealthComponent,
     EducationComponent,
     LawyerComponent,
@@ -50,6 +47,11 @@ import { LoginComponent } from './login/login.component';
     CommoncomponentComponent,
     RegisterComponent,
     LoginComponent
+    ListNewsSearchComponent,
+    SearchComponent,
+    NewsDetailComponent,
+    RightCateloryComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,
