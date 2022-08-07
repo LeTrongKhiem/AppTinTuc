@@ -17,6 +17,9 @@ import {RealestateComponent} from "./realestate/realestate.component";
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import {NgxPaginationModule} from "ngx-pagination";
 import { IdealsoflifeComponent } from './idealsoflife/idealsoflife.component';
+import { StraighttalkComponent } from './straighttalk/straighttalk.component';
+import { ExclusivenewsComponent } from './exclusivenews/exclusivenews.component';
+import { MarketComponent } from './market/market.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { IdealsoflifeComponent } from './idealsoflife/idealsoflife.component';
     GreentourismComponent,
     ScrollToTopComponent,
     IdealsoflifeComponent,
+    StraighttalkComponent,
+    ExclusivenewsComponent,
+    MarketComponent,
   ],
   imports: [
     BrowserModule,
