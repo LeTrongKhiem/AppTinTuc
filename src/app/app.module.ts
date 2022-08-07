@@ -15,6 +15,8 @@ import { WomenComponent } from './women/women.component';
 import { GreentourismComponent } from './greentourism/greentourism.component';
 import {RealestateComponent} from "./realestate/realestate.component";
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import {NgxPaginationModule} from "ngx-pagination";
+import { IdealsoflifeComponent } from './idealsoflife/idealsoflife.component';
 
 @NgModule({
   declarations: [
@@ -28,12 +30,14 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     TechnologyComponent,
     WomenComponent,
     GreentourismComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    IdealsoflifeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -24,13 +24,13 @@
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
-          <ul class="list-news clearfix" *ngFor="let thoiSuItem of congNgheResult">
-            <!--           |paginate: {-->
-            <!--                     itemsPerPage:5,-->
-            <!--                     currentPage: page,-->
-            <!--                     totalItems: totalLength-->
-            <!--                     }-->
-            <!--            >-->
+          <ul class="list-news clearfix" *ngFor="let thoiSuItem of congNgheResult
+                       |paginate: {
+                                 itemsPerPage:5,
+                                 currentPage: page,
+                                 totalItems: totalLength
+                                 }
+                        ">
             <li class="news-item ">
 
               <a href=""
@@ -63,8 +63,7 @@
               <div class="clearfix"></div>
             </li>
           </ul>
-          <!--          <pagination-controls (pageChange)="page =$event" ></pagination-controls>-->
-        </div>
+          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>        </div>
         <div class="clearfix"></div>
 
       </div>
