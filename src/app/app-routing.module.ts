@@ -6,6 +6,7 @@ import {ForeignComponent} from "./foreign/foreign.component";
 import {ListNewsSearchComponent} from "./list-news-search/list-news-search.component";
 import {NewsDetailComponent} from "./news-detail/news-detail.component";
 import {UnionComponent} from "./union/union.component";
+import {YouReadComponent} from "./you-read/you-read.component";
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -14,6 +15,7 @@ const routes: Routes = [
   {path:'search/:searchTerm',component:ListNewsSearchComponent},
   {path:'detail/:link',component:NewsDetailComponent},
   {path:'cong-doan',component:UnionComponent},
+  {path:'ban-doc',component:YouReadComponent}
 ];
 
 @NgModule({

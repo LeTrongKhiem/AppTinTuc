@@ -22,6 +22,7 @@ import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
 import { CommentComponent } from './comment/comment.component';
 import { UnionComponent } from './union/union.component';
+import { YouReadComponent } from './you-read/you-read.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,9 @@ import { UnionComponent } from './union/union.component';
     NewsDetailComponent,
     RightCateloryComponent,
     CommentComponent,
-    UnionComponent
+    UnionComponent,
+    YouReadComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -47,7 +50,8 @@ import { UnionComponent } from './union/union.component';
     BrowserAnimationsModule,
     InfiniteScrollModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+
   ],
   providers: [],
   bootstrap: [AppComponent]

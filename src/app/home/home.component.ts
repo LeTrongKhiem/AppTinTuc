@@ -1,13 +1,12 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
-
+import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css','../app.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Output() onSelected = new EventEmitter<any>();
 
   constructor(private service: NewsApiService) {
 
