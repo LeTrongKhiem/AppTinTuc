@@ -29,7 +29,11 @@ import { RightCateloryComponent } from './right-catelory/right-catelory.componen
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { CommentComponent } from './comment/comment.component';
-
+import { ReactiveFormsModule } from '@angular/forms';
+import {
+  SocialLoginModule,
+  SocialAuthServiceConfig, GoogleLoginProvider,
+} from 'angularx-social-login';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +58,8 @@ import { CommentComponent } from './comment/comment.component';
     CommentComponent
   ],
   imports: [
+    ReactiveFormsModule,
+    SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
@@ -63,7 +69,20 @@ import { CommentComponent } from './comment/comment.component';
     FormsModule,
     Ng2SearchPipeModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider('72023525219-ldr5ss039fenmdlvmcgh0rihsrrhipj0.apps.googleusercontent.com'),
+          },
+        ],
+      } as SocialAuthServiceConfig,
+    },
+  ],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
