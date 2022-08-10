@@ -25,6 +25,7 @@ const routes: Routes = [
   {path:'giao-duc', component:EducationComponent},
   {path:'phap-luat', component:LawyerComponent},
   {path:'nghe-thuat', component:ArtComponent},
+  {path:'giai-tri', component:EntertainmentComponent},
   {path: 'dang-ky', component:RegisterComponent},
   {path: 'dang-nhap', component:LoginComponent},
   {path:'search/:searchTerm',component:ListNewsSearchComponent},
