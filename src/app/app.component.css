@@ -6,6 +6,7 @@
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
+  list-style-type: none;
 }
 .clearfix:after {
   content: "";
@@ -25,4 +26,22 @@
 
  .fr {
    float: right;
+ }
+ /* Mobile & Tablet */
+ @media (max-width:1023px) {
+
+ }
+ /* Tablet */
+ @media (min-width:740px)and (max-width:1023px) {
+
+
+ }
+ /* Mobile */
+ @media (max-width:739px) {
+  app-header {
+    display: none;
+  }
+   app-header-mobile{
+     display: block;
+   }
  }

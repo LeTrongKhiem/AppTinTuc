@@ -388,3 +388,10 @@ img {
   width: 17px;
   height: 17px;
 }
+.menu-container ul.menu-top li.search .search-input-active {
+  width: 160px;
+  visibility: visible;
+  opacity: 1;
+}
+
+
