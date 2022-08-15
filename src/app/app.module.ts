@@ -39,15 +39,12 @@ import { TechnologyComponent } from './technology/technology.component';
 import { WomenComponent } from './women/women.component';
 import { GreentourismComponent } from './greentourism/greentourism.component';
 import {RealestateComponent} from "./realestate/realestate.component";
-import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
-import {NgxPaginationModule} from "ngx-pagination";
 import { IdealsoflifeComponent } from './idealsoflife/idealsoflife.component';
 import { StraighttalkComponent } from './straighttalk/straighttalk.component';
 import { ExclusivenewsComponent } from './exclusivenews/exclusivenews.component';
 import { MarketComponent } from './market/market.component';
 import { UnionComponent } from './union/union.component';
 import { YouReadComponent } from './you-read/you-read.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
 
@@ -77,6 +74,16 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     YouReadComponent,
     HeaderMobileComponent,
     FooterMobileComponent,
+    RealestateComponent,
+    SportsComponent,
+    TechnologyComponent,
+    WomenComponent,
+    GreentourismComponent,
+    IdealsoflifeComponent,
+    StraighttalkComponent,
+    ExclusivenewsComponent,
+    MarketComponent,
+    ScrollToTopComponent
 
   ],
   imports: [
@@ -90,7 +97,6 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     InfiniteScrollModule,
     FormsModule,
     Ng2SearchPipeModule,
-    FlexLayoutModule,
   ],
   providers: [
     {
@@ -106,25 +112,6 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
       } as SocialAuthServiceConfig,
     },
   ],
-  bootstrap: [AppComponent],
-    RealestateComponent,
-    SportsComponent,
-    TechnologyComponent,
-    WomenComponent,
-    GreentourismComponent,
-    ScrollToTopComponent,
-    IdealsoflifeComponent,
-    StraighttalkComponent,
-    ExclusivenewsComponent,
-    MarketComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    NgxPaginationModule
-  ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
