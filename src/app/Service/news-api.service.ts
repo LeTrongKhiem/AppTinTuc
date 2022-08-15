@@ -13,7 +13,7 @@ export class NewsApiService {
   latestNewsApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-moi-nhat.rss';
   noiThangApitUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fnoi-thang.rss'
   docQuyenApitUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Ftin-doc-quyen.rss';
-  thoiSuApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss';
+  thoiSuApiUrl = ' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su.rss&api_key=wyupoxrahoywqd0moxlpaohvlediwjmy5zprs5hs';
   thoiSUQuocTeUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthoi-su-quoc-te.rss';
   congDoanApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fcong-doan.rss'
   banDocApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fban-doc.rss';
@@ -21,7 +21,7 @@ export class NewsApiService {
   sucKhoeApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fsuc-khoe.rss'
   giaoDucApiUrl ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiao-duc-khoa-hoc.rss'
   weatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=ho chi minh&appid=09f1c2260cdee53ceaf045da1d0853d5';
-  phapluatApiUrl= 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fphap-luat.rss'
+  phapluatApiUrl= ' https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fphap-luat.rss&api_key=wyupoxrahoywqd0moxlpaohvlediwjmy5zprs5hs'
   giaiTriApiUrl= 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fgiai-tri.rss';
   congNgheApiUrl= 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fcong-nghe.rss';
   duLichXanhApiUrl= 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fdu-lich-xanh.rss';

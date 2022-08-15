@@ -1,13 +1,12 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
-
+import { OwlOptions } from 'ngx-owl-carousel-o';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css','../app.component.css']
 })
 export class HomeComponent implements OnInit {
-  @Output() onSelected = new EventEmitter<any>();
 
   constructor(private service: NewsApiService) {
 
@@ -42,7 +41,7 @@ export class HomeComponent implements OnInit {
       this.latestNewsResult = result.items;
     })
     this.service.noiThang().subscribe((result) => {
-      console.log(result);
+      // console.log(result);
       this.noiThangResult = result.items;
     })
     this.service.docQuyen().subscribe((result) => {
@@ -50,7 +49,7 @@ export class HomeComponent implements OnInit {
       this.docQuyenResult = result.items;
     })
     this.service.thoiSu().subscribe((result) => {
-      // console.log(result);
+      console.log(result);
       this.thoiSuResult = result.items;
     })
     this.service.thoiSuQuocte().subscribe((result) => {

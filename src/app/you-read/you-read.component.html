@@ -2,11 +2,11 @@
   <div class="body-content body-category">
     <div class="cate-left">
       <div class="sub-cate">
-        <h1 class="title-cate">Trong nước</h1>
+        <h1 class="title-cate">Bạn Đọc</h1>
       </div>
       <div class="clearfix"></div>
       <div class="box-cate-focus">
-        <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(0,1)">
+        <ng-container *ngFor="let thoiSuItem of banDocResult.slice(0,1)">
           <div class="news-info">
             <h3>
               <a class="title" href="{{thoiSuItem.link}}" title="{{thoiSuItem.title}}">{{thoiSuItem.title}}</a>
@@ -14,8 +14,9 @@
             <p class="sapo">{{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
           </div>
           <a class="img435x273" href="{{thoiSuItem.link}}">
-            <img src="{{thoiSuItem.thumbnail}}" alt="{{thoiSuItem.title}}" title="{{thoiSuItem.title}}"
-              class="img435x273">
+            <img src="{{thoiSuItem.thumbnail}}"
+                 alt="{{thoiSuItem.title}}"
+                 title="{{thoiSuItem.title}}" class="img435x273">
           </a>
         </ng-container>
         <div class="clearfix"></div>
@@ -23,29 +24,30 @@
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
-          <ul class="list-news clearfix" *ngFor="let thoiSuItem of thoiSuResult
-           |paginate: {
-                     itemsPerPage:5,
-                     currentPage: page,
-                     totalItems: totalLength
-                     }
-            ">
+          <ul class="list-news clearfix" *ngFor="let thoiSuItem of banDocResult |
+          paginate: {itemsPerPage:5, currentPage: page, totalItems: totalLength}">
             <li class="news-item ">
 
-              <a href="" class="img220x139">
-                <img src="{{thoiSuItem.thumbnail}}" class="img220x139">
+              <a href=""
+
+                 class="img220x139">
+                <img src="{{thoiSuItem.thumbnail}}"
+                     class="img220x139">
               </a>
 
               <div class="news-info">
-                <h3><a href="" title="{{thoiSuItem.title}}" class="title">{{thoiSuItem.title}}</a></h3>
+                <h3><a href=""
+                       title="{{thoiSuItem.title}}"
+                       class="title">{{thoiSuItem.title}}</a></h3>
                 <div class="clearfix"></div>
 
 
                 <ul class="news-relate">
 
                   <li>
-                    <a href="" title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                      class="title">{{thoiSuItem.description.slice(thoiSuItem.description.search('">')+2)}}</a>
+                    <a href=""
+                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
+                       class="title">{{thoiSuItem.description.slice(thoiSuItem.description.search('">') + 7)}}</a>
                   </li>
 
 
@@ -56,7 +58,7 @@
               <div class="clearfix"></div>
             </li>
           </ul>
-          <pagination-controls (pageChange)="page =$event"></pagination-controls>
+          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
         </div>
         <div class="clearfix"></div>
 
@@ -68,12 +70,13 @@
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
-          <ul class="list-news">
+          <ul class="list-news" >
 
-            <li *ngFor="let thoiSuItem of thoiSuResult.slice(2,5) ;let i = index">
+            <li *ngFor="let thoiSuItem of banDocResult.slice(2,5) ;let i = index">
 
               <a href="" class="img216x133">
-                <img src="{{thoiSuItem.thumbnail}}" class="img216x133">
+                <img src="{{thoiSuItem.thumbnail}}"
+                     class="img216x133">
               </a>
 
 
@@ -86,8 +89,9 @@
         </div>
       </div>
     </div>
-    <app-right-catelory></app-right-catelory>
+
   </div>
   <div class="clearfix"></div>
 
 </section>
+

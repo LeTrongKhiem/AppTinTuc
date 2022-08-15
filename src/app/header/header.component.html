@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" xmlns="">
   <div class="bg_top_header">
     <div class="top-header">
       <p class="hotline">
@@ -104,10 +104,10 @@
         <a routerLink="/thoi-su-quoc-te" title="Quốc tế">Quốc tế</a>
       </li>
       <li class="">
-        <a href="/cong-doan.htm" title="Công đoàn">Công đoàn</a>
+        <a routerLink="/cong-doan" title="Công đoàn">Công đoàn</a>
       </li>
       <li class="">
-        <a href="/ban-doc.htm" title="Bạn đọc">Bạn đọc</a>
+        <a routerLink="/ban-doc" title="Bạn đọc">Bạn đọc</a>
       </li>
       <li class="">
         <a href="/kinh-te.htm" title="Kinh tế">Kinh tế</a>
@@ -143,14 +143,11 @@
       <li>
         <a href="https://diaoc.nld.com.vn" target="_blank" rel="nofollow" title="Địa ốc">Địa ốc</a>
       </li>
-
       <li class="search">
-        <div class="search-box">
-          <button class="btn-search" (click)="search()"></button>
-          <input [(ngModel)]="enteredSearchValue" type="text" class="input-search" placeholder="Type to Search...">
-        </div>
+        <a class="fr" title="Tìm kiếm" (click)="openSearch()"></a>
+        <input type="text" id="txtKeyWord" [(ngModel)]="enteredSearchValue" class="search-input fr"
+          (keyup.enter)="search()" [class.search-input-active]="showSearch" placeholder="Nhập từ khóa tìm kiếm">
       </li>
     </ul>
   </div>
 </header>
-<router-outlet></router-outlet>

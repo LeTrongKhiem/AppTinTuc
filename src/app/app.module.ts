@@ -45,6 +45,11 @@ import { IdealsoflifeComponent } from './idealsoflife/idealsoflife.component';
 import { StraighttalkComponent } from './straighttalk/straighttalk.component';
 import { ExclusivenewsComponent } from './exclusivenews/exclusivenews.component';
 import { MarketComponent } from './market/market.component';
+import { UnionComponent } from './union/union.component';
+import { YouReadComponent } from './you-read/you-read.component';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
+import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
 
 @NgModule({
   declarations: [
@@ -67,7 +72,12 @@ import { MarketComponent } from './market/market.component';
     SearchComponent,
     NewsDetailComponent,
     RightCateloryComponent,
-    CommentComponent
+    CommentComponent,
+    UnionComponent,
+    YouReadComponent,
+    HeaderMobileComponent,
+    FooterMobileComponent,
+
   ],
   imports: [
     ReactiveFormsModule,
@@ -79,7 +89,8 @@ import { MarketComponent } from './market/market.component';
     BrowserAnimationsModule,
     InfiniteScrollModule,
     FormsModule,
-    Ng2SearchPipeModule
+    Ng2SearchPipeModule,
+    FlexLayoutModule,
   ],
   providers: [
     {

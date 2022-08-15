@@ -1,0 +1,101 @@
+.footer {
+  margin-top: 20px;
+  padding: 20px 15px 70px;
+  background: #005bb2;
+  position: relative;
+}
+.footer .top {
+  margin-bottom: 20px;
+}
+.footer .top .logo {
+  float: left;
+  display: block;
+  width: calc((100vw - 45px)/2);
+}
+.footer p.sologan {
+  color: #fff;
+  font: normal 11px/normal Roboto-Medium;
+  line-height: 15px;
+  margin-top: 0;
+  float: left;
+  margin-left: 15px;
+  width: calc((100vw - 45px)/2);
+}
+.footer .left {
+  float: left;
+  width: calc((100vw - 45px)/2);
+}
+.footer p {
+  color: #fff;
+  font-size: 11px;
+  line-height: 15px;
+}
+.footer .right {
+  float: left;
+  margin-left: 15px;
+  width: calc((100vw - 45px)/2);
+}
+.footer-menu {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  padding: 15px;
+  border-top: 1px solid #999;
+  width: calc(100vw);
+  background: #fff;
+  z-index: 9999;
+  display: none;
+}
+.footer-menu .footer-nav .item {
+   float: left;
+   width: calc((100vw - 30px)/5);
+   text-align: center;
+ }
+.footer-menu .footer-nav .item a {
+  color: #999;
+  font-size: 8px;
+  line-height: 14px;
+}
+.footer-menu .footer-nav .item a.active {
+  color: #005bb2;
+}
+.footer-menu .footer-nav .item .home:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  background-image: url(https://static.mediacdn.vn/nld/web_images/mob/HomeActive2.svg);
+  display: block;
+  margin: 0 auto 5px;
+}
+.footer-menu .footer-nav .item .most-view:before {
+  content: '';
+  width: 20px;
+  height: 18px;
+  background-image: url(https://static.mediacdn.vn/nld/web_images/mob/MostView.svg);
+  display: block;
+  margin: 0 auto 7px;
+}
+.footer-menu .footer-nav .item .hot-news:before {
+   content: '';
+   width: 16px;
+   height: 20px;
+   display: block;
+   margin: 0 auto 5px;
+   background-image: url(https://static.mediacdn.vn/nld/web_images/mob/HotNews.svg);
+ }
+.footer-menu .footer-nav .item .media:before {
+  content: '';
+  width: 20px;
+  height: 18px;
+  display: block;
+  background-image: url(https://static.mediacdn.vn/nld/web_images/mob/Media.svg);
+  margin: 0 auto 7px;
+}
+.footer-menu .footer-nav .item .emagazine:before {
+  content: '';
+  width: 16px;
+  height: 20px;
+  display: block;
+  margin: 0 auto 5px;
+  background-image: url(https://static.mediacdn.vn/nld/web_images/mob/Magazine.svg);
+}

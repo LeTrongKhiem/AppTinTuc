@@ -42,3 +42,8 @@
 #searchQuerySubmit:hover {
   cursor: pointer;
 }
+@media (max-width:739px) {
+  .wrapper{
+    width: 60% !important;
+  }
+}

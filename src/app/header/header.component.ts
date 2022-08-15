@@ -7,7 +7,7 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+showSearch:boolean = false;
   constructor(private  router : Router) { }
 
   ngOnInit(): void {
@@ -21,4 +21,8 @@ export class HeaderComponent implements OnInit {
   search(){
     this.router.navigate(['/search',this.enteredSearchValue]);
   }
+  openSearch(){
+    this.showSearch = !this.showSearch;
+  }
+
 }

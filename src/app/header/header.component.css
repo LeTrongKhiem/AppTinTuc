@@ -406,3 +406,8 @@ img {
   font: bold 11px Tahoma;
   color: #094e95;
 }
+.menu-container ul.menu-top li.search .search-input-active {
+  width: 160px;
+  visibility: visible;
+  opacity: 1;
+}
