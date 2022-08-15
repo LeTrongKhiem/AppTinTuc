@@ -12,7 +12,7 @@ import { DomesticComponent } from './domestic/domestic.component';
 import {NgxPaginationModule} from "ngx-pagination";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ForeignComponent } from './foreign/foreign.component';
-import {InfiniteScrollModule} from "ngx-infinite-scroll";
+// import {InfiniteScrollModule} from "ngx-infinite-scroll";
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { HealthComponent } from './health/health.component';
 import { EducationComponent } from './education/education.component';
@@ -23,17 +23,17 @@ import { CommoncomponentComponent } from './commoncomponent/commoncomponent.comp
 import { ListNewsSearchComponent } from './list-news-search/list-news-search.component';
 import { SearchComponent } from './search/search.component';
 import {FormsModule} from "@angular/forms";
-import {Ng2SearchPipeModule} from "ng2-search-filter";
+// import {Ng2SearchPipeModule} from "ng2-search-filter";
 import { NewsDetailComponent } from './news-detail/news-detail.component';
 import { RightCateloryComponent } from './right-catelory/right-catelory.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import { CommentComponent } from './comment/comment.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import {
-  SocialLoginModule,
-  SocialAuthServiceConfig, GoogleLoginProvider,
-} from 'angularx-social-login';
+// import {
+//   SocialLoginModule,
+//   SocialAuthServiceConfig, GoogleLoginProvider,
+// } from 'angularx-social-login';
 import { SportsComponent } from './sports/sports.component';
 import { TechnologyComponent } from './technology/technology.component';
 import { WomenComponent } from './women/women.component';
@@ -88,30 +88,30 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
   ],
   imports: [
     ReactiveFormsModule,
-    SocialLoginModule,
+    // SocialLoginModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     NgxPaginationModule,
     BrowserAnimationsModule,
-    InfiniteScrollModule,
+    // InfiniteScrollModule,
     FormsModule,
-    Ng2SearchPipeModule,
+    // Ng2SearchPipeModule,
   ],
-  providers: [
-    {
-      provide: 'SocialAuthServiceConfig',
-      useValue: {
-        autoLogin: false,
-        providers: [
-          {
-            id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('72023525219-ldr5ss039fenmdlvmcgh0rihsrrhipj0.apps.googleusercontent.com'),
-          },
-        ],
-      } as SocialAuthServiceConfig,
-    },
-  ],
+  // providers: [
+  //   {
+  //     provide: 'SocialAuthServiceConfig',
+  //     useValue: {
+  //       autoLogin: false,
+  //       providers: [
+  //         {
+  //           id: GoogleLoginProvider.PROVIDER_ID,
+  //           provider: new GoogleLoginProvider('72023525219-ldr5ss039fenmdlvmcgh0rihsrrhipj0.apps.googleusercontent.com'),
+  //         },
+  //       ],
+  //     } as SocialAuthServiceConfig,
+  //   },
+  // ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

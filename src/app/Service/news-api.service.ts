@@ -28,7 +28,7 @@ export class NewsApiService {
   phuNuApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fchuyen-trang-phu-nu.rss';
   thiTruongApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthi-truong.rss&api_key=hzd7djd8ns02ynhshwmzabrxlacmgumgik3gcv7q';
   diaOcApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fdia-oc.rss';
-  theThaoApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fwww.reddit.com%2Fr%2Fgifs.rss&api_key=hzd7djd8ns02ynhshwmzabrxlacmgumgik3gcv7q';
+  theThaoApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthe-thao.rss';
   lyTuongSongApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fly-tuong-song.rss'
 
   latestNews(): Observable<any> {

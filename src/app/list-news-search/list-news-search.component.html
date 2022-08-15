@@ -5,7 +5,7 @@
 
     <div class="grid wide">
       <div class="row no-gutters">
-        <ng-container *ngFor="let listItems of tiemkiemResult |filter:searchText|  paginate: { itemsPerPage: 8, currentPage: page } ">
+        <ng-container *ngFor="let listItems of tiemkiemResult |  paginate: { itemsPerPage: 8, currentPage: page } ">
         <div class="col l-3 m-6 c-12" >
           <div class="card">
             <img class="img-fluid w-100"
