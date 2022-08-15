@@ -7,17 +7,16 @@
       <div class="clearfix"></div>
       <div class="box-cate-focus">
         <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(0,1)">
-        <div class="news-info">
-          <h3>
-            <a class="title" href="{{thoiSuItem.link}}" title="{{thoiSuItem.title}}">{{thoiSuItem.title}}</a>
-          </h3>
-          <p class="sapo">{{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
-        </div>
-        <a class="img435x273" href="{{thoiSuItem.link}}">
-          <img src="{{thoiSuItem.thumbnail}}"
-               alt="{{thoiSuItem.title}}"
-               title="{{thoiSuItem.title}}" class="img435x273">
-        </a>
+          <div class="news-info">
+            <h3>
+              <a class="title" href="{{thoiSuItem.link}}" title="{{thoiSuItem.title}}">{{thoiSuItem.title}}</a>
+            </h3>
+            <p class="sapo">{{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
+          </div>
+          <a class="img435x273" href="{{thoiSuItem.link}}">
+            <img src="{{thoiSuItem.thumbnail}}" alt="{{thoiSuItem.title}}" title="{{thoiSuItem.title}}"
+              class="img435x273">
+          </a>
         </ng-container>
         <div class="clearfix"></div>
         <span class="separator"></span>
@@ -33,26 +32,20 @@
             ">
             <li class="news-item ">
 
-              <a href=""
-
-                 class="img220x139">
-                <img src="{{thoiSuItem.thumbnail}}"
-                     class="img220x139">
+              <a href="" class="img220x139">
+                <img src="{{thoiSuItem.thumbnail}}" class="img220x139">
               </a>
 
               <div class="news-info">
-                <h3><a href=""
-                       title="{{thoiSuItem.title}}"
-                       class="title">{{thoiSuItem.title}}</a></h3>
+                <h3><a href="" title="{{thoiSuItem.title}}" class="title">{{thoiSuItem.title}}</a></h3>
                 <div class="clearfix"></div>
 
 
                 <ul class="news-relate">
 
                   <li>
-                    <a href=""
-                       title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                       class="title">{{thoiSuItem.description.slice(thoiSuItem.description.search('">')+2)}}</a>
+                    <a href="" title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
+                      class="title">{{thoiSuItem.description.slice(thoiSuItem.description.search('">')+2)}}</a>
                   </li>
 
 
@@ -63,7 +56,7 @@
               <div class="clearfix"></div>
             </li>
           </ul>
-          <pagination-controls (pageChange)="page =$event" ></pagination-controls>
+          <pagination-controls (pageChange)="page =$event"></pagination-controls>
         </div>
         <div class="clearfix"></div>
 
@@ -75,13 +68,12 @@
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
-          <ul class="list-news" >
+          <ul class="list-news">
 
             <li *ngFor="let thoiSuItem of thoiSuResult.slice(2,5) ;let i = index">
 
               <a href="" class="img216x133">
-                <img src="{{thoiSuItem.thumbnail}}"
-                     class="img216x133">
+                <img src="{{thoiSuItem.thumbnail}}" class="img216x133">
               </a>
 
 
@@ -94,9 +86,8 @@
         </div>
       </div>
     </div>
-      <app-right-catelory></app-right-catelory>
+    <app-right-catelory></app-right-catelory>
   </div>
   <div class="clearfix"></div>
 
 </section>
-

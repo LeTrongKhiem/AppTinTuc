@@ -1,3 +1,4 @@
+
 import {Component, OnInit} from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
 
@@ -35,10 +36,5 @@ export class DomesticComponent implements OnInit {
       console.log(result)
     })
   }
-
-
-
-
-
 
 }
