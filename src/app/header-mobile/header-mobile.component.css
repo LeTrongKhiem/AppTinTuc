@@ -1,5 +1,6 @@
 .cf {
   height: 44px !important;
+  display: none;
 }
 .cf:before, .clearfix:before, .cf:after, .clearfix:after {
   content: " ";
@@ -179,9 +180,32 @@ a:visited, a:visited h3, a:visited h2 {
 }
 .header ul.list-menu li a {
   color: #333;
-  font: normal 12px/normal Roboto-Bold;
+  font-size: 12px;
   line-height: 16px;
   text-transform: uppercase;
   padding: 10px 0;
   display: block;
+}
+/** PC with min screen **/
+@media (min-width: 1024px) and (max-width: 1239px) {
+
+}
+
+@media (max-width:1023px) {
+
+
+}
+/* Tablet */
+@media (min-width:740px)and (max-width:1023px) {
+
+}
+/* Mobile */
+@media (max-width:739px) {
+
+}
+/* Mobile and Tablet */
+@media (max-width: 1023px) {
+ .cf{
+   display: block;
+ }
 }

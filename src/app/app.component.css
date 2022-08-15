@@ -8,6 +8,9 @@
   font-family: 'Roboto', sans-serif;
   list-style-type: none;
 }
+ app-footer-mobile{
+   display: none;
+ }
 .clearfix:after {
   content: "";
   visibility: hidden;
@@ -27,21 +30,42 @@
  .fr {
    float: right;
  }
- /* Mobile & Tablet */
+ /** PC with min screen **/
+ @media (min-width: 1024px) and (max-width: 1239px) {
+   app-header-mobile {
+     display: none;
+   }
+ }
+
  @media (max-width:1023px) {
+
 
  }
  /* Tablet */
  @media (min-width:740px)and (max-width:1023px) {
-
-
+   app-header {
+     display: none;
+   }
+   app-footer {
+     display: none;
+   }
+   app-header-mobile{
+     display: block;
+   }
  }
  /* Mobile */
  @media (max-width:739px) {
   app-header {
     display: none;
   }
+
    app-header-mobile{
+     display: block;
+   }
+   app-footer {
+     display: none;
+   }
+   app-footer-mobile {
      display: block;
    }
  }

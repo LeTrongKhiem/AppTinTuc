@@ -23,12 +23,9 @@ import { RightCateloryComponent } from './right-catelory/right-catelory.componen
 import { CommentComponent } from './comment/comment.component';
 import { UnionComponent } from './union/union.component';
 import { YouReadComponent } from './you-read/you-read.component';
-import {MatToolbarModule} from "@angular/material/toolbar";
-import {MatIconModule} from "@angular/material/icon";
-import {MatSidenavModule} from "@angular/material/sidenav";
-import {MatListModule} from "@angular/material/list";
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
+import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +44,7 @@ import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
     UnionComponent,
     YouReadComponent,
     HeaderMobileComponent,
+    FooterMobileComponent,
 
   ],
   imports: [
@@ -58,10 +56,6 @@ import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
     InfiniteScrollModule,
     FormsModule,
     Ng2SearchPipeModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatSidenavModule,
-    MatListModule,
     FlexLayoutModule,
   ],
   providers: [],

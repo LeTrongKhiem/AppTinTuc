@@ -41,7 +41,7 @@ export class HomeComponent implements OnInit {
       this.latestNewsResult = result.items;
     })
     this.service.noiThang().subscribe((result) => {
-      console.log(result);
+      // console.log(result);
       this.noiThangResult = result.items;
     })
     this.service.docQuyen().subscribe((result) => {
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
       this.docQuyenResult = result.items;
     })
     this.service.thoiSu().subscribe((result) => {
-      // console.log(result);
+      console.log(result);
       this.thoiSuResult = result.items;
     })
     this.service.thoiSuQuocte().subscribe((result) => {

@@ -7,53 +7,67 @@
   max-width: 66.6667%;
   flex: 0 0 66.6667%;
 }
+
 .col-lg-6 {
   max-width: 50%;
   flex: 0 0 50%;
 }
+
 .mb-3, .my-3 {
   margin-bottom: 1rem !important;
 }
+
 .img-fluid {
   max-width: 100%;
   height: auto;
 }
+
 .w-100 {
   width: 100% !important;
 }
+
 .p-4 {
   /*padding: 1.5rem !important;*/
   height: 220px;
   padding: 20px;
 }
+
 .border-top-0 {
   border-top: 0px !important;
 }
+
 .border {
   border-width: 1px !important;
   border-style: solid !important;
   border-color: rgb(228, 231, 237) !important;
   border-image: initial !important;
 }
+
 .bg-white {
   background-color: rgb(255, 255, 255) !important;
 }
+
 .mb-2, .my-2 {
   margin-bottom: 0.5rem !important;
 }
+
 .text-body {
   color: rgb(154, 157, 162) !important;
 }
+
 small, .small {
   font-size: 80%;
   font-weight: 400;
 }
+
 .text-secondary {
   color: rgb(49, 64, 75) !important;
 }
+
 .text-uppercase {
   text-transform: uppercase !important;
 }
+
 .mb-3, .my-3 {
   margin-bottom: 1rem !important;
 }
@@ -61,6 +75,7 @@ small, .small {
 h1, h2, .font-weight-bold {
   font-weight: 700 !important;
 }
+
 /*Read More Button*/
 .read-more-button {
   background-color: #00bcd4;
@@ -76,7 +91,8 @@ h1, h2, .font-weight-bold {
   text-transform: uppercase;
   float: right;
 }
-.btn-readmore{
+
+.btn-readmore {
   display: flex;
   align-items: center;
   padding: 10px 0;
@@ -84,21 +100,46 @@ h1, h2, .font-weight-bold {
 
 }
 
-.sapo{
-  -webkit-line-clamp: 6;  /* số dòng hiển thị */
+.sapo {
+  -webkit-line-clamp: 6; /* số dòng hiển thị */
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   display: block;
   display: -webkit-box;
 }
-.card{
+
+.card {
   width: 300px;
 }
-.hide{
+
+.hide {
   display: none;
 }
 
 .pagination {
   text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+@media (max-width: 1023px) {
+
+}
+
+/* Tablet */
+@media (min-width: 740px)and (max-width: 1023px) {
+
+
+}
+
+/* Mobile */
+@media (max-width: 739px) {
+  .card {
+    width: 100%;
+    margin: 20px 0;
+  }
+
+
 }
