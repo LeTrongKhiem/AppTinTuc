@@ -30,9 +30,9 @@
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
-
           <ul class="list-news clearfix">
-            <ng-container *ngFor="let suckhoeItem of suckhoeResult">
+            <ng-container *ngFor="let suckhoeItem of suckhoeResult |
+          paginate: {itemsPerPage:5, currentPage: page, totalItems: totalLenght}">
             <li class="news-item ">
               <a href="{{suckhoeItem.link}}"
                  title="{{suckhoeItem.title}}"
@@ -69,6 +69,7 @@
             </li>
             </ng-container>
           </ul>
+          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
         </div>
         <div class="clearfix"></div>
 
@@ -80,49 +81,21 @@
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
-          <ul class="list-news">
-            <li>
+          <ul class="list-news" >
 
+            <li *ngFor="let thoiSuItem of suckhoeResult.slice(2,5) ;let i = index">
 
               <a href="" class="img216x133">
-                <img src="https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2022/7/26/photo-13-16588046760021458294633.jpg"
+                <img src="{{thoiSuItem.thumbnail}}"
                      class="img216x133">
               </a>
 
 
-              <h3><a href="" class="title">Lãnh đạo Đảng, Nhà nước tưởng nhớ Chủ tịch Hồ Chí Minh và
-                các Anh
-                hùng liệt sĩ</a>
+              <h3><a href="" class="title">{{thoiSuItem.title}}</a>
               </h3>
+
             </li>
-            <li>
 
-
-              <a href="" class="img216x133">
-                <img src="https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2022/7/26/photo-13-16588046760021458294633.jpg"
-                     class="img216x133">
-              </a>
-
-
-              <h3><a href="" class="title">Lãnh đạo Đảng, Nhà nước tưởng nhớ Chủ tịch Hồ Chí Minh và
-                các Anh
-                hùng liệt sĩ</a>
-              </h3>
-            </li>
-            <li>
-
-
-              <a href="" class="img216x133">
-                <img src="https://nld.mediacdn.vn/zoom/216_133/291774122806476800/2022/7/26/photo-13-16588046760021458294633.jpg"
-                     class="img216x133">
-              </a>
-
-
-              <h3><a href="" class="title">Lãnh đạo Đảng, Nhà nước tưởng nhớ Chủ tịch Hồ Chí Minh và
-                các Anh
-                hùng liệt sĩ</a>
-              </h3>
-            </li>
           </ul>
         </div>
       </div>

@@ -4,13 +4,12 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-health',
   templateUrl: './health.component.html',
-  styleUrls: ['./health.component.css', '../commoncomponent/commoncomponent.component.css']
+  styleUrls: ['./health.component.css', '../commoncomponent/commoncomponent.component.css','../app.component.css']
 })
 export class HealthComponent implements OnInit {
   suckhoeResult : any = [];
   totalLenght : any;
   page : number = 1;
-
   constructor(private service : NewsApiService) {
     this.getItems();
   }
