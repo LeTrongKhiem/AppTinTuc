@@ -33,7 +33,7 @@
           <div class="main-news">
             <ng-container *ngFor="let latestItem of latestNewsResult.slice(0,1)">
             <div class="top1-focus">
-              <a href="{{latestItem.link}}"
+              <a routerLink="/detail/{{replaceAll(latestItem.link,'/','?')}}"
                  title="{{latestItem.title}}"
                  class="img544x340">
 
@@ -62,11 +62,9 @@
           <div class="list-news-thumb">
 
             <div class="tabs clearfix">
-              <a href="" title="Tin nóng" class="tab-item active"
+              <a routerLink="/" title="Tin nóng" class="tab-item active"
                  data-id="content-newest">Tin nóng</a>
               <span class="line-middle"></span>
-              <a href="" title="Tin mới" class="tab-item"
-                 style="width: 113px; text-align: center;">Tin mới</a>
 
             </div>
             <div class="tab-content" style="height: unset; overflow: unset;">
@@ -79,7 +77,7 @@
 
                     <div class="item-news-thumb" *ngFor="let lastedNews of latestNewsResult">
                       <div class="news-thumb-title">
-                        <a href="{{lastedNews.link}}"
+                        <a routerLink="/detail/{{replaceAll(lastedNews.link,'/','?')}}"
                            title="{{lastedNews.title}}"
                         >{{lastedNews.title}}</a>
                       </div>
@@ -92,121 +90,6 @@
               </div>
 
 
-              <div class="tab-content-view" id="content-most-views" style="display: none;">
-                <div class="slimScrollDiv"
-                     style="position: relative; overflow: hidden; width: auto; height: 424px;">
-                  <div class="scroll" style="overflow: hidden; width: auto; height: 424px;">
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a href="/cong-doan/nguoi-lao-dong-thac-mac-ve-ho-tro-tien-thue-nha-20220628155828612.htm"
-                           title="Người lao động thắc mắc về hỗ trợ tiền thuê nhà"
-                           data-newstypetitle="0" data-newsid="20220628155828612">Người lao
-                          động thắc mắc về hỗ trợ tiền thuê nhà</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/mien-tay/cong-ty-cp-bat-dong-san-can-tho-duoc-vinh-danh-top-10-san-giao-dich-bds-20220628155512615.htm"
-                          title="Công ty CP Bất động sản Cần Thơ được vinh danh tốp 10 sàn giao dịch BĐS"
-                          data-newstypetitle="0" data-newsid="20220628155512615">Công ty
-                          CP Bất động sản Cần Thơ được vinh danh tốp 10 sàn giao dịch
-                          BĐS</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/phap-luat/dieu-tra-nghi-van-be-gai-8-tuoi-bi-nam-thanh-nien-xong-vao-nha-ham-hiep-20220628151123548.htm"
-                          title="Điều tra nghi vấn bé gái 8 tuổi bị nam thanh niên xông vào nhà hãm hiếp"
-                          data-newstypetitle="0" data-newsid="20220628151123548">Điều tra
-                          nghi vấn bé gái 8 tuổi bị nam thanh niên xông vào nhà hãm
-                          hiếp</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/suc-khoe/tang-can-kho-kiem-soat-hoa-ra-mac-benh-da-u-mo-hiem-gap-20220628151707596.htm"
-                          title="Tăng cân khó kiểm soát, hoá ra mắc bệnh đa u mỡ hiếm gặp"
-                          data-newstypetitle="0" data-newsid="20220628151707596">Tăng cân
-                          khó kiểm soát, hoá ra mắc bệnh đa u mỡ hiếm gặp</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/kinh-te/my-la-thi-truong-so-1-chiem-hon-27-thi-phan-nong-san-viet-20220628145629723.htm"
-                          title="Mỹ là thị trường số 1, chiếm hơn 27% thị phần nông sản Việt"
-                          data-newstypetitle="0" data-newsid="20220628145629723">Mỹ là thị
-                          trường số 1, chiếm hơn 27% thị phần nông sản Việt</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/phap-luat/dan-canh-danh-ghen-nu-hoc-vien-va-dong-bon-cuong-doat-700-trieu-dong-20220628144836165.htm"
-                          title="Dàn cảnh đánh ghen, nữ học viên và đồng bọn cưỡng đoạt 700 triệu đồng"
-                          data-newstypetitle="0" data-newsid="20220628144836165">Dàn cảnh
-                          đánh ghen, nữ học viên và đồng bọn cưỡng đoạt 700 triệu đồng</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/thoi-su/clip-nghi-van-nhom-tin-dung-den-xong-vao-nha-cu-ba-78-tuoi-dap-pha-20220628145103429.htm"
-                          title="CLIP: Nghi vấn nhóm tín dụng đen xông vào nhà cụ bà 78 tuổi đập phá"
-                          data-newstypetitle="2" data-newsid="20220628145103429">CLIP:
-                          Nghi vấn nhóm tín dụng đen xông vào nhà cụ bà 78 tuổi đập
-                          phá</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a href="/giai-tri/nu-ca-si-bi-chong-ban-chet-ngay-trong-nha-hang-20220628134905633.htm"
-                           title="Nữ ca sĩ bị chồng bắn chết ngay trong nhà hàng"
-                           data-newstypetitle="0" data-newsid="20220628134905633">Nữ ca sĩ
-                          bị chồng bắn chết ngay trong nhà hàng</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/cong-nghe/microsoft-dinh-ngay-dep-windows-81-nguoi-dung-phai-lo-nang-cap-20220627145602062.htm"
-                          title="Microsoft định ngày &quot;dẹp&quot; Windows 8.1, người dùng phải lo nâng cấp"
-                          data-newstypetitle="0" data-newsid="20220627145602062">Microsoft
-                          định ngày "dẹp" Windows 8.1, người dùng phải lo nâng cấp</a>
-                      </div>
-                    </div>
-
-                    <div class="item-news-thumb">
-                      <div class="news-thumb-title">
-                        <a
-                          href="/dia-phuong/tu-ha-noi-vao-thanh-hoa-gay-ra-hang-loat-vu-trom-cap-tien-vang-20220628130428645.htm"
-                          title="Từ Hà Nội vào Thanh Hóa gây ra hàng loạt vụ trộm cắp tiền vàng"
-                          data-newstypetitle="0" data-newsid="20220628130428645">Từ Hà Nội
-                          vào Thanh Hóa gây ra hàng loạt vụ trộm cắp tiền vàng</a>
-                      </div>
-                    </div>
-
-                  </div>
-                  <div class="slimScrollBar"
-                       style="background: rgb(0, 0, 0); width: 7px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;">
-                  </div>
-                  <div class="slimScrollRail"
-                       style="width: 7px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
-                  </div>
-                </div>
-              </div>
 
             </div>
           </div>
@@ -214,7 +97,7 @@
             <div class="news-horizontal-item " *ngFor="let lastedNews of latestNewsResult; let i = index ;">
 
               <div *ngIf="i <= 4 && i!=0">
-                <a href="{{lastedNews.link}}"
+                <a routerLink="/detail/{{replaceAll(lastedNews.link,'/','?')}}"
                    title="{{lastedNews.title}}"
                    class="img203x127" data-newstype="0">
 
@@ -226,10 +109,8 @@
                 </a>
 
                 <div class="news-horizontal-title">
-                  <a data-linktype="newsdetail" data-newstypetitle="0" data-newsid="2022062811380381"
-                     data-id="2022062811380381" data-adr="h1-2022062811380381"
-                     href="/chinh-tri/ky-luat-8-uy-vien-nguyen-uy-vien-trung-uong-va-20-si-quan-cap-tuong-2022062811380381.htm"
-                     title="Kỷ luật 8 Ủy viên, nguyên Ủy viên Trung ương và 20 sĩ quan cấp tướng">
+                  <a routerLink="/detail/{{replaceAll(lastedNews.link,'/','?')}}"
+                     title="{{lastedNews.title}}">
                     {{lastedNews.title}}
                   </a>
                 </div>
@@ -250,7 +131,7 @@
       <div class="box-left">
         <div class="box-news-with-cate">
           <div class="fl">
-            <div data-marked-zoneid="nld_home_s1">
+            <div>
 
 
               <div class="box-news-list">
@@ -262,7 +143,7 @@
                 <div class="news-item " *ngFor="let lastedNews of latestNewsResult.slice(1,5);let i =index">
 
                   <a
-                    href="/phap-luat/tong-giam-doc-cong-ty-cong-trinh-cong-cong-hoi-an-nhan-hoi-lo-400-trieu-dong-20220628133948409.htm"
+                    routerLink="/detail/{{replaceAll(lastedNews.link,'/','?')}}"
                     title="{{lastedNews.title}}"
                     class="img220x139" data-newstype="0">
 
@@ -273,13 +154,13 @@
                   </a>
 
                   <h3><a class="title"
-                         href="{{lastedNews.link}}"
+                         routerLink="/detail/{{replaceAll(lastedNews.link,'/','?')}}"
                          title="{{lastedNews.title}}">{{lastedNews.title}}</a></h3>
                   <div class="news-info">
                     <ul class="news-relate">
 
                       <li>
-                        <a href="{{lastedNews.link}}"
+                        <a routerLink="/detail/{{replaceAll(lastedNews.link,'/','?')}}"
                            title="{{lastedNews.title}}"
                            class="title">{{lastedNews.content.slice(lastedNews.content.search('">') + 2)}}</a>
                       </li>
@@ -303,13 +184,13 @@
             <div class="box-cate box-noithang">
               <div class="box-cate-content">
                 <div class="header-cate clearfix">
-                  <a href="/noi-thang.htm" title="Nói thẳng" class="title">Nói thẳng</a>
-                  <a href="/noi-thang.htm" title="Xem tất cả" class="view-more">Xem tất cả</a>
+                  <a routerLink="" title="Nói thẳng" class="title">Nói thẳng</a>
+                  <a routerLink=""title="Xem tất cả" class="view-more">Xem tất cả</a>
                 </div>
                 <ng-container *ngFor="let noiThangItem of noiThangResult.slice(0,1)">
                 <div class="news-item">
 
-                  <a href="{{noiThangItem.link}}"
+                  <a routerLink="/detail/{{replaceAll(noiThangItem.link,'/','?')}}"
                      title="{{noiThangItem.title}}" class="img216x133"
                   >
 
@@ -319,7 +200,7 @@
 
                   </a>
 
-                  <h3 style="margin-bottom: 0px;"><a href="/noiThang" class="title"
+                  <h3 style="margin-bottom: 0px;"><a routerLink="/" class="title"
                                                      title="{{noiThangItem.title}}">{{noiThangItem.title}}</a>
                   </h3>
                   <div class="news-info clearfix">
@@ -334,22 +215,22 @@
               <div class="box-cate-content">
                 <div class="header-cate clearfix">
                   <div class="header-cate-content fl">
-                    <a href="/tin-doc-quyen" title="Tin độc quyền" class="title">Tin độc quyền</a>
+                    <a routerLink="/tin-doc-quyen" title="Tin độc quyền" class="title">Tin độc quyền</a>
                   </div>
 
-                  <a href="/tin-doc-quyen" title="Xem tất cả" class="view-more">Xem tất cả</a>
+                  <a routerLink="/tin-doc-quyen" title="Xem tất cả" class="view-more">Xem tất cả</a>
                 </div>
 
                 <div class="news-item">
                   <ng-container *ngFor="let docQuyenItem of docQuyenResult.slice(0,1)">
-                    <a href="{{docQuyenItem.link}}" title="{{docQuyenItem.title}}" class="img216x133">
+                    <a routerLink="/detail/{{replaceAll(docQuyenItem.link,'/','?')}}" title="{{docQuyenItem.title}}" class="img216x133">
 
                       <img
                         src="{{docQuyenItem.thumbnail }}"
                         alt="3 người chết trong xử lý vụ cháy công ty ở KCN Sóng Thần 1" class="img216x133">
                     </a>
 
-                    <h3 style="margin-bottom: 0px;"><a href="{{docQuyenItem.link}}" class="title"
+                    <h3 style="margin-bottom: 0px;"><a routerLink="/detail/{{replaceAll(docQuyenItem.link,'/','?')}}" class="title"
                                                        title="{{docQuyenItem.title}}">{{docQuyenItem.title}}</a></h3>
                   </ng-container>
 
@@ -411,7 +292,7 @@
                   <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(0,1); let i =index">
                     <a href="{{thoiSuItem.link}}"
                        title="{{thoiSuItem.title}}"
-                       data-newstype="0" class="img256x160">
+                       >
 
                       <img
                         src="{{thoiSuItem.thumbnail }}"
@@ -419,7 +300,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{thoiSuItem.link}}"
+                      <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
 
                          title="{{thoiSuItem.title}}"
                          class="title">
