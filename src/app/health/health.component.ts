@@ -13,7 +13,6 @@ export class HealthComponent implements OnInit {
   constructor(private service : NewsApiService) {
     this.getItems();
   }
-
   ngOnInit(): void {
   }
   getItems():void{
