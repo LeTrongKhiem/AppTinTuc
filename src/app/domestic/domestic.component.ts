@@ -5,7 +5,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-domestic',
   templateUrl: './domestic.component.html',
-  styleUrls: ['./domestic.component.css','../app.component.css']
+  styleUrls: ['./domestic.component.css','../app.component.css','../reponsiveCategory.css']
 })
 export class DomesticComponent implements OnInit {
   thoiSuResult: any = [];

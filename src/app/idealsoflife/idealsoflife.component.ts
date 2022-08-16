@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-idealsoflife',
   templateUrl: './idealsoflife.component.html',
-  styleUrls: ['./idealsoflife.component.css']
+  styleUrls: ['./idealsoflife.component.css','../reponsiveCategory.css']
 })
 export class IdealsoflifeComponent implements OnInit {
 

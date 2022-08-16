@@ -4,7 +4,7 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-health',
   templateUrl: './health.component.html',
-  styleUrls: ['./health.component.css', '../commoncomponent/commoncomponent.component.css']
+  styleUrls: ['./health.component.css', '../commoncomponent/commoncomponent.component.css','../reponsiveCategory.css']
 })
 export class HealthComponent implements OnInit {
   suckhoeResult : any = [];

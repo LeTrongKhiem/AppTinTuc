@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-lawyer',
   templateUrl: './lawyer.component.html',
-  styleUrls: ['./lawyer.component.css', '../commoncomponent/commoncomponent.component.css'],
+  styleUrls: ['./lawyer.component.css', '../commoncomponent/commoncomponent.component.css','../reponsiveCategory.css'],
 })
 export class LawyerComponent implements OnInit {
   phapluatResult : any = [];

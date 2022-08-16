@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-you-read',
   templateUrl: './you-read.component.html',
-  styleUrls: ['./you-read.component.css','../domestic/domestic.component.css','../app.component.css']
+  styleUrls: ['./you-read.component.css','../domestic/domestic.component.css','../app.component.css','../reponsiveCategory.css']
 })
 export class YouReadComponent implements OnInit {
 

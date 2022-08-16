@@ -5,7 +5,7 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-sports',
   templateUrl: './sports.component.html',
-  styleUrls: ['./sports.component.css']
+  styleUrls: ['./sports.component.css','../reponsiveCategory.css']
 })
 export class SportsComponent implements OnInit {
 

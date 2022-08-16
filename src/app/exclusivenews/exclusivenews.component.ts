@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-exclusivenews',
   templateUrl: './exclusivenews.component.html',
-  styleUrls: ['./exclusivenews.component.css']
+  styleUrls: ['./exclusivenews.component.css','../reponsiveCategory.css']
 })
 export class ExclusivenewsComponent implements OnInit {
 

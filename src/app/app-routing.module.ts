@@ -25,13 +25,12 @@ import {StraighttalkComponent} from "./straighttalk/straighttalk.component";
 import {ExclusivenewsComponent} from "./exclusivenews/exclusivenews.component";
 import {UnionComponent} from "./union/union.component";
 import {YouReadComponent} from "./you-read/you-read.component";
+import {EconomyComponent} from "./economy/economy.component";
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
   {path:'trong-nuoc',component:DomesticComponent},
   {path:'thoi-su-quoc-te',component:ForeignComponent},
-  // {path:'search/:searchTerm',component:ListNewsSearchComponent},
-  // {path:'detail/:link',component:NewsDetailComponent},
   {path:'suc-khoe', component:HealthComponent},
   {path:'giao-duc', component:EducationComponent},
   {path:'phap-luat', component:LawyerComponent},
@@ -51,7 +50,8 @@ const routes: Routes = [
   {path: 'noi-thang', component:StraighttalkComponent},
   {path: 'tin-doc-quyen', component:ExclusivenewsComponent},
   {path:'cong-doan',component:UnionComponent},
-  {path:'ban-doc',component:YouReadComponent}
+  {path:'ban-doc',component:YouReadComponent},
+  {path:'kinh-te',component:EconomyComponent}
 ];
 
 @NgModule({

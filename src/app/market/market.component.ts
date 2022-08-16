@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-market',
   templateUrl: './market.component.html',
-  styleUrls: ['./market.component.css']
+  styleUrls: ['./market.component.css','../reponsiveCategory.css']
 })
 export class MarketComponent implements OnInit {
 

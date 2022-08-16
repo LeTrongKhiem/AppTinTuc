@@ -16,7 +16,8 @@
   h2 {
     .title {
       color: #000;
-      font: normal 17px/normal Roboto-Bold;
+      font-size: 20px;
+      font-weight: 500;
       line-height: 1;
       text-transform: uppercase;
       &:before {
@@ -43,6 +44,7 @@
           font-size: 15px;
           font-weight: bold;
           line-height: 1.31;
+          font-weight: 500;
         }
       }
     }
@@ -59,6 +61,7 @@
           line-height: 1.38;
           display: block;
           margin-top: 9px;
+          font-weight: 500;
         }
         &:last-child {
           margin-left: 18px;
