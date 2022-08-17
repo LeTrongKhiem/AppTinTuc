@@ -42,6 +42,7 @@
   font-size: 24px;
   line-height: 30px;
   float: left;
+  font-weight: 500;
 }
 .body-content .cate-left .box-cate-focus .news-info .sapo {
   color: #000;
@@ -106,13 +107,14 @@
   font-size: 18px;
   line-height: 24px;
   float: none;
+  font-weight: 500;
 }
 .body-content .cate-left .list-news-container .cate-list-news ul.list-news li.news-item .news-info .news-relate{
   list-style-type: none;
 }
 .body-content .cate-left .list-news-container .cate-list-news ul.list-news li.news-item .news-info .news-relate li a.title {
   color: #454545;
-  font-size: 13px;
+  font-size: 14px;
   margin-left: 0;
   margin-bottom: 7px;
   padding-left: 6px;
@@ -142,9 +144,10 @@
   float: left;
   padding: 15px 20px 7px;
   color: #000;
-  font: normal 15px/normal Roboto-Bold;
+  font-size: 15px;
   line-height: 18px;
   text-transform: uppercase;
+  font-weight: 500;
 }
 .body-content .cate-left .list-box-container .box-news h2 .bg-right {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
@@ -178,8 +181,12 @@
   color: #000;
   font-size: 15px;
   line-height: 23px;
+  font-weight: 500;
 }
 .body-content .cate-left .list-box-container .box-news .list-news li:last-child {
   border-bottom: none;
   padding-bottom: 0;
+}
+.pagination{
+  text-align: center;
 }

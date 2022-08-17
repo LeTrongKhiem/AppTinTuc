@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-greentourism',
   templateUrl: './greentourism.component.html',
-  styleUrls: ['./greentourism.component.css']
+  styleUrls: ['./greentourism.component.css','../reponsiveCategory.css','../app.component.css']
 })
 export class GreentourismComponent implements OnInit {
 
@@ -23,5 +23,7 @@ export class GreentourismComponent implements OnInit {
       console.log(result)
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

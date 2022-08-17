@@ -12,82 +12,65 @@
         <div class="clearfix"></div>
         <ul class="list-menu clearfix" [class.list-menu-active]="showMenu" >
           <li>
-            <a href="/thoi-su.htm" title="Thời sự">Trong nước</a>
+            <a routerLink="/trong-nuoc" title="Thời sự">Trong nước</a>
           </li>
           <li>
-            <a href="/thoi-su-quoc-te.htm" title="Thời sự quốc tế">Quốc tế</a>
+            <a routerLink="/thoi-su-quoc-te"  title="Thời sự quốc tế">Quốc tế</a>
           </li>
           <li>
-            <a href="/cong-doan.htm" title="Công đoàn">Công đoàn</a>
+            <a routerLink="/cong-doan" title="Công đoàn">Công đoàn</a>
           </li>
           <li>
-            <a href="/ban-doc.htm" title="Bạn đọc">Bạn đọc</a>
+            <a routerLink="/ban-doc" title="Bạn đọc">Bạn đọc</a>
           </li>
           <li>
-            <a href="/kinh-te.htm" title="Kinh tế">Kinh tế</a>
+            <a routerLink="/kinh-te" title="Kinh tế">Kinh tế</a>
           </li>
           <li>
-            <a href="/suc-khoe.htm" title="Sức khỏe">Sức khỏe</a>
+            <a routerLink="/suc-khoe" title="Sức khỏe">Sức khỏe</a>
           </li>
           <li>
-            <a href="/giao-duc-khoa-hoc.htm" title="Giáo dục">Giáo dục</a>
+            <a routerLink="/giao-duc"title="Giáo dục">Giáo dục</a>
           </li>
           <li>
-            <a href="/phap-luat.htm" title="Pháp luật">Pháp luật</a>
+            <a routerLink="/phap-luat" title="Pháp luật">Pháp luật</a>
           </li>
           <li>
-            <a href="/giai-tri.htm" title="Giải trí">Giải trí</a>
+            <a  routerLink="/giai-tri"title="Giải trí">Giải trí</a>
           </li>
           <li>
-            <a href="/the-thao.htm" title="Thể thao">Thể thao</a>
+            <a routerLink="/the-thao"title="Thể thao">Thể thao</a>
           </li>
           <li>
-            <a href="/cong-nghe.htm" title="Công nghệ">Công nghệ</a>
+            <a routerLink="/cong-nghe" title="Công nghệ">Công nghệ</a>
           </li>
+
           <li>
-            <a href="/moi-truong.htm" title="Môi trường">Môi trường</a>
-          </li>
-          <li>
-            <a href="https://diaoc.nld.com.vn/" title="Địa ốc" target="_blank" rel="nofollow">Địa ốc</a>
+            <a routerLink="/dia-oc" title="Địa ốc" >Địa ốc</a>
           </li>
           <li>
             <a href="/van-nghe.htm" title="Văn nghệ">Văn nghệ</a>
           </li>
           <li>
-            <a href="/du-lich-xanh.htm" title="Du lịch xanh">Du lịch xanh</a>
+            <a  routerLink="/du-lich-xanh" title="Du lịch xanh">Du lịch xanh</a>
           </li>
           <li>
-            <a href="https://phunu.nld.com.vn/" title="Phụ nữ" target="_blank" rel="nofollow">Phụ nữ</a>
+            <a routerLink="/phu-nu">Phụ nữ</a>
           </li>
 
           <li>
-            <a href="/khoa-hoc.htm" title="Khoa học">Khoa học</a>
+            <a routerLink="/thi-truong">Thị trường</a>
+          </li>
+          <li>
+            <a routerLink="/ly-tuong-song" title="Lý tưởng sống">Lý tưởng sống</a>
+          </li>
+          <li>
+            <a routerLink="/noi-thang"  title="Nói thẳng">Nói thẳng</a>
+          </li>
+          <li>
+            <a routerLink="/tin-doc-quyen"  title="Tin độc quyền">Tin độc quyền</a>
           </li>
 
-          <li>
-            <a href="https://thitruong.nld.com.vn/" title="Thị trường" target="_blank" rel="nofollow">Thị trường</a>
-          </li>
-          <li>
-            <a href="/ly-tuong-song.htm" title="Lý tưởng sống">Lý tưởng sống</a>
-          </li>
-          <li>
-            <a href="/bien-dao.htm" title="Biển đảo">Biển đảo</a>
-          </li>
-          <li>
-            <a href="/noi-thang.htm" title="Nói thẳng">Nói thẳng</a>
-          </li>
-          <li>
-            <a href="/goc-nhin.htm" title="Góc nhìn">Góc nhìn</a>
-          </li>
-          <li>
-            <a href="/tin-doc-quyen.htm" title="Tin độc quyền">Tin độc quyền</a>
-          </li>
-          <li>
-            <a href="/hoi-nong-dap-nhanh.htm" title="Hỏi nóng đáp nhanh">Hỏi nóng đáp nhanh</a>
-          </li>
-          <li>
-            <a href="/truy-vet-mang-xa-hoi.htm" title="Truy vết mạng xã hội">Truy vết mạng xã hội</a>
-          </li>
           <li class="clearfix" style="height: 150px; border: none; background: none; width: 100%;"></li>
         </ul>
       </div>
@@ -99,35 +82,13 @@
         <input type="text" id="txtKeyword" class="input-search" [class.input-search-active]="showIpunSearch" [(ngModel)]="enteredSearchValue" (keyup.enter)="search()" placeholder="Nhập từ khóa">
       </div>
       <div class="social">
-        <a   title="Facebook" class="social-facebook"></a>
+        <a  title="Facebook" class="social-facebook"></a>
         <a  title="Youtube" class="social-youtube"></a>
         <div class="loginform">
           <div class="h_logout" id="head_login" style="display: block;">
-            <a id="btn-login" href="javascript:;" title="ĐĂNG KÝ / ĐĂNG NHẬP">
+            <a id="btn-login"  title="ĐĂNG KÝ / ĐĂNG NHẬP">
               <img src="https://static.mediacdn.vn/nld/Images/iconuser.svg" width="22" alt="user">
             </a>
-          </div>
-          <div class="h_login" id="head_islogin" style="display: none;">
-            <a class="h_name"  title="">
-              <img src="https://static.mediacdn.vn/nld/Images/iconuser.svg" width="22" alt="user">
-            </a>
-            <div class="logininfo">
-              <div class="u_name">Xin chào, <a href="/thong-tin-tai-khoan.htm" title="" id="head_u_name"></a></div>
-              <ul>
-                <li>
-                  <a href="/thong-tin-tai-khoan.htm" title="Thông tin cá nhân">Thông tin cá nhân</a>
-                </li>
-                <li>
-                  <a >Đổi mật khẩu</a>
-                </li>
-                <li>
-                  <a>Hoạt động của tôi</a>
-                </li>
-                <li>
-                  <a  id="head_logout" title="Đăng xuất">Đăng xuất</a>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

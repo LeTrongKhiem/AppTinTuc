@@ -1,7 +1,6 @@
 .comment-container {
   background: #fff;
   width: 670px;
-  margin-left: 180px;
   height: 100%;
 }
 .comment-container .comment-input-container {
@@ -11,7 +10,7 @@
 }
 .comment-container .comment-input-container .text-comment .title {
   color: #0959ab;
-  font: normal 15px/normal Roboto-Bold;
+  font-size: 20px;
   text-transform: uppercase;
   margin-bottom: 17px;
 }

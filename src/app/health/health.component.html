@@ -3,22 +3,17 @@
     <div class="cate-left">
       <div class="sub-cate">
         <h1 class="title-cate">Sức khỏe</h1>
-        <h2 class="title-cate-child">Chuyển động y học</h2>
-        <h2 class="title-cate-child">Chuyển động y học</h2>
-        <h2 class="title-cate-child">Giới tính</h2>
-        <h2 class="title-cate-child">Sức khỏe của bạn</h2>
-        <h2 class="title-cate-child">Phòng mạch covid-19</h2>
       </div>
       <div class="clearfix"></div>
       <div class="box-cate-focus">
         <ng-container *ngFor="let suckhoeItem of suckhoeResult.slice(0,1)">
           <div class="news-info">
             <h3>
-              <a class="title" href="{{suckhoeItem.link}}" title="{{suckhoeItem.title}}">{{suckhoeItem.title}}</a>
+              <a class="title" routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}" title="{{suckhoeItem.title}}">{{suckhoeItem.title}}</a>
             </h3>
             <p class="sapo">{{suckhoeItem.content.slice(suckhoeItem.content.search('">') + 2)}}</p>
           </div>
-          <a class="img435x273" href="{{suckhoeItem.link}}">
+          <a class="img435x273" routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}">
             <img src="{{suckhoeItem.thumbnail}}"
                  alt="{{suckhoeItem.alt}}"
                  title="{{suckhoeItem.title}}" class="img435x273">
@@ -31,10 +26,13 @@
       <div class="list-news-container">
         <div class="cate-list-news">
           <ul class="list-news clearfix">
-            <ng-container *ngFor="let suckhoeItem of suckhoeResult |
-          paginate: {itemsPerPage:5, currentPage: page, totalItems: totalLenght}">
+            <ng-container *ngFor="let suckhoeItem of suckhoeResult  |paginate: {
+                     itemsPerPage:5,
+                     currentPage: page,
+                     totalItems: totalLength
+                     }">
             <li class="news-item ">
-              <a href="{{suckhoeItem.link}}"
+              <a routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}"
                  title="{{suckhoeItem.title}}"
                  class="img220x139">
                 <img src="{{suckhoeItem.thumbnail}}"
@@ -42,7 +40,7 @@
               </a>
 
               <div class="news-info">
-                <h3><a href="{{suckhoeItem.link}}"
+                <h3><a routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}"
                        title="{{suckhoeItem.title}}"
                        class="title">{{suckhoeItem.title}}</a></h3>
                 <div class="clearfix"></div>
@@ -69,7 +67,8 @@
             </li>
             </ng-container>
           </ul>
-          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
+          <pagination-controls  class="pagination" (pageChange)="page =$event" previousLabel="" nextLabel=""></pagination-controls>
+
         </div>
         <div class="clearfix"></div>
 
@@ -77,21 +76,24 @@
       <div class="list-box-container">
         <div class="box-news">
           <h2>
-            <a class="title-cate" href="">Tin nổi bật</a>
+            <a class="title-cate" routerLink="/ban-doc">Tin nổi bật</a>
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
           <ul class="list-news" >
 
-            <li *ngFor="let thoiSuItem of suckhoeResult.slice(2,5) ;let i = index">
 
-              <a href="" class="img216x133">
-                <img src="{{thoiSuItem.thumbnail}}"
+            <li *ngFor="let suckhoeItem of suckhoeResult.slice(2,5) ;let i = index">
+
+              <a routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}" class="img216x133">
+                <img src="{{suckhoeItem.thumbnail}}"
+
                      class="img216x133">
               </a>
 
 
-              <h3><a href="" class="title">{{thoiSuItem.title}}</a>
+              <h3><a routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}" class="title">{{suckhoeItem.title}}</a>
+
               </h3>
 
             </li>

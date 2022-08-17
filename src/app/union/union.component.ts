@@ -3,7 +3,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-union',
   templateUrl: './union.component.html',
-  styleUrls: ['./union.component.css','../domestic/domestic.component.css','../app.component.css']
+  styleUrls: ['./union.component.css','../domestic/domestic.component.css','../app.component.css','../reponsiveCategory.css']
 })
 export class UnionComponent implements OnInit {
 
@@ -19,5 +19,7 @@ export class UnionComponent implements OnInit {
       console.log(result)
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

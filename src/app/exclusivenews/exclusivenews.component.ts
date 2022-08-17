@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-exclusivenews',
   templateUrl: './exclusivenews.component.html',
-  styleUrls: ['./exclusivenews.component.css']
+  styleUrls: ['./exclusivenews.component.css','../reponsiveCategory.css','../app.component.css']
 })
 export class ExclusivenewsComponent implements OnInit {
 
@@ -24,5 +24,7 @@ export class ExclusivenewsComponent implements OnInit {
     })
   }
 
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

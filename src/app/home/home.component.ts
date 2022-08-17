@@ -1,16 +1,18 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css','../app.component.css']
+  styleUrls: ['./home.component.css', '../app.component.css']
 })
 export class HomeComponent implements OnInit {
 
   constructor(private service: NewsApiService) {
 
   }
-  temp : any;
+
+  temp: any;
   latestNewsResult: any = []
   noiThangResult: any = []
   docQuyenResult: any = []
@@ -30,7 +32,7 @@ export class HomeComponent implements OnInit {
   thiTruongReuslt: any = [];
 
 
-  todayString: string =new Date().toLocaleDateString('vi');
+  todayString: string = new Date().toLocaleDateString('vi');
 
 
   ngOnInit(): void {
@@ -57,7 +59,7 @@ export class HomeComponent implements OnInit {
     })
     this.service.weatherApi().subscribe((result) => {
       this.weatherResult = result;
-      this.temp =Math.floor(this.weatherResult.main.temp - 273.15);
+      this.temp = Math.floor(this.weatherResult.main.temp - 273.15);
     })
     this.service.congDoanApi().subscribe((result) => {
       this.congDoanResult = result.items;
@@ -96,6 +98,9 @@ export class HomeComponent implements OnInit {
 
   }
 
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 
 
 }
