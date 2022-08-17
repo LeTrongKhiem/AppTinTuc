@@ -14,7 +14,7 @@
 }
 .footer p.sologan {
   color: #fff;
-  font: normal 11px/normal Roboto-Medium;
+  font-size: 11px;
   line-height: 15px;
   margin-top: 0;
   float: left;
@@ -53,7 +53,7 @@
  }
 .footer-menu .footer-nav .item a {
   color: #999;
-  font-size: 8px;
+  font-size: 10px;
   line-height: 14px;
 }
 .footer-menu .footer-nav .item a.active {

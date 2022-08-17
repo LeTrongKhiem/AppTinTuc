@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-idealsoflife',
   templateUrl: './idealsoflife.component.html',
-  styleUrls: ['./idealsoflife.component.css']
+  styleUrls: ['./idealsoflife.component.css','../reponsiveCategory.css','../app.component.css']
 })
 export class IdealsoflifeComponent implements OnInit {
 
@@ -24,5 +24,7 @@ export class IdealsoflifeComponent implements OnInit {
     })
   }
 
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

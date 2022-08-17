@@ -17,7 +17,8 @@
 }
 .broadcast h2 .title {
   color: #000;
-  font: normal 17px/normal Roboto-Bold;
+  font-size: 20px;
+  font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
 }
@@ -44,6 +45,7 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 1.31;
+  font-weight: 500;
 }
 .broadcast .news-list ul.sub-news {
   margin-top: 18px;
@@ -60,6 +62,7 @@
   line-height: 1.38;
   display: block;
   margin-top: 9px;
+  font-weight: 500;
 }
 .broadcast .news-list ul.sub-news li:last-child {
   margin-left: 18px;

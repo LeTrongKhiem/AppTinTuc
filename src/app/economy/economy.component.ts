@@ -2,21 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
 
 @Component({
-  selector: 'app-foreign',
-  templateUrl: './foreign.component.html',
-  styleUrls: ['./foreign.component.css', '../app.component.css','../reponsiveCategory.css']
+  selector: 'app-economy',
+  templateUrl: './economy.component.html',
+  styleUrls: ['./economy.component.scss','../domestic/domestic.component.css','../app.component.css','../reponsiveCategory.css']
 })
-export class ForeignComponent implements OnInit {
+export class EconomyComponent implements OnInit {
 
-  thoiSuQuocteResult: any = [];
+  kinhTeResult: any = [];
   totalLength:any;
   page:number=1;
   constructor(private service: NewsApiService) { }
   ngOnInit(): void {
-    this.service.thoiSuQuocte().subscribe((result) => {
-      this.thoiSuQuocteResult = result.items;
+    this.service.kinhTeApi().subscribe((result) => {
+      this.kinhTeResult = result.items;
       this.totalLength = result.items.length;
-      console.log(result)
     })
   }
   replaceAll(str: string, search: string, replacement: string) {

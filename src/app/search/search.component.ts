@@ -23,6 +23,8 @@ export class SearchComponent implements OnInit {
   }
 
   search(){
-    this.router.navigate(['/search',this.searchTerm]);
+    this.router.navigate(['/search',this.searchTerm],{
+      state:{signoreLoadingBar: true}
+    });
   }
 }

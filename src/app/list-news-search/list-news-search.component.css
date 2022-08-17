@@ -1,6 +1,7 @@
 .body .body-content {
   margin: 20px auto 0;
-  text-decoration: none;
+  text-decoration: none !important;
+
 }
 
 .col-lg-8 {
@@ -53,6 +54,7 @@
 
 .text-body {
   color: rgb(154, 157, 162) !important;
+  text-decoration: none;
 }
 
 small, .small {
@@ -74,11 +76,12 @@ small, .small {
 
 h1, h2, .font-weight-bold {
   font-weight: 700 !important;
+  text-decoration: none !important;
 }
 
 /*Read More Button*/
 .read-more-button {
-  background-color: #00bcd4;
+  background-color: #0959ab;
   border-radius: 5px;
   color: #fff;
   cursor: pointer;
@@ -97,6 +100,7 @@ h1, h2, .font-weight-bold {
   align-items: center;
   padding: 10px 0;
   justify-content: flex-end;
+
 
 }
 
@@ -140,6 +144,8 @@ h1, h2, .font-weight-bold {
     width: 100%;
     margin: 20px 0;
   }
-
+.btn-readmore{
+  justify-content: center;
+}
 
 }

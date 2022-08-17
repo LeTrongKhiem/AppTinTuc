@@ -47,7 +47,8 @@ import { UnionComponent } from './union/union.component';
 import { YouReadComponent } from './you-read/you-read.component';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
-
+import { EconomyComponent } from './economy/economy.component';
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -83,7 +84,8 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     StraighttalkComponent,
     ExclusivenewsComponent,
     MarketComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    EconomyComponent
 
   ],
   imports: [
@@ -97,6 +99,7 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     InfiniteScrollModule,
     FormsModule,
     Ng2SearchPipeModule,
+    LoadingBarRouterModule,
   ],
   providers: [
     {
@@ -111,7 +114,8 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
         ],
       } as SocialAuthServiceConfig,
     },
-  ],
+  ]
+  ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -268,7 +268,8 @@
   width: 300px;
   float: right;
   margin-left: 30px;
-  background: #e7e9ec;
+  position: fixed;
+  right: 100px;
 }
 
 .body .body-content .box-content .box-left .box-news-with-cate {

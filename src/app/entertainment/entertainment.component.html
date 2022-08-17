@@ -2,72 +2,61 @@
   <div class="body-content body-category">
     <div class="cate-left">
       <div class="sub-cate">
-        <h1 class="title-cate">Giải trí</h1>
-        <h2 class="title-cate-child">Hậu trường Showbiz</h2>
-        <h2 class="title-cate-child">Mỗi tuần một nhân vật</h2>
+        <h1 class="title-cate">Giải Trí</h1>
       </div>
       <div class="clearfix"></div>
       <div class="box-cate-focus">
-        <ng-container *ngFor="let giaitriItem of giaitriResult.slice(0,1)">
+        <ng-container *ngFor="let giaitriItems of giaitriResult.slice(0,1)">
           <div class="news-info">
             <h3>
-              <a class="title" href="{{giaitriItem.link}}" title="{{giaitriItem.title}}">{{giaitriItem.title}}</a>
+              <a class="title" routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" title="{{giaitriItems.title}}">{{giaitriItems.title}}</a>
             </h3>
-            <p class="sapo">{{giaitriItem.content.slice(giaitriItem.content.search('">') + 2)}}</p>
+            <p class="sapo">{{giaitriItems.content.slice(giaitriItems.content.search('">') + 2)}}</p>
           </div>
-          <a class="img435x273" href="{{giaitriItem.link}}">
-            <img src="{{giaitriItem.thumbnail}}"
-                 alt="{{giaitriItem.alt}}"
-                 title="{{giaitriItem.title}}" class="img435x273">
+          <a class="img435x273" routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}">
+            <img src="{{giaitriItems.thumbnail}}" alt="{{giaitriItems.title}}" title="{{giaitriItems.title}}"
+                 class="img435x273">
           </a>
         </ng-container>
-
         <div class="clearfix"></div>
         <span class="separator"></span>
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
+          <ul class="list-news clearfix" *ngFor="let giaitriItems of giaitriResult
+           |paginate: {
+                     itemsPerPage:5,
+                     currentPage: page,
+                     totalItems: totalLength
+                     }
+            ">
+            <li class="news-item ">
 
-          <ul class="list-news clearfix">
-            <ng-container *ngFor="let giaitriItem of giaitriResult|
-          paginate: {itemsPerPage:5, currentPage: page, totalItems: totalLenght}">
-              <li class="news-item ">
-                <a href="{{giaitriItem.link}}"
-                   title="{{giaitriItem.title}}"
-                   class="img220x139">
-                  <img src="{{giaitriItem.thumbnail}}"
-                       class="img220x139">
-                </a>
+              <a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" class="img220x139">
+                <img src="{{giaitriItems.thumbnail}}" class="img220x139">
+              </a>
 
-                <div class="news-info">
-                  <h3><a href="{{giaitriItem.link}}"
-                         title="{{giaitriItem.title}}"
-                         class="title">{{giaitriItem.title}}</a></h3>
-                  <div class="clearfix"></div>
-                  <ul class="news-relate">
-
-                    <li>
-                      <a href=""
-                         title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
-                         class="title">Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày
-                        1-8 tới</a>
-                    </li>
-
-                    <li>
-                      <a href=""
-                         title="Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến từ ngày 1-8"
-                         class="title">Cao tốc Cầu Giẽ - Ninh Bình thu phí không dừng toàn tuyến
-                        từ ngày 1-8</a>
-                    </li>
-
-                  </ul>
-
-                </div>
+              <div class="news-info">
+                <h3><a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" title="{{giaitriItems.title}}" class="title">{{giaitriItems.title}}</a></h3>
                 <div class="clearfix"></div>
-              </li>
-            </ng-container>
+
+
+                <ul class="news-relate">
+
+                  <li>
+                    <a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
+                       class="title">{{giaitriItems.description.slice(giaitriItems.description.search('">')+2)}}</a>
+                  </li>
+
+
+
+                </ul>
+
+              </div>
+              <div class="clearfix"></div>
+            </li>
           </ul>
-          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
+          <pagination-controls  class="pagination" (pageChange)="page =$event" previousLabel="" nextLabel=""></pagination-controls>
         </div>
         <div class="clearfix"></div>
 
@@ -75,21 +64,20 @@
       <div class="list-box-container">
         <div class="box-news">
           <h2>
-            <a class="title-cate" href="">Tin nổi bật</a>
+            <a class="title-cate" routerLink="/trong-nuoc">Tin nổi bật</a>
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
-          <ul class="list-news" >
+          <ul class="list-news">
 
-            <li *ngFor="let thoiSuItem of giaitriResult.slice(2,5) ;let i = index">
+            <li *ngFor="let giaitriItems of giaitriResult.slice(2,5) ;let i = index">
 
-              <a href="" class="img216x133">
-                <img src="{{thoiSuItem.thumbnail}}"
-                     class="img216x133">
+              <a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" class="img216x133">
+                <img src="{{giaitriItems.thumbnail}}" class="img216x133">
               </a>
 
 
-              <h3><a href="" class="title">{{thoiSuItem.title}}</a>
+              <h3><a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" class="title">{{giaitriItems.title}}</a>
               </h3>
 
             </li>
