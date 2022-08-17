@@ -5,6 +5,7 @@ import {NewsApiService} from "../Service/news-api.service";
   selector: 'app-education',
   templateUrl: './education.component.html',
   styleUrls: ['./education.component.css','../app.component.css','../reponsiveCategory.css']
+
 })
 export class EducationComponent implements OnInit {
   giaoducResult : any = [];

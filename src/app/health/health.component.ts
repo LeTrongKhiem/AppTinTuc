@@ -5,16 +5,15 @@ import {AppComponent} from "../app.component";
   selector: 'app-health',
   templateUrl: './health.component.html',
   styleUrls: ['./health.component.css', '../app.component.css','../reponsiveCategory.css']
+1
 })
 export class HealthComponent implements OnInit {
   suckhoeResult : any = [];
   totalLength : any;
   page : number = 1;
-
   constructor(private service : NewsApiService) {
     this.getItems();
   }
-
   ngOnInit(): void {
   }
   getItems():void{

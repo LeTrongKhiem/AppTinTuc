@@ -25,7 +25,6 @@
       </div>
       <div class="list-news-container">
         <div class="cate-list-news">
-
           <ul class="list-news clearfix">
             <ng-container *ngFor="let suckhoeItem of suckhoeResult  |paginate: {
                      itemsPerPage:5,
@@ -69,6 +68,7 @@
             </ng-container>
           </ul>
           <pagination-controls  class="pagination" (pageChange)="page =$event" previousLabel="" nextLabel=""></pagination-controls>
+
         </div>
         <div class="clearfix"></div>
 
@@ -82,15 +82,18 @@
           <div class="clearfix"></div>
           <ul class="list-news" >
 
+
             <li *ngFor="let suckhoeItem of suckhoeResult.slice(2,5) ;let i = index">
 
               <a routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}" class="img216x133">
                 <img src="{{suckhoeItem.thumbnail}}"
+
                      class="img216x133">
               </a>
 
 
               <h3><a routerLink="/detail/{{replaceAll(suckhoeItem.link,'/','?')}}" class="title">{{suckhoeItem.title}}</a>
+
               </h3>
 
             </li>

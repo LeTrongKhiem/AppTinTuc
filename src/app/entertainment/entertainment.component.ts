@@ -5,6 +5,7 @@ import {NewsApiService} from "../Service/news-api.service";
   selector: 'app-entertainment',
   templateUrl: './entertainment.component.html',
   styleUrls: ['./entertainment.component.css', '../app.component.css','../reponsiveCategory.css']
+
 })
 export class EntertainmentComponent implements OnInit {
   giaitriResult : any = [];

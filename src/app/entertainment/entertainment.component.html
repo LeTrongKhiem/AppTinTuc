@@ -38,6 +38,8 @@
 
               <div class="news-info">
                 <h3><a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" title="{{giaitriItems.title}}" class="title">{{giaitriItems.title}}</a></h3>
+
+
                 <div class="clearfix"></div>
 
 
@@ -56,7 +58,9 @@
               <div class="clearfix"></div>
             </li>
           </ul>
+
           <pagination-controls  class="pagination" (pageChange)="page =$event" previousLabel="" nextLabel=""></pagination-controls>
+
         </div>
         <div class="clearfix"></div>
 
@@ -68,6 +72,7 @@
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
+
           <ul class="list-news">
 
             <li *ngFor="let giaitriItems of giaitriResult.slice(2,5) ;let i = index">
@@ -78,6 +83,7 @@
 
 
               <h3><a routerLink="/detail/{{replaceAll(giaitriItems.link,'/','?')}}" class="title">{{giaitriItems.title}}</a>
+
               </h3>
 
             </li>
