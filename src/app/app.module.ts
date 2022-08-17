@@ -47,6 +47,7 @@ import { UnionComponent } from './union/union.component';
 import { YouReadComponent } from './you-read/you-read.component';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
+import { MultimediaComponent } from './multimedia/multimedia.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
     StraighttalkComponent,
     ExclusivenewsComponent,
     MarketComponent,
-    ScrollToTopComponent
+    ScrollToTopComponent,
+    MultimediaComponent
 
   ],
   imports: [
