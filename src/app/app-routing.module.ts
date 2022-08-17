@@ -25,6 +25,7 @@ import {StraighttalkComponent} from "./straighttalk/straighttalk.component";
 import {ExclusivenewsComponent} from "./exclusivenews/exclusivenews.component";
 import {UnionComponent} from "./union/union.component";
 import {YouReadComponent} from "./you-read/you-read.component";
+import {MultimediaComponent} from "./multimedia/multimedia.component";
 
 const routes: Routes = [
   {path:'',component: HomeComponent},
@@ -51,7 +52,8 @@ const routes: Routes = [
   {path: 'noi-thang', component:StraighttalkComponent},
   {path: 'tin-doc-quyen', component:ExclusivenewsComponent},
   {path:'cong-doan',component:UnionComponent},
-  {path:'ban-doc',component:YouReadComponent}
+  {path:'ban-doc',component:YouReadComponent},
+  {path:'multimedia',component:MultimediaComponent},
 ];
 
 @NgModule({
