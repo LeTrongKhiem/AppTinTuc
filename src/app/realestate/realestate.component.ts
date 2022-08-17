@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-realestate',
   templateUrl: './realestate.component.html',
-  styleUrls: ['./realestate.component.css']
+  styleUrls: ['./realestate.component.css','../domestic/domestic.component.css','../app.component.css']
 })
 export class RealestateComponent implements OnInit {
 
@@ -13,7 +13,13 @@ export class RealestateComponent implements OnInit {
   page:number=1;
   constructor(private service: NewsApiService) { }
   ngOnInit(): void {
-    this.getItems();
+    this.service.diaOcApi().subscribe((result) => {
+      // console.log(result);
+      this.diaOcResult = result.items;
+      this.totalLength = result.items.length;
+      console.log(result)
+    })
+
   }
   getItems():void{
     this.service.diaOcApi().subscribe((result) => {
