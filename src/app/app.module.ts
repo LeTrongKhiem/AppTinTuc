@@ -48,7 +48,7 @@ import { YouReadComponent } from './you-read/you-read.component';
 import { HeaderMobileComponent } from './header-mobile/header-mobile.component';
 import { FooterMobileComponent } from './footer-mobile/footer-mobile.component';
 import { EconomyComponent } from './economy/economy.component';
-
+import { LoadingBarRouterModule } from '@ngx-loading-bar/router';
 @NgModule({
   declarations: [
     AppComponent,
@@ -99,6 +99,7 @@ import { EconomyComponent } from './economy/economy.component';
     InfiniteScrollModule,
     FormsModule,
     Ng2SearchPipeModule,
+    LoadingBarRouterModule,
   ],
   providers: [
     {
@@ -113,7 +114,8 @@ import { EconomyComponent } from './economy/economy.component';
         ],
       } as SocialAuthServiceConfig,
     },
-  ],
+  ]
+  ,
   bootstrap: [AppComponent]
 })
 export class AppModule { }

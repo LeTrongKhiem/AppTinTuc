@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-straighttalk',
   templateUrl: './straighttalk.component.html',
-  styleUrls: ['./straighttalk.component.css','../reponsiveCategory.css']
+  styleUrls: ['./straighttalk.component.css','../reponsiveCategory.css','../app.component.css']
 })
 export class StraighttalkComponent implements OnInit {
 
@@ -22,5 +22,8 @@ export class StraighttalkComponent implements OnInit {
       this.totalLength = result.items.length;
       console.log(result)
     })
+  }
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
   }
 }

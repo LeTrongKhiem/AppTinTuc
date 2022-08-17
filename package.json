@@ -16,10 +16,14 @@
     "@angular/compiler": "^14.0.0",
     "@angular/core": "^14.0.0",
     "@angular/forms": "^14.0.0",
+    "@angular/http": "^7.2.16",
     "@angular/material": "^14.1.0",
     "@angular/platform-browser": "^14.0.0",
     "@angular/platform-browser-dynamic": "^14.0.0",
     "@angular/router": "^14.0.0",
+    "@ngx-loading-bar/core": "^6.0.2",
+    "@ngx-loading-bar/http-client": "^6.0.2",
+    "@ngx-loading-bar/router": "^6.0.2",
     "angularx-social-login": "^4.1.0",
     "ng2-search-filter": "^0.5.1",
     "ngx-infinite-scroll": "^14.0.0",
@@ -41,17 +45,5 @@
     "karma-jasmine": "~5.0.0",
     "karma-jasmine-html-reporter": "~1.7.0",
     "typescript": "~4.7.2"
-  },
-  "description": "��#\u0000 \u0000A\u0000p\u0000p\u0000T\u0000i\u0000n\u0000T\u0000u\u0000c\u0000 \u0000\r\u0000 \u0000#\u0000#\u0000 \u0000\u0010\u0001�\u001e \u0000�\u0000n\u0000 \u0000c\u0000u\u0000�\u001ei\u0000 \u0000k\u0000�\u001e \u0000m\u0000�\u0000n\u0000 \u0000h\u0000�\u001ec\u0000 \u0000L\u0000�\u001ep\u0000 \u0000t\u0000r\u0000�\u0000n\u0000h\u0000 \u0000F\u0000r\u0000o\u0000n\u0000t\u0000e\u0000n\u0000d\u0000\r\u0000 \u0000#\u0000#\u0000 \u0000T\u0000h\u0000�\u0000n\u0000h\u0000 \u0000v\u0000i\u0000�\u0000n\u0000 \u0000t\u0000r\u0000o\u0000n\u0000g\u0000 \u0000n\u0000h\u0000�\u0000m\u0000:\u0000\r\u0000 \u0000-\u0000 \u0000L\u0000�\u0000 \u0000T\u0000r\u0000�\u001en\u0000g\u0000 \u0000K\u0000h\u0000i\u0000�\u0000m\u0000 \u00001\u00009\u00001\u00003\u00000\u00001\u00000\u00002\u0000\r\u0000 \u0000-\u0000 \u0000L\u0000�\u0000 \u0000H\u0000o\u0000�\u0000n\u0000g\u0000 \u0000�\u0000n\u0000 \u00001\u00009\u00001\u00003\u00000\u00000\u00000\u00004\u0000\r\u0000 \u0000-\u0000 \u0000T\u0000�\u001en\u0000g\u0000 \u0000M\u0000i\u0000n\u0000h\u0000 \u0000T\u0000h\u0000u\u0000�\u001en\u0000 \u00001\u00009\u00001\u00003\u00000\u00002\u00002\u00003\u0000\r\u0000 \u0000#\u0000#\u0000 \u0000G\u0000i\u0000�\u001en\u0000g\u0000 \u0000v\u0000i\u0000�\u0000n\u0000 \u0000h\u0000�\u0001�\u001en\u0000g\u0000 \u0000d\u0000�\u001en\u0000:\u0000\r\u0000 \u0000-\u0000 \u0000T\u0000r\u0000�\u001en\u0000 \u0000\u0010\u0001�\u0000n\u0000h\u0000 \u0000l\u0000o\u0000n\u0000g\u0000\r\u0000 \u0000#\u0000#\u0000 \u0000C\u0000�\u0000n\u0000g\u0000 \u0000n\u0000g\u0000h\u0000�\u001e \u0000s\u0000�\u001e \u0000d\u0000�\u001en\u0000g\u0000:\u0000 \u0000\r\u0000 \u0000-\u0000 \u0000F\u0000r\u0000o\u0000n\u0000t\u0000e\u0000n\u0000d\u0000:\u0000 \u0000A\u0000n\u0000g\u0000u\u0000l\u0000a\u0000r\u0000\r\u0000 \u0000-\u0000 \u0000B\u0000a\u0000c\u0000k\u0000e\u0000n\u0000d\u0000:\u0000 \u0000A\u0000s\u0000p\u0000n\u0000e\u0000t\u0000 \u0000c\u0000o\u0000r\u0000e\u0000\r\u0000 \u0000\r\u0000 \u0000\r\u0000 \u0000\r\u0000 \u0000",
-  "main": "karma.conf.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LeTrongKhiem/AppTinTuc.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/LeTrongKhiem/AppTinTuc/issues"
-  },
-  "homepage": "https://github.com/LeTrongKhiem/AppTinTuc#readme"
+  }
 }

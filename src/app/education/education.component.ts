@@ -4,11 +4,11 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-education',
   templateUrl: './education.component.html',
-  styleUrls: ['./education.component.css', '../commoncomponent/commoncomponent.component.css','../reponsiveCategory.css']
+  styleUrls: ['./education.component.css','../app.component.css','../reponsiveCategory.css']
 })
 export class EducationComponent implements OnInit {
   giaoducResult : any = [];
-  totalLenght : any;
+  totalLength : any;
   page : number = 1;
 
   constructor(private service : NewsApiService) {
@@ -20,9 +20,11 @@ export class EducationComponent implements OnInit {
   getItems():void{
     this.service.giaoDucApi().subscribe((result) => {
       this.giaoducResult = result.items;
-      this.totalLenght = result.item.length;
+      this.totalLength = result.items.length;
       console.log(result);
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

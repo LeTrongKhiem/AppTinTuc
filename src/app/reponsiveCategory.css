@@ -53,7 +53,9 @@
 
 /* Mobile */
 @media (max-width: 739px) {
-
+  .body .body-content{
+    width: 100%;
+  }
   .box-cate-focus {
     display: flex;
     align-items: center;
@@ -129,5 +131,15 @@
 
   .pagination {
     margin-left: -50px;
+  }
+  .username-input input{
+    width: 100%;
+  }
+  .comment-container{
+    width: 100%;
+  }
+  .comment-container .comment-list .comment-item .comment-content,
+  .comment-container .comment-input-container .text-comment .text-input textarea{
+    width: 100%;
   }
 }

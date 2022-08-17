@@ -19,11 +19,11 @@ export class DomesticComponent implements OnInit {
 
   getItems():void{
     this.service.thoiSu().subscribe((result) => {
-      // console.log(result);
       this.thoiSuResult = result.items;
       this.totalLength = result.items.length;
-      console.log(result)
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

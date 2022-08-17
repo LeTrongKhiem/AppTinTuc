@@ -5,7 +5,7 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
-  styleUrls: ['./technology.component.css','../reponsiveCategory.css']
+  styleUrls: ['./technology.component.css','../reponsiveCategory.css','../app.component.css']
 })
 export class TechnologyComponent implements OnInit {
 
@@ -24,5 +24,7 @@ export class TechnologyComponent implements OnInit {
       console.log(result)
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

@@ -1,18 +1,21 @@
 
-  .cate-right {
-    float: right;
-    background: #e7e9ec;
-    margin-left: 50px;
-  }
+.cate-right {
+  float: right;
+  background: #e7e9ec;
+  margin-left: 50px;
+}
+
 .broadcast.box-tv {
   background-color: #f6f6f6;
 }
+
 .broadcast {
   padding: 19px 20px;
-  border: 1px solid rgba(116,152,189,.35);
+  border: 1px solid rgba(116, 152, 189, .35);
   border-radius: 5px;
   background: #fff;
   margin-bottom: 20px;
+
   h2 {
     .title {
       color: #000;
@@ -20,6 +23,7 @@
       font-weight: 500;
       line-height: 1;
       text-transform: uppercase;
+
       &:before {
         content: '';
         background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
@@ -33,12 +37,15 @@
       }
     }
   }
+
   .news-list {
     .main-news {
       margin-top: 19px;
       width: 259px;
+
       h3 {
         margin-top: 10px;
+
         .title {
           color: #000;
           font-size: 15px;
@@ -48,12 +55,15 @@
         }
       }
     }
+
     ul.sub-news {
       margin-top: 18px;
+
       li {
         list-style-type: none;
         float: left;
         width: 120px;
+
         .title {
           color: #000;
           font-size: 12px;
@@ -63,6 +73,7 @@
           margin-top: 9px;
           font-weight: 500;
         }
+
         &:last-child {
           margin-left: 18px;
         }
@@ -70,10 +81,12 @@
     }
   }
 }
+
 .img259x146 {
   width: 259px;
   height: 146px;
 }
+
 .img120x68 {
   width: 120px;
   height: 68px;

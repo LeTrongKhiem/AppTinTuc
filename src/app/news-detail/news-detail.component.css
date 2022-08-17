@@ -9,3 +9,15 @@
 iframe .title-content{
   display: none;
 }
+.comment-container {
+  background: #fff;
+}
+#admwrapper{
+  display: none;
+}
+.body-detail .body-content .sapo-detail {
+display: none;
+}
+/deep/ .body-detail .body-content .sapo-detail  {
+display: none;
+}

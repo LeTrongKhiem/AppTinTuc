@@ -5,7 +5,7 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-sports',
   templateUrl: './sports.component.html',
-  styleUrls: ['./sports.component.css','../reponsiveCategory.css']
+  styleUrls: ['./sports.component.css','../reponsiveCategory.css','../app.component.css']
 })
 export class SportsComponent implements OnInit {
 
@@ -18,11 +18,11 @@ export class SportsComponent implements OnInit {
   }
   getItems():void{
     this.service.theThaoApi().subscribe((result) => {
-      // console.log(result);
       this.theThaoResult = result.items;
       this.totalLength = result.items.length;
-      console.log(result)
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

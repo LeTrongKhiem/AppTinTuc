@@ -2,18 +2,18 @@
   <div class="body-content body-category">
     <div class="cate-left">
       <div class="sub-cate">
-        <h1 class="title-cate">Trong nước</h1>
+        <h1 class="title-cate">Công đoàn</h1>
       </div>
       <div class="clearfix"></div>
       <div class="box-cate-focus">
         <ng-container *ngFor="let thoiSuItem of congDoanResult.slice(0,1)">
           <div class="news-info">
             <h3>
-              <a class="title" href="{{thoiSuItem.link}}" title="{{thoiSuItem.title}}">{{thoiSuItem.title}}</a>
+              <a class="title" routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}" title="{{thoiSuItem.title}}">{{thoiSuItem.title}}</a>
             </h3>
             <p class="sapo">{{thoiSuItem.content.slice(thoiSuItem.content.search('">') + 2)}}</p>
           </div>
-          <a class="img435x273" href="{{thoiSuItem.link}}">
+          <a class="img435x273" routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}">
             <img src="{{thoiSuItem.thumbnail}}"
                  alt="{{thoiSuItem.title}}"
                  title="{{thoiSuItem.title}}" class="img435x273">
@@ -28,7 +28,7 @@
           paginate: {itemsPerPage:5, currentPage: page, totalItems: totalLength}">
             <li class="news-item ">
 
-              <a href=""
+              <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
 
                  class="img220x139">
                 <img src="{{thoiSuItem.thumbnail}}"
@@ -36,7 +36,7 @@
               </a>
 
               <div class="news-info">
-                <h3><a href=""
+                <h3><a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                        title="{{thoiSuItem.title}}"
                        class="title">{{thoiSuItem.title}}</a></h3>
                 <div class="clearfix"></div>
@@ -45,7 +45,7 @@
                 <ul class="news-relate">
 
                   <li>
-                    <a href=""
+                    <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                        title="Thu phí không dừng cao tốc Liên Khương - Prenn vào ngày 1-8 tới"
                        class="title">{{thoiSuItem.description.slice(thoiSuItem.description.search('">') + 7)}}</a>
                   </li>
@@ -58,7 +58,7 @@
               <div class="clearfix"></div>
             </li>
           </ul>
-          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="Trước" nextLabel="Sau" ></pagination-controls>
+          <pagination-controls class="pagination" (pageChange)="page =$event" previousLabel="" nextLabel="" ></pagination-controls>
         </div>
         <div class="clearfix"></div>
 
@@ -66,7 +66,7 @@
       <div class="list-box-container">
         <div class="box-news">
           <h2>
-            <a class="title-cate" href="">Tin nổi bật</a>
+            <a class="title-cate" routerLink="/cong-doan">Tin nổi bật</a>
             <span class="bg-right"></span>
           </h2>
           <div class="clearfix"></div>
@@ -74,13 +74,13 @@
 
             <li *ngFor="let thoiSuItem of congDoanResult.slice(2,5) ;let i = index">
 
-              <a href="" class="img216x133">
+              <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}" class="img216x133">
                 <img src="{{thoiSuItem.thumbnail}}"
                      class="img216x133">
               </a>
 
 
-              <h3><a href="" class="title">{{thoiSuItem.title}}</a>
+              <h3><a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}" class="title">{{thoiSuItem.title}}</a>
               </h3>
 
             </li>

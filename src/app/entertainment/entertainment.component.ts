@@ -4,11 +4,11 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-entertainment',
   templateUrl: './entertainment.component.html',
-  styleUrls: ['./entertainment.component.css', '../commoncomponent/commoncomponent.component.css','../reponsiveCategory.css']
+  styleUrls: ['./entertainment.component.css', '../app.component.css','../reponsiveCategory.css']
 })
 export class EntertainmentComponent implements OnInit {
   giaitriResult : any = [];
-  totalLenght : any;
+  totalLength : any;
   page : number = 1;
 
   constructor(private service : NewsApiService) {
@@ -20,9 +20,10 @@ export class EntertainmentComponent implements OnInit {
   getItems():void{
     this.service.giaiTriApi().subscribe((result) => {
       this.giaitriResult = result.items;
-      this.totalLenght = result.item.length;
-      console.log(result);
+      this.totalLength = result.items.length;
     })
   }
-
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
+  }
 }

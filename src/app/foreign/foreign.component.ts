@@ -14,10 +14,12 @@ export class ForeignComponent implements OnInit {
   constructor(private service: NewsApiService) { }
   ngOnInit(): void {
     this.service.thoiSuQuocte().subscribe((result) => {
-      // console.log(result);
       this.thoiSuQuocteResult = result.items;
       this.totalLength = result.items.length;
       console.log(result)
     })
+  }
+  replaceAll(str: string, search: string, replacement: string) {
+    return str.replace(new RegExp(search, 'g'), replacement);
   }
 }

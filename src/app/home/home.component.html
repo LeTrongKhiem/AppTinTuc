@@ -1,27 +1,27 @@
 <section class="body">
   <div class="body-content">
     <div class="logo-text fl">
-            {{todayString     }},
-        {{weatherResult.name}}
-        {{temp}}°C,
-        {{weatherResult.weather?.main}}
+      {{todayString     }},
+      {{weatherResult.name}}
+      {{temp}}°C,
+      {{weatherResult.weather?.main}}
 
     </div>
     <div class="hot-news fr clearfix">
       <div class="icon-hot-news"></div>
 
       <div class="hot-news-item">
-        <a href="/" title="Xung đột Nga - Ukraine"># Xung đột Nga -
+        <a routerLink="/" title="Xung đột Nga - Ukraine"># Xung đột Nga -
           Ukraine</a>
       </div>
 
       <div class="hot-news-item">
-        <a href="/" title="Kit xét nghiệm Công ty Việt Á"># Kit xét
+        <a routerLink="/" title="Kit xét nghiệm Công ty Việt Á"># Kit xét
           nghiệm Công ty Việt Á</a>
       </div>
 
       <div class="hot-news-item">
-        <a href="/" title="Diễn biến dịch Covid-19"># Diễn biến dịch
+        <a routerLink="/" title="Diễn biến dịch Covid-19"># Diễn biến dịch
           Covid-19</a>
       </div>
 
@@ -32,30 +32,30 @@
         <div class="top-news clearfix">
           <div class="main-news">
             <ng-container *ngFor="let latestItem of latestNewsResult.slice(0,1)">
-            <div class="top1-focus">
-              <a routerLink="/detail/{{replaceAll(latestItem.link,'/','?')}}"
-                 title="{{latestItem.title}}"
-                 class="img544x340">
+              <div class="top1-focus">
+                <a routerLink="/detail/{{replaceAll(latestItem.link,'/','?')}}"
+                   title="{{latestItem.title}}"
+                   class="img544x340">
 
-                <img
-                  src="{{latestItem.thumbnail }}"
-                  alt="{{latestItem.title}}"
-                  class="img544x340">
+                  <img
+                    src="{{latestItem.thumbnail }}"
+                    alt="{{latestItem.title}}"
+                    class="img544x340">
 
-              </a>
+                </a>
 
 
-              <div class="gradient">
-                <h3 class="news-title" >
-                </h3>
-                <p class="sapo">
-                  {{latestItem.content.slice(latestItem.content.search('">') + 2)}}
-                </p>
+                <div class="gradient">
+                  <h3 class="news-title">
+                  </h3>
+                  <p class="sapo">
+                    {{latestItem.content.slice(latestItem.content.search('">') + 2)}}
+                  </p>
 
+
+                </div>
 
               </div>
-
-            </div>
             </ng-container>
 
           </div>
@@ -88,7 +88,6 @@
 
                 </div>
               </div>
-
 
 
             </div>
@@ -124,7 +123,7 @@
         </div>
       </div>
       <div class="box-right">
-
+        <app-right-catelory></app-right-catelory>
       </div>
     </div>
     <div class="box-content mg_t22 clearfix">
@@ -185,29 +184,29 @@
               <div class="box-cate-content">
                 <div class="header-cate clearfix">
                   <a routerLink="" title="Nói thẳng" class="title">Nói thẳng</a>
-                  <a routerLink=""title="Xem tất cả" class="view-more">Xem tất cả</a>
+                  <a routerLink="" title="Xem tất cả" class="view-more">Xem tất cả</a>
                 </div>
                 <ng-container *ngFor="let noiThangItem of noiThangResult.slice(0,1)">
-                <div class="news-item">
+                  <div class="news-item">
 
-                  <a routerLink="/detail/{{replaceAll(noiThangItem.link,'/','?')}}"
-                     title="{{noiThangItem.title}}" class="img216x133"
-                  >
+                    <a routerLink="/detail/{{replaceAll(noiThangItem.link,'/','?')}}"
+                       title="{{noiThangItem.title}}" class="img216x133"
+                    >
 
                       <img
                         src="{{noiThangItem.thumbnail}}"
                         alt="Thu phí ôtô &quot;không đặt nặng lời, lỗ&quot;: Khó nghe quá!" class="img216x133">
 
-                  </a>
+                    </a>
 
-                  <h3 style="margin-bottom: 0px;"><a routerLink="/" class="title"
-                                                     title="{{noiThangItem.title}}">{{noiThangItem.title}}</a>
-                  </h3>
-                  <div class="news-info clearfix">
-                    <div class="icon-views" style="display: none;"></div>
-                    <div class="number-views get-views" style="display: none;"><span>0</span> người quan tâm</div>
+                    <h3 style="margin-bottom: 0px;"><a routerLink="/" class="title"
+                                                       title="{{noiThangItem.title}}">{{noiThangItem.title}}</a>
+                    </h3>
+                    <div class="news-info clearfix">
+                      <div class="icon-views" style="display: none;"></div>
+                      <div class="number-views get-views" style="display: none;"><span>0</span> người quan tâm</div>
+                    </div>
                   </div>
-                </div>
                 </ng-container>
               </div>
             </div>
@@ -223,14 +222,16 @@
 
                 <div class="news-item">
                   <ng-container *ngFor="let docQuyenItem of docQuyenResult.slice(0,1)">
-                    <a routerLink="/detail/{{replaceAll(docQuyenItem.link,'/','?')}}" title="{{docQuyenItem.title}}" class="img216x133">
+                    <a routerLink="/detail/{{replaceAll(docQuyenItem.link,'/','?')}}" title="{{docQuyenItem.title}}"
+                       class="img216x133">
 
                       <img
                         src="{{docQuyenItem.thumbnail }}"
                         alt="3 người chết trong xử lý vụ cháy công ty ở KCN Sóng Thần 1" class="img216x133">
                     </a>
 
-                    <h3 style="margin-bottom: 0px;"><a routerLink="/detail/{{replaceAll(docQuyenItem.link,'/','?')}}" class="title"
+                    <h3 style="margin-bottom: 0px;"><a routerLink="/detail/{{replaceAll(docQuyenItem.link,'/','?')}}"
+                                                       class="title"
                                                        title="{{docQuyenItem.title}}">{{docQuyenItem.title}}</a></h3>
                   </ng-container>
 
@@ -249,34 +250,34 @@
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/thoi-su/chinh-tri.htm" title="Chính trị">Chính trị</a>
+                  <a routerLink="/" title="Chính trị">Chính trị</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su/xa-hoi.htm" title="Xã hội">Xã hội</a>
+                  <a routerLink="/" title="Xã hội">Xã hội</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su/mien-tay.htm" title="Miền Tây">Miền Tây</a>
+                  <a routerLink="/" title="Miền Tây">Miền Tây</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su/mien-trung-tay-nguyen.htm"
+                  <a routerLink="/"
                      title="Miền Trung - Tây Nguyên">Miền Trung - Tây Nguyên</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su/ha-noi.htm" title="Hà Nội">Hà Nội</a>
+                  <a routerLink="/trong-nuoc" title="Hà Nội">Hà Nội</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su/phong-su-but-ky.htm" title="Phóng sự - Bút ký">Phóng sự - Bút
+                  <a routerLink="/trong-nuoc" title="Phóng sự - Bút ký">Phóng sự - Bút
                     ký</a>
                 </li>
 
 
                 <li>
-                  <a href="/bien-dao.htm" title="Biển đảo">Biển đảo</a>
+                  <a routerLink="/trong-nuoc" title="Biển đảo">Biển đảo</a>
                 </li>
 
 
@@ -290,9 +291,9 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(0,1); let i =index">
-                    <a href="{{thoiSuItem.link}}"
+                    <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                        title="{{thoiSuItem.title}}"
-                       >
+                    >
 
                       <img
                         src="{{thoiSuItem.thumbnail }}"
@@ -315,7 +316,7 @@
                   <ng-container *ngFor="let thoiSuItem of thoiSuResult.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{thoiSuItem.link}}"
+                      <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                          title="{{thoiSuItem.title}}" class="img114x71">
 
                         <img
@@ -325,7 +326,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{thoiSuItem.link}}"
+                        routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                         title="{{thoiSuItem.title}}"
                         class="title">{{thoiSuItem.title}}</a></h3>
                     </li>
@@ -391,28 +392,23 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="Quốc tế" class="title">Quốc tế</a></h2>
+              <h2><a routerLink="/trong-nuoc" title="Quốc tế" class="title">Quốc tế</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/thoi-su-quoc-te/tin-hay-anh-la.htm" title="Tin hay, ảnh lạ">Tin hay, ảnh lạ</a>
+                  <a routerLink="/thoi-su-quoc-te" title="Tin hay, ảnh lạ">Tin hay, ảnh lạ</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su-quoc-te/van-de-nong.htm" title="Vấn đề nóng">Vấn đề nóng</a>
+                  <a routerLink="/thoi-su-quoc-te" title="Vấn đề nóng">Vấn đề nóng</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su-quoc-te/ho-so.htm" title="Hồ sơ">Hồ sơ</a>
+                  <a routerLink="/thoi-su-quoc-te" title="Hồ sơ">Hồ sơ</a>
                 </li>
 
                 <li>
-                  <a href="/thoi-su-quoc-te/video-clip.htm" title="Video clip">Video clip</a>
-                </li>
-
-
-                <li>
-                  <a href="/khoa-hoc.htm" title="Khoa học">Khoa học</a>
+                  <a routerLink="/thoi-su-quoc-te" title="Video clip">Video clip</a>
                 </li>
 
 
@@ -426,7 +422,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let thoiSuItem of thoiSuQuocTeResult.slice(0,1); let i =index">
-                    <a href="{{thoiSuItem.link}}"
+                    <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                        title="{{thoiSuItem.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -436,7 +432,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{thoiSuItem.link}}"
+                      <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
 
                          title="{{thoiSuItem.title}}"
                          class="title">
@@ -451,7 +447,7 @@
                   <ng-container *ngFor="let thoiSuItem of thoiSuQuocTeResult.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{thoiSuItem.link}}"
+                      <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                          title="{{thoiSuItem.title}}" class="img114x71">
 
                         <img
@@ -461,7 +457,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{thoiSuItem.link}}"
+                        routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                         title="{{thoiSuItem.title}}"
                         class="title">{{thoiSuItem.title}}</a></h3>
                     </li>
@@ -472,11 +468,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Dư luận</a>
+                  <a routerLink="/ban-doc" title="Dư luận" class="title-cate">Dư luận</a>
 
 
                   <ng-container *ngFor="let thoiSuItem of thoiSuQuocTeResult.slice(0,1); let i =index">
-                    <a href="{{thoiSuItem.link}}">
+                    <a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}">
 
                       <img
                         src="{{thoiSuItem.thumbnail }}"
@@ -484,7 +480,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{thoiSuItem.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(thoiSuItem.link,'/','?')}}"
                              title="{{thoiSuItem.title}}" class="title">{{thoiSuItem.title}}</a></h3>
 
 
@@ -505,21 +501,16 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="Công đoàn" class="title">Công đoàn</a></h2>
+              <h2><a routerLink="/cong-doan" title="Công đoàn" class="title">Công đoàn</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/cong-doan/doi-song-cong-nhan.htm" title="Đời sống công nhân">Đời sống công nhân</a>
+                  <a routerLink="/cong-doan" title="Đời sống công nhân">Đời sống công nhân</a>
                 </li>
 
                 <li>
-                  <a href="/cong-doan/doi-thoai.htm" title="Đối thoại">Đối thoại</a>
+                  <a routerLink="/cong-doan" title="Đối thoại">Đối thoại</a>
                 </li>
-
-                <li>
-                  <a href="https://vieclam.nld.com.vn/" title="Việc làm">Việc làm</a>
-                </li>
-
 
               </ul>
             </div>
@@ -531,7 +522,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of congDoanResult.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -541,7 +532,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -556,7 +547,7 @@
                   <ng-container *ngFor="let newsItems of congDoanResult.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -565,7 +556,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -576,11 +567,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Chính sách</a>
+                  <a routerLink="/ban-doc" title="Dư luận" class="title-cate">Chính sách</a>
 
 
                   <ng-container *ngFor="let newsItems of congDoanResult.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -588,7 +579,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -609,23 +600,23 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="BẠN ĐỌC" class="title">BẠN ĐỌC</a></h2>
+              <h2><a routerLink="/ban-doc" title="BẠN ĐỌC" class="title">BẠN ĐỌC</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/ban-doc/cuoc-song-nhan-ai.htm" title="Cuộc sống nhân ái">Cuộc sống nhân ái</a>
+                  <a routerLink="/ban-doc" title="Cuộc sống nhân ái">Cuộc sống nhân ái</a>
                 </li>
 
                 <li>
-                  <a href="/ban-doc/toi-len-tieng.htm" title="Tôi lên tiếng">Tôi lên tiếng</a>
+                  <a routerLink="/ban-doc" title="Tôi lên tiếng">Tôi lên tiếng</a>
                 </li>
 
                 <li>
-                  <a href="/ban-doc/net-dep-doi-thuong.htm" title="Nét đẹp đời thường">Nét đẹp đời thường</a>
+                  <a routerLink="/ban-doc" title="Nét đẹp đời thường">Nét đẹp đời thường</a>
                 </li>
 
                 <li>
-                  <a href="/ban-doc/goc-anh-ban-doc.htm" title="Góc ảnh bạn đọc">Góc ảnh bạn đọc</a>
+                  <a routerLink="/ban-doc" title="Góc ảnh bạn đọc">Góc ảnh bạn đọc</a>
                 </li>
 
 
@@ -639,7 +630,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of banDocReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -649,7 +640,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -664,7 +655,7 @@
                   <ng-container *ngFor="let newsItems of banDocReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -673,7 +664,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -684,11 +675,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Dư luận</a>
+                  <a routerLink="/ban-doc" title="Dư luận" class="title-cate">Dư luận</a>
 
 
                   <ng-container *ngFor="let newsItems of banDocReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -696,7 +687,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -717,23 +708,23 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="KINH TẾ" class="title">KINH TẾ</a></h2>
+              <h2><a routerLink="/kinh-te" title="KINH TẾ" class="title">KINH TẾ</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/kinh-te/doanh-nghiep.htm" title="Doanh nghiệp">Doanh nghiệp</a>
+                  <a routerLink="/kinh-te" title="Doanh nghiệp">Doanh nghiệp</a>
                 </li>
 
                 <li>
-                  <a href="/kinh-te/chuyen-quan-ly.htm" title="Chuyện quản lý">Chuyện quản lý</a>
+                  <a routerLink="/kinh-te" title="Chuyện quản lý">Chuyện quản lý</a>
                 </li>
 
                 <li>
-                  <a href="/kinh-te/tieu-dung.htm" title="Tiêu dùng">Tiêu dùng</a>
+                  <a routerLink="/kinh-te" title="Tiêu dùng">Tiêu dùng</a>
                 </li>
 
                 <li>
-                  <a href="/kinh-te/oto-xe-dien-may.htm" title="Ôtô - Xe - Điện máy">Ôtô - Xe - Điện máy</a>
+                  <a routerLink="/kinh-te" title="Ôtô - Xe - Điện máy">Ôtô - Xe - Điện máy</a>
                 </li>
 
 
@@ -747,7 +738,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of kinhTeReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -757,7 +748,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -772,7 +763,7 @@
                   <ng-container *ngFor="let newsItems of kinhTeReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -781,7 +772,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -792,11 +783,12 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">Tài chính - Địa ốc</a>
+                  <a routerLink="/dia-oc" title="Dư luận" class="title-cate">Tài chính - Địa ốc</a>
 
 
                   <ng-container *ngFor="let newsItems of kinhTeReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
+                    >
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -804,7 +796,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -824,23 +816,23 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="SỨC KHỎE" class="title">SỨC KHỎE</a></h2>
+              <h2><a routerLink="/suc-khoe" title="SỨC KHỎE" class="title">SỨC KHỎE</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/suc-khoe/chuyen-dong-y-hoc.htm" title="Chuyển động y học">Chuyển động y học</a>
+                  <a routerLink="/suc-khoe"title="Chuyển động y học">Chuyển động y học</a>
                 </li>
 
                 <li>
-                  <a href="/suc-khoe/gioi-tinh.htm" title="Giới tính">Giới tính</a>
+                  <a routerLink="/suc-khoe" title="Giới tính">Giới tính</a>
                 </li>
 
                 <li>
-                  <a href="/suc-khoe/phong-mach-covid-19.htm" title="Phòng mạch Covid-19">Phòng mạch Covid-19</a>
+                  <a routerLink="/suc-khoe" title="Phòng mạch Covid-19">Phòng mạch Covid-19</a>
                 </li>
 
                 <li>
-                  <a href="/suc-khoe/thuoc-dinh-duong.htm" title="Thuốc &amp; Dinh dưỡng">Thuốc &amp; Dinh dưỡng</a>
+                  <a routerLink="/suc-khoe" title="Thuốc &amp; Dinh dưỡng">Thuốc &amp; Dinh dưỡng</a>
                 </li>
 
 
@@ -854,7 +846,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of sucKhoeReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -864,7 +856,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -879,7 +871,7 @@
                   <ng-container *ngFor="let newsItems of sucKhoeReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -888,7 +880,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -899,11 +891,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">BÁC SĨ CỦA BẠN</a>
+                  <a routerLink="/suc-khoe" title="Sức khỏe" class="title-cate">BÁC SĨ CỦA BẠN</a>
 
 
                   <ng-container *ngFor="let newsItems of sucKhoeReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -911,7 +903,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -932,18 +924,16 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="GIÁO DỤC" class="title">GIÁO DỤC</a></h2>
+              <h2><a routerLink="/giao-duc" title="GIÁO DỤC" class="title">GIÁO DỤC</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/giao-duc-khoa-hoc/du-hoc.htm" title="Du học">Du học</a>
+                  <a routerLink="/giao-duc" title="Du học">Du học</a>
                 </li>
 
                 <li>
-                  <a href="/giao-duc-khoa-hoc/sau-buc-giang.htm" title="Sau bục giảng">Sau bục giảng</a>
+                  <a routerLink="/giao-duc" title="Sau bục giảng">Sau bục giảng</a>
                 </li>
-
-
 
 
               </ul>
@@ -956,7 +946,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of giaoDucReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -966,7 +956,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -981,7 +971,7 @@
                   <ng-container *ngFor="let newsItems of giaoDucReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -990,7 +980,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -1001,11 +991,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">TUYỂN SINH</a>
+                  <a routerLink="/giao-duc" title="Dư luận" class="title-cate">TUYỂN SINH</a>
 
 
                   <ng-container *ngFor="let newsItems of giaoDucReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -1013,7 +1003,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -1034,22 +1024,20 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="PHÁP LUẬT" class="title">PHÁP LUẬT</a></h2>
+              <h2><a routerLink="/phap-luat" title="PHÁP LUẬT" class="title">PHÁP LUẬT</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/phap-luat/hoi-dap-phap-luat.htm" title="Hỏi đáp">Hỏi đáp</a>
+                  <a routerLink="/phap-luat" title="Hỏi đáp">Hỏi đáp</a>
                 </li>
 
                 <li>
-                  <a href="/phap-luat/truy-na.htm" title="Truy nã">Truy nã</a>
+                  <a routerLink="/phap-luat" title="Truy nã">Truy nã</a>
                 </li>
 
                 <li>
-                  <a href="/phap-luat/chuyen-phap-dinh.htm" title="Chuyện pháp đình">Chuyện pháp đình</a>
+                  <a routerLink="/phap-luat"title="Chuyện pháp đình">Chuyện pháp đình</a>
                 </li>
-
-
 
 
               </ul>
@@ -1062,7 +1050,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of phapLuatReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -1072,7 +1060,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -1087,7 +1075,7 @@
                   <ng-container *ngFor="let newsItems of phapLuatReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail}}"
@@ -1096,7 +1084,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -1107,11 +1095,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">KỲ ÁN</a>
+                  <a routerLink="/phap-luat" title="Dư luận" class="title-cate">KỲ ÁN</a>
 
 
                   <ng-container *ngFor="let newsItems of phapLuatReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -1119,7 +1107,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -1140,15 +1128,15 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="GIẢI TRÍ" class="title">GIẢI TRÍ</a></h2>
+              <h2><a routerLink="/giai-tri" title="GIẢI TRÍ" class="title">GIẢI TRÍ</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/giai-tri/hau-truong-showbiz.htm" title="Hậu trường showbiz">Hậu trường showbiz</a>
+                  <a routerLink="/giai-tri" title="Hậu trường showbiz">Hậu trường showbiz</a>
                 </li>
 
                 <li>
-                  <a href="/giai-tri/moi-tuan-mot-nhan-vat.htm" title="Mỗi tuần một nhân vật">Mỗi tuần một nhân vật</a>
+                  <a routerLink="/giai-tri" title="Mỗi tuần một nhân vật">Mỗi tuần một nhân vật</a>
                 </li>
 
               </ul>
@@ -1161,7 +1149,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of giaiTriReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -1171,7 +1159,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -1186,7 +1174,7 @@
                   <ng-container *ngFor="let newsItems of giaiTriReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -1195,7 +1183,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -1206,11 +1194,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">KỲ ÁN</a>
+                  <a routerLink="/giai-tri" title="GIẢI TRÍ" class="title-cate">GIẢI TRÍ</a>
 
 
                   <ng-container *ngFor="let newsItems of giaiTriReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -1218,7 +1206,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -1239,18 +1227,16 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="CÔNG NGHỆ" class="title">CÔNG NGHỆ</a></h2>
+              <h2><a routerLink="/cong-nghe" title="CÔNG NGHỆ" class="title">CÔNG NGHỆ</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/cong-nghe/thiet-bi-so.htm" title="Thiết bị số">Thiết bị số</a>
+                  <a routerLink="/cong-nghe"  title="Thiết bị số">Thiết bị số</a>
                 </li>
 
                 <li>
-                  <a href="/cong-nghe/bao-mat.htm" title="Bảo mật">Bảo mật</a>
+                  <a routerLink="/cong-nghe"  title="Bảo mật">Bảo mật</a>
                 </li>
-
-
 
 
               </ul>
@@ -1263,7 +1249,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of congNgheReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -1273,7 +1259,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -1288,7 +1274,7 @@
                   <ng-container *ngFor="let newsItems of congNgheReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -1297,7 +1283,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -1308,11 +1294,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">CƯ DÂN MẠNG</a>
+                  <a routerLink="/cong-nghe" title="Dư luận" class="title-cate">CƯ DÂN MẠNG</a>
 
 
                   <ng-container *ngFor="let newsItems of congNgheReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail}}"
@@ -1320,7 +1306,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -1341,22 +1327,20 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="DU LỊCH XANH" class="title">DU LỊCH XANH</a></h2>
+              <h2><a routerLink="/du-lich-xanh"  title="DU LỊCH XANH" class="title">DU LỊCH XANH</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/du-lich-xanh/tieu-diem.htm" title="Tiêu điểm">Tiêu điểm</a>
+                  <a routerLink="/du-lich-xanh"  title="Tiêu điểm">Tiêu điểm</a>
                 </li>
 
                 <li>
-                  <a href="/du-lich-xanh/diem-den.htm" title="Điểm đến">Điểm đến</a>
+                  <a routerLink="/du-lich-xanh"  title="Điểm đến">Điểm đến</a>
                 </li>
 
                 <li>
-                  <a href="/du-lich-xanh/dung-bo-lo.htm" title="Đừng bỏ lỡ">Đừng bỏ lỡ</a>
+                  <a routerLink="/du-lich-xanh"  title="Đừng bỏ lỡ">Đừng bỏ lỡ</a>
                 </li>
-
-
 
 
               </ul>
@@ -1369,7 +1353,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of duLichXanhReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -1379,7 +1363,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -1394,7 +1378,7 @@
                   <ng-container *ngFor="let newsItems of duLichXanhReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -1403,7 +1387,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -1414,11 +1398,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="/ban-doc/du-luan.htm" title="Dư luận" class="title-cate">ẨM THỰC</a>
+                  <a routerLink="/du-lich-xanh" title="Dư luận" class="title-cate">ẨM THỰC</a>
 
 
                   <ng-container *ngFor="let newsItems of duLichXanhReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -1426,7 +1410,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -1447,22 +1431,20 @@
         <div class="box-cate-home mg_t15 clearfix">
           <div class="box-cate-container">
             <div class="box-cate-title">
-              <h2><a href="/trongNuoc" title="THỊ TRƯỜNG" class="title">THỊ TRƯỜNG</a></h2>
+              <h2><a routerLink="/thi-truong" title="THỊ TRƯỜNG" class="title">THỊ TRƯỜNG</a></h2>
               <ul class="sub-cate">
 
                 <li>
-                  <a href="/du-lich-xanh/tieu-diem.htm" title="Tiêu điểm">Tiêu điểm</a>
+                  <a routerLink="/thi-truong"  title="Tiêu điểm">Tiêu điểm</a>
                 </li>
 
                 <li>
-                  <a href="/du-lich-xanh/diem-den.htm" title="Điểm đến">Điểm đến</a>
+                  <a routerLink="/thi-truong"  title="Điểm đến">Điểm đến</a>
                 </li>
 
                 <li>
-                  <a href="/du-lich-xanh/dung-bo-lo.htm" title="Đừng bỏ lỡ">Đừng bỏ lỡ</a>
+                  <a routerLink="/thi-truong" title="Đừng bỏ lỡ">Đừng bỏ lỡ</a>
                 </li>
-
-
 
 
               </ul>
@@ -1475,7 +1457,7 @@
 
                 <div class="news-main ">
                   <ng-container *ngFor="let newsItems of thiTruongReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}"
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                        title="{{newsItems.title}}"
                        data-newstype="0" class="img256x160">
 
@@ -1485,7 +1467,7 @@
                         class="img256x160">
                     </a>
                     <h3 class="">
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
 
                          title="{{newsItems.title}}"
                          class="title">
@@ -1500,7 +1482,7 @@
                   <ng-container *ngFor="let newsItems of thiTruongReuslt.slice(1,5); let i =index">
                     <li class="clearfix" *ngIf="i>0">
 
-                      <a href="{{newsItems.link}}"
+                      <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                          title="{{newsItems.title}}" class="img114x71">
 
                         <img src="{{newsItems.thumbnail }}"
@@ -1509,7 +1491,7 @@
                       </a>
 
                       <h3 class=""><a
-                        href="{{newsItems.link}}"
+                        routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                         title="{{newsItems.title}}"
                         class="title">{{newsItems.title}}</a></h3>
                     </li>
@@ -1520,11 +1502,11 @@
 
               <div class="news-right">
                 <div class="box-sub-cate">
-                  <a href="" title="Dư luận" class="title-cate">TIN TỨC</a>
+                  <a routerLink="/thi-truong"  title="Dư luận" class="title-cate">TIN TỨC</a>
 
 
                   <ng-container *ngFor="let newsItems of thiTruongReuslt.slice(0,1); let i =index">
-                    <a href="{{newsItems.link}}">
+                    <a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}">
 
                       <img
                         src="{{newsItems.thumbnail }}"
@@ -1532,7 +1514,7 @@
                     </a>
 
                     <div class="news-info">
-                      <h3><a href="{{newsItems.link}}"
+                      <h3><a routerLink="/detail/{{replaceAll(newsItems.link,'/','?')}}"
                              title="{{newsItems.title}}" class="title">{{newsItems.title}}</a></h3>
 
 
@@ -1550,9 +1532,7 @@
           </div>
         </div>
       </div>
-      <div class="box-right">
 
-      </div>
     </div>
 
   </div>
