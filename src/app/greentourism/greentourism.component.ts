@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-greentourism',
   templateUrl: './greentourism.component.html',
-  styleUrls: ['./greentourism.component.css']
+  styleUrls: ['./greentourism.component.css','../domestic/domestic.component.css','../app.component.css']
 })
 export class GreentourismComponent implements OnInit {
 
