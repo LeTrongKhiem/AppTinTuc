@@ -5,7 +5,7 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-technology',
   templateUrl: './technology.component.html',
-  styleUrls: ['./technology.component.css']
+  styleUrls: ['./technology.component.css','../domestic/domestic.component.css','../app.component.css']
 })
 export class TechnologyComponent implements OnInit {
 
