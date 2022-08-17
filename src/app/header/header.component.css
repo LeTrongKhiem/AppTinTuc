@@ -411,3 +411,9 @@ img {
   visibility: visible;
   opacity: 1;
 }
+.menu-container ul.menu-top li.active a {
+  background: rgba(0,0,0,.2);
+}
+.menu-container ul.menu-top li a:hover{
+  background: rgba(0,0,0,.2);
+}

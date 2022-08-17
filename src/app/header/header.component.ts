@@ -19,10 +19,7 @@ showSearch:boolean = false;
     this.searchTextChanged.emit(this.enteredSearchValue);
   }
   search(){
-    this.router.navigate(['/search',this.enteredSearchValue],{
-      state:{signoreLoadingBar: true}
-      }
-    );
+    this.router.navigate(['/search',this.enteredSearchValue]);
   }
   openSearch(){
     this.showSearch = !this.showSearch;
