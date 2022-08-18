@@ -30,7 +30,7 @@ export class NewsApiService {
   diaOcApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fdia-oc.rss';
   theThaoApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fthe-thao.rss';
   lyTuongSongApiUrl = 'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fly-tuong-song.rss';
-  multimediaApiUrl ='https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fnld.com.vn%2Fly-tuong-song.rss'
+
   latestNews(): Observable<any> {
     return this.http.get(this.latestNewsApiUrl);
   }
@@ -114,8 +114,4 @@ export class NewsApiService {
   lyTuongSongApi(): Observable<any> {
     return this.http.get(this.lyTuongSongApiUrl)
   }
-  multimediaApi(): Observable<any> {
-    return this.http.get(this.multimediaApiUrl)
-  }
-
 }
