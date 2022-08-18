@@ -1,12 +1,22 @@
 <section class="body">
   <div class="body-content">
     <div class="logo-text fl">
-      {{todayString     }},
-      {{weatherResult.name}}
-      {{temp}}°C,
-      {{weatherResult.weather?.main}}
-
+      <div id="divWeatherMain">
+        <div *ngIf="WeatherData.isDay" class="weatherWidgetRow">
+          <fa-icon class="sun" [icon]="faSun"></fa-icon>
+        </div>
+        <div *ngIf="!WeatherData.isDay" class="weatherWidgetRow">
+          <fa-icon class="moon" [icon]="faMoon"></fa-icon>
+        </div>
+        <div class="weatherWidgetRow cloudDiv">
+          <fa-icon class="cloud" [icon]="faCloud"></fa-icon>
+        </div>
+        <div class="weatherWidgetRow" style="font-size: 28px;margin-top: 10px;">{{WeatherData.temp_celcius}}°</div>
+        <div class="weatherWidgetRow" style="font-size: 25px;margin-top: 10px;"></div>
+        {{todayString}}, {{WeatherData.name}}
+      </div>
     </div>
+
     <div class="hot-news fr clearfix">
       <div class="icon-hot-news"></div>
 
@@ -27,7 +37,7 @@
 
     </div>
     <div class="clearfix"></div>
-    <div class="box-content mg_t22 clearfix">
+    <div class="box-content clearfix">
       <div class="box-left">
         <div class="top-news clearfix">
           <div class="main-news">

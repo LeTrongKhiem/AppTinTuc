@@ -1,17 +1,21 @@
 import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {NewsApiService} from "../Service/news-api.service";
-
+import {faCloud} from '@fortawesome/free-solid-svg-icons'
+import {faSun} from '@fortawesome/free-solid-svg-icons'
+import {faMoon} from '@fortawesome/free-solid-svg-icons'
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css', '../app.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  faCloud = faCloud;
+  faSun = faSun;
+  faMoon = faMoon;
   constructor(private service: NewsApiService) {
 
   }
-
+  WeatherData:any;
   temp: any;
   latestNewsResult: any = []
   noiThangResult: any = []
@@ -95,9 +99,29 @@ export class HomeComponent implements OnInit {
       this.thiTruongReuslt = result.items;
     })
 
-
+    this.WeatherData = {
+      main : {},
+      isDay: true
+    };
+    this.getWeatherData();
+    console.log(this.WeatherData);
   }
-
+  getWeatherData(){
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=ho chi minh&appid=09f1c2260cdee53ceaf045da1d0853d5')
+      .then(response=>response.json())
+      .then(data=>{this.setWeatherData(data);})
+  }
+  setWeatherData(data: any){
+    this.WeatherData = data;
+    let sunsetTime = new Date(this.WeatherData.sys.sunset * 1000);
+    this.WeatherData.sunset_time = sunsetTime.toLocaleTimeString();
+    let currentDate = new Date();
+    this.WeatherData.isDay = (currentDate.getTime() < sunsetTime.getTime());
+    this.WeatherData.temp_celcius = (this.WeatherData.main.temp - 273.15).toFixed(0);
+    this.WeatherData.temp_min = (this.WeatherData.main.temp_min - 273.15).toFixed(0);
+    this.WeatherData.temp_max = (this.WeatherData.main.temp_max - 273.15).toFixed(0);
+    this.WeatherData.temp_feels_like = (this.WeatherData.main.feels_like - 273.15).toFixed(0);
+  }
   replaceAll(str: string, search: string, replacement: string) {
     return str.replace(new RegExp(search, 'g'), replacement);
   }
