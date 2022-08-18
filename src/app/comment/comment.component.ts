@@ -12,16 +12,17 @@ export class CommentComponent implements OnInit {
     comment:this.comment,
     userName:this.userName
   }];
+  data:any=[];
   constructor() { }
   post(){
     // @ts-ignore
     this.postComment.push({comment:this.comment,userName:this.userName});
     // @ts-ignore
-    // this.postComment.push(this.comment);
     this.comment="";
     this.userName="";
   }
   ngOnInit(): void {
+    localStorage.setItem("comment",JSON.stringify(this.postComment));
   }
 
 }
