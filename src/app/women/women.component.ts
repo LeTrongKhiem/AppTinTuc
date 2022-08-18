@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-women',
   templateUrl: './women.component.html',
-  styleUrls: ['./women.component.css','../domestic/domestic.component.css','../app.component.css']
+  styleUrls: ['./women.component.scss', '../commoncomponent/commoncomponent.component.css','../app.component.css']
 })
 export class WomenComponent implements OnInit {
 
