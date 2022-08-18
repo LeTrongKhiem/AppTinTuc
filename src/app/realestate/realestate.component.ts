@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-realestate',
   templateUrl: './realestate.component.html',
-  styleUrls: ['./realestate.component.css','../domestic/domestic.component.css','../app.component.css']
+  styleUrls: ['./realestate.component.scss', '../commoncomponent/commoncomponent.component.css','../app.component.css']
 })
 export class RealestateComponent implements OnInit {
 

@@ -5,7 +5,7 @@ import {AppComponent} from "../app.component";
 @Component({
   selector: 'app-sports',
   templateUrl: './sports.component.html',
-  styleUrls: ['./sports.component.css','../domestic/domestic.component.css','../app.component.css']
+  styleUrls: ['./sports.component.scss', '../commoncomponent/commoncomponent.component.css','../app.component.css']
 })
 export class SportsComponent implements OnInit {
 
