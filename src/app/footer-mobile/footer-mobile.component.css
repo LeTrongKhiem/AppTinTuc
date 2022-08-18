@@ -10,7 +10,7 @@
 .footer .top .logo {
   float: left;
   display: block;
-  width: calc((100vw - 45px)/2);
+  width: calc((100vw - 45px) / 2);
 }
 .footer p.sologan {
   color: #fff;
@@ -19,11 +19,11 @@
   margin-top: 0;
   float: left;
   margin-left: 15px;
-  width: calc((100vw - 45px)/2);
+  width: calc((100vw - 45px) / 2);
 }
 .footer .left {
   float: left;
-  width: calc((100vw - 45px)/2);
+  width: calc((100vw - 45px) / 2);
 }
 .footer p {
   color: #fff;
@@ -33,24 +33,25 @@
 .footer .right {
   float: left;
   margin-left: 15px;
-  width: calc((100vw - 45px)/2);
+  width: calc((100vw - 45px) / 2);
 }
+
 .footer-menu {
   position: fixed;
   bottom: 0;
   left: 0;
   padding: 15px;
   border-top: 1px solid #999;
-  width: calc(100vw);
+  width: 100vw;
   background: #fff;
   z-index: 9999;
   display: none;
 }
 .footer-menu .footer-nav .item {
-   float: left;
-   width: calc((100vw - 30px)/5);
-   text-align: center;
- }
+  float: left;
+  width: calc((100vw - 30px) / 5);
+  text-align: center;
+}
 .footer-menu .footer-nav .item a {
   color: #999;
   font-size: 10px;
@@ -60,7 +61,7 @@
   color: #005bb2;
 }
 .footer-menu .footer-nav .item .home:before {
-  content: '';
+  content: "";
   width: 20px;
   height: 20px;
   background-image: url(https://static.mediacdn.vn/nld/web_images/mob/HomeActive2.svg);
@@ -68,7 +69,7 @@
   margin: 0 auto 5px;
 }
 .footer-menu .footer-nav .item .most-view:before {
-  content: '';
+  content: "";
   width: 20px;
   height: 18px;
   background-image: url(https://static.mediacdn.vn/nld/web_images/mob/MostView.svg);
@@ -76,15 +77,15 @@
   margin: 0 auto 7px;
 }
 .footer-menu .footer-nav .item .hot-news:before {
-   content: '';
-   width: 16px;
-   height: 20px;
-   display: block;
-   margin: 0 auto 5px;
-   background-image: url(https://static.mediacdn.vn/nld/web_images/mob/HotNews.svg);
- }
+  content: "";
+  width: 16px;
+  height: 20px;
+  display: block;
+  margin: 0 auto 5px;
+  background-image: url(https://static.mediacdn.vn/nld/web_images/mob/HotNews.svg);
+}
 .footer-menu .footer-nav .item .media:before {
-  content: '';
+  content: "";
   width: 20px;
   height: 18px;
   display: block;
@@ -92,10 +93,12 @@
   margin: 0 auto 7px;
 }
 .footer-menu .footer-nav .item .emagazine:before {
-  content: '';
+  content: "";
   width: 16px;
   height: 20px;
   display: block;
   margin: 0 auto 5px;
   background-image: url(https://static.mediacdn.vn/nld/web_images/mob/Magazine.svg);
 }
+
+/*# sourceMappingURL=footer-mobile.component.css.map */

@@ -1,3 +1,4 @@
+/* End header */
 * {
   margin: 0;
   padding: 0;
@@ -18,53 +19,55 @@
   width: 100%;
   background: #fff;
 }
-
-.bg_top_header {
-  background: #eee;
-  padding: 8px 0 6px;
-  width: 100%;
-}
-
 .header .top-header {
   width: 1160px;
   margin: 0 auto;
 }
-
 .header .top-header .hotline {
   float: left;
   color: #000;
   font: normal 11px/normal Roboto-Medium;
 }
-
 .header .top-header .hotline a {
   color: #000;
   font: normal 11px/normal Roboto-Medium;
   text-transform: uppercase;
 }
-
 .header .top-header .social {
   float: right;
 }
-
+.header .top-header .social a {
+  float: left;
+  padding-left: 18px;
+}
 .header .top-header .social a:first-child {
   padding: 0 12px;
   border-right: 1px solid #d8d8d8;
   border-left: 1px solid #d8d8d8;
 }
-
+.header .top-header .social a .icon-google {
+  background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+  display: block;
+  background-repeat: no-repeat;
+  background-position: -367px -145px;
+  width: 16px;
+  height: 12px;
+}
+.header .top-header .social a .icon-facebook {
+  background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+  display: block;
+  background-repeat: no-repeat;
+  background-position: -250px -58px;
+  width: 7px;
+  height: 13px;
+}
 .header .top-header .social a.send-news {
   color: #000;
   font: 500 11px/normal Roboto-Medium;
   text-transform: uppercase;
 }
-
-.header .top-header .social a {
-  float: left;
-  padding-left: 18px;
-}
-
 .header .top-header .social a.send-news:before {
-  content: '';
+  content: "";
   float: left;
   margin-right: 8px;
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
@@ -74,25 +77,6 @@
   width: 14px;
   height: 12px;
 }
-
-.header .top-header .social a .icon-google {
-  background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
-  display: block;
-  background-repeat: no-repeat;
-  background-position: -367px -145px;
-  width: 16px;
-  height: 12px;
-}
-
-.header .top-header .social a .icon-facebook {
-  background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
-  display: block;
-  background-repeat: no-repeat;
-  background-position: -250px -58px;
-  width: 7px;
-  height: 13px;
-}
-
 .header .content-header {
   width: 1160px;
   padding-top: 20px;
@@ -104,25 +88,6 @@
   width: 262px;
   float: left;
 }
-
-.logo-container {
-  display: flex;
-  width: auto !important;
-}
-
-.logo-container {
-  display: flex;
-  width: auto !important
-}
-
-.logo-container a.seagames31 img {
-  height: 100%;
-  object-fit: contain;
-  width: 130px;
-  margin-left: 20px;
-}
-
-
 .header .content-header .logo-container .logo-main {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -131,38 +96,34 @@
   width: 262px;
   height: 43px;
 }
-
 .header .content-header .topic {
   float: right;
   margin-left: 0;
   margin-right: 10px;
   display: flex;
 }
-
 .header .content-header .topic ul.list-topic {
   list-style-type: none;
   padding: 0;
   margin: 0;
   display: flex;
 }
-
 .header .content-header .topic ul.list-topic li {
   float: left;
   margin-top: 2px;
   padding: 2px 5px;
+  float: left;
+  margin-top: 2px;
+  padding: 2px 5px;
 }
-
 .header .content-header .topic ul.list-topic li a {
   color: #000;
   font: normal 10px/normal Roboto-Medium;
   text-transform: uppercase;
+  color: #000;
+  font: normal 10px/normal Roboto-Medium;
+  text-transform: uppercase;
 }
-
-img {
-  display: block;
-  color: transparent;
-}
-
 .header .content-header .topic ul.list-topic li a .item-icon-6 {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -174,7 +135,6 @@ img {
   margin-top: 5px;
   margin-bottom: 10px;
 }
-
 .header .content-header .topic ul.list-topic li a .item-icon-7 {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -186,7 +146,6 @@ img {
   margin-top: 7px;
   margin-bottom: 10px;
 }
-
 .header .content-header .topic ul.list-topic li a .item-icon-1 {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -198,7 +157,6 @@ img {
   margin-top: 4px;
   margin-bottom: 10px;
 }
-
 .header .content-header .topic ul.list-topic li a .item-icon-2 {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -209,7 +167,6 @@ img {
   margin: 0 auto;
   margin-bottom: 10px;
 }
-
 .header .content-header .topic ul.list-topic li a .item-icon-3 {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -221,7 +178,6 @@ img {
   margin-top: 3px;
   margin-bottom: 10px;
 }
-
 .header .content-header .topic ul.list-topic li a .item-icon-4 {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -234,51 +190,46 @@ img {
   margin-bottom: 10px;
 }
 
-.header .content-header .topic ul.list-topic li {
-  float: left;
-  margin-top: 2px;
-  padding: 2px 5px;
+.bg_top_header {
+  background: #eee;
+  padding: 8px 0 6px;
+  width: 100%;
 }
 
-.header .content-header .topic ul.list-topic li a {
-  color: #000;
-  font: normal 10px/normal Roboto-Medium;
-  text-transform: uppercase;
+.logo-container {
+  display: flex;
+  width: auto !important;
+  display: flex;
+  width: auto !important;
+}
+.logo-container a.seagames31 img {
+  height: 100%;
+  object-fit: contain;
+  width: 130px;
+  margin-left: 20px;
+}
+
+img {
+  display: block;
+  color: transparent;
 }
 
 .menu-container {
   width: 100%;
   background: #0959ab;
 }
-
 .menu-container ul.menu-top {
   width: 1160px;
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
 }
-
 .menu-container ul.menu-top li {
   float: left;
 }
-
-.menu-container ul.menu-top li.active a {
-  background: rgba(0, 0, 0, .2);
-}
-
 .menu-container ul.menu-top li a.menu-home-href {
   padding: 8px 10px 8px;
 }
-
-.menu-container ul.menu-top li a {
-  text-transform: uppercase;
-  color: #fff;
-  padding: 9px 8px;
-  display: block;
-  font-family: Roboto-Bold;
-  font-size: 11px;
-}
-
 .menu-container ul.menu-top li a.menu-home-href span.menu-home {
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
@@ -287,23 +238,32 @@ img {
   width: 15px;
   height: 13px;
 }
-.search{
-  display: flex;
-  align-items: center;
+.menu-container ul.menu-top li a {
+  text-transform: uppercase;
+  color: #fff;
+  padding: 9px 8px;
+  display: block;
+  font-family: Roboto-Bold;
+  font-size: 11px;
+}
+.menu-container ul.menu-top li a:hover {
+  background: rgba(0, 0, 0, 0.2);
+}
+.menu-container ul.menu-top li.active a {
+  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.2);
 }
 .menu-container ul.menu-top li.search {
   position: relative;
   float: right;
 }
-
 .menu-container ul.menu-top li.search a {
   padding-top: 7px;
   padding-bottom: 0;
   padding-right: 0;
 }
-
 .menu-container ul.menu-top li.search a:before {
-  content: '';
+  content: "";
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
   background-repeat: no-repeat;
@@ -311,15 +271,14 @@ img {
   width: 17px;
   height: 17px;
 }
-
 .menu-container ul.menu-top li.search .search-input {
   position: absolute;
   right: 40px;
   top: 3px;
   width: 0;
-  transition: all .3s;
-  -webkit-transition: all .3s;
-  -moz-transition: all .3s;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
   border-radius: 20px;
   border: none;
   padding: 5px 10px;
@@ -327,15 +286,26 @@ img {
   visibility: hidden;
   opacity: 0;
 }
-/* End header */
-.search-box{
+.menu-container ul.menu-top li.search .search-input-active {
+  width: 160px;
+  visibility: visible;
+  opacity: 1;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+}
+
+.search-box {
   width: fit-content;
   height: fit-content;
   position: relative;
   display: flex;
   align-items: center;
 }
-.input-search{
+
+.input-search {
   height: 30px;
   width: 30px;
   border-style: none;
@@ -343,17 +313,25 @@ img {
   letter-spacing: 2px;
   outline: none;
   border-radius: 25px;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   background-color: transparent;
   padding-right: 40px;
-  color:#fff;
+  color: #fff;
 }
-.input-search::placeholder{
-  color:rgba(255,255,255,.5);
+.input-search::placeholder {
+  color: rgba(255, 255, 255, 0.5);
   letter-spacing: 2px;
   font-weight: 100;
 }
-.btn-search{
+.input-search:focus {
+  width: 200px;
+  border-radius: 0px;
+  background-color: transparent;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
+}
+
+.btn-search {
   border-style: none;
   font-size: 18px;
   font-weight: bold;
@@ -361,26 +339,19 @@ img {
   cursor: pointer;
   position: absolute;
   right: 0px;
-  color:#ffffff ;
+  color: #ffffff;
   margin-top: 10px;
-  background-color:transparent;
+  background-color: transparent;
   pointer-events: painted;
 }
-.btn-search:focus ~ .input-search{
+.btn-search:focus ~ .input-search {
   width: 200px;
   border-radius: 0px;
   background-color: transparent;
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
-}
-.input-search:focus{
-  width: 200px;
-  border-radius: 0px;
-  background-color: transparent;
-  border-bottom:1px solid rgba(255,255,255,.5);
-  transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  transition: all 500ms cubic-bezier(0, 0.11, 0.35, 2);
 }
 .btn-search:before {
-  content: '';
+  content: "";
   background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
   display: block;
   background-repeat: no-repeat;
@@ -388,6 +359,7 @@ img {
   width: 17px;
   height: 17px;
 }
+
 .topic .login-form {
   flex-shrink: 0;
   max-width: 250px;
@@ -406,14 +378,5 @@ img {
   font: bold 11px Tahoma;
   color: #094e95;
 }
-.menu-container ul.menu-top li.search .search-input-active {
-  width: 160px;
-  visibility: visible;
-  opacity: 1;
-}
-.menu-container ul.menu-top li.active a {
-  background: rgba(0,0,0,.2);
-}
-.menu-container ul.menu-top li a:hover{
-  background: rgba(0,0,0,.2);
-}
+
+/*# sourceMappingURL=header.component.css.map */

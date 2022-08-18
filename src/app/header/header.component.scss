@@ -1,0 +1,381 @@
+/* End header */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+.clearfix {
+  &:after {
+    content: "";
+    visibility: hidden;
+    display: block;
+    height: 0;
+    clear: both;
+    font-size: 0;
+  }
+}
+.header {
+  width: 100%;
+  background: #fff;
+  .top-header {
+    width: 1160px;
+    margin: 0 auto;
+    .hotline {
+      float: left;
+      color: #000;
+      font: normal 11px/normal Roboto-Medium;
+      a {
+        color: #000;
+        font: normal 11px/normal Roboto-Medium;
+        text-transform: uppercase;
+      }
+    }
+    .social {
+      float: right;
+      a {
+        &:first-child {
+          padding: 0 12px;
+          border-right: 1px solid #d8d8d8;
+          border-left: 1px solid #d8d8d8;
+        }
+        float: left;
+        padding-left: 18px;
+        .icon-google {
+          background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+          display: block;
+          background-repeat: no-repeat;
+          background-position: -367px -145px;
+          width: 16px;
+          height: 12px;
+        }
+        .icon-facebook {
+          background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+          display: block;
+          background-repeat: no-repeat;
+          background-position: -250px -58px;
+          width: 7px;
+          height: 13px;
+        }
+      }
+      a.send-news {
+        color: #000;
+        font: 500 11px/normal Roboto-Medium;
+        text-transform: uppercase;
+        &:before {
+          content: '';
+          float: left;
+          margin-right: 8px;
+          background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+          display: block;
+          background-repeat: no-repeat;
+          background-position: -184px -59px;
+          width: 14px;
+          height: 12px;
+        }
+      }
+    }
+  }
+  .content-header {
+    width: 1160px;
+    padding-top: 20px;
+    padding-bottom: 17px;
+    margin: 0 auto;
+    position: relative;
+    .logo-container {
+      width: 262px;
+      float: left;
+      .logo-main {
+        background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+        display: block;
+        background-repeat: no-repeat;
+        background-position: -7px -234px;
+        width: 262px;
+        height: 43px;
+      }
+    }
+    .topic {
+      float: right;
+      margin-left: 0;
+      margin-right: 10px;
+      display: flex;
+      ul.list-topic {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        li {
+          float: left;
+          margin-top: 2px;
+          padding: 2px 5px;
+          float: left;
+          margin-top: 2px;
+          padding: 2px 5px;
+          a {
+            color: #000;
+            font: normal 10px/normal Roboto-Medium;
+            text-transform: uppercase;
+            color: #000;
+            font: normal 10px/normal Roboto-Medium;
+            text-transform: uppercase;
+            .item-icon-6 {
+              background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+              display: block;
+              background-repeat: no-repeat;
+              background-position: -136px -58px;
+              width: 14px;
+              height: 14px;
+              margin: 0 auto;
+              margin-top: 5px;
+              margin-bottom: 10px;
+            }
+            .item-icon-7 {
+              background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+              display: block;
+              background-repeat: no-repeat;
+              background-position: -158px -59px;
+              width: 17px;
+              height: 12px;
+              margin: 0 auto;
+              margin-top: 7px;
+              margin-bottom: 10px;
+            }
+            .item-icon-1 {
+              background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+              display: block;
+              background-repeat: no-repeat;
+              background-position: -12px -59px;
+              width: 15px;
+              height: 15px;
+              margin: 0 auto;
+              margin-top: 4px;
+              margin-bottom: 10px;
+            }
+            .item-icon-2 {
+              background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+              display: block;
+              background-repeat: no-repeat;
+              background-position: -39px -59px;
+              width: 15px;
+              height: 19px;
+              margin: 0 auto;
+              margin-bottom: 10px;
+            }
+            .item-icon-3 {
+              background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+              display: block;
+              background-repeat: no-repeat;
+              background-position: -65px -58px;
+              width: 16px;
+              height: 16px;
+              margin: 0 auto;
+              margin-top: 3px;
+              margin-bottom: 10px;
+            }
+            .item-icon-4 {
+              background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+              display: block;
+              background-repeat: no-repeat;
+              background-position: -93px -58px;
+              width: 15px;
+              height: 15px;
+              margin: 0 auto;
+              margin-top: 4px;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.bg_top_header {
+  background: #eee;
+  padding: 8px 0 6px;
+  width: 100%;
+}
+.logo-container {
+  display: flex;
+  width: auto !important;
+  display: flex;
+  width: auto !important;
+  a.seagames31 {
+    img {
+      height: 100%;
+      object-fit: contain;
+      width: 130px;
+      margin-left: 20px;
+    }
+  }
+}
+img {
+  display: block;
+  color: transparent;
+}
+.menu-container {
+  width: 100%;
+  background: #0959ab;
+  ul.menu-top {
+    width: 1160px;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    li {
+      float: left;
+      a.menu-home-href {
+        padding: 8px 10px 8px;
+        span.menu-home {
+          background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+          display: block;
+          background-repeat: no-repeat;
+          background-position: -50px -90px;
+          width: 15px;
+          height: 13px;
+        }
+      }
+      a {
+        text-transform: uppercase;
+        color: #fff;
+        padding: 9px 8px;
+        display: block;
+        font-family: Roboto-Bold;
+        font-size: 11px;
+        &:hover {
+          background: rgba(0,0,0,.2);
+        }
+      }
+    }
+    li.active {
+      a {
+        background: rgba(0, 0, 0, .2);
+        background: rgba(0,0,0,.2);
+      }
+    }
+    li.search {
+      position: relative;
+      float: right;
+      a {
+        padding-top: 7px;
+        padding-bottom: 0;
+        padding-right: 0;
+        &:before {
+          content: '';
+          background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+          display: block;
+          background-repeat: no-repeat;
+          background-position: -73px -90px;
+          width: 17px;
+          height: 17px;
+        }
+      }
+      .search-input {
+        position: absolute;
+        right: 40px;
+        top: 3px;
+        width: 0;
+        transition: all .3s;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        border-radius: 20px;
+        border: none;
+        padding: 5px 10px;
+        outline: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+      .search-input-active {
+        width: 160px;
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+}
+.search {
+  display: flex;
+  align-items: center;
+}
+.search-box {
+  width: fit-content;
+  height: fit-content;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.input-search {
+  height: 30px;
+  width: 30px;
+  border-style: none;
+  padding: 10px;
+  letter-spacing: 2px;
+  outline: none;
+  border-radius: 25px;
+  transition: all .5s ease-in-out;
+  background-color: transparent;
+  padding-right: 40px;
+  color: #fff;
+  &::placeholder {
+    color: rgba(255,255,255,.5);
+    letter-spacing: 2px;
+    font-weight: 100;
+  }
+  &:focus {
+    width: 200px;
+    border-radius: 0px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(255,255,255,.5);
+    transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+  }
+}
+.btn-search {
+  border-style: none;
+  font-size: 18px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  color: #ffffff;
+  margin-top: 10px;
+  background-color: transparent;
+  pointer-events: painted;
+  &:focus {
+    ~ {
+      .input-search {
+        width: 200px;
+        border-radius: 0px;
+        background-color: transparent;
+        transition: all 500ms cubic-bezier(0, 0.110, 0.35, 2);
+      }
+    }
+  }
+  &:before {
+    content: '';
+    background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
+    display: block;
+    background-repeat: no-repeat;
+    background-position: -73px -90px;
+    width: 17px;
+    height: 17px;
+  }
+}
+.topic {
+  .login-form {
+    flex-shrink: 0;
+    max-width: 250px;
+    margin-left: 10px;
+    min-width: 150px;
+    .area__authenticate {
+      border: solid 2px #094e95;
+      width: 150px;
+      text-align: center;
+      padding: 8px 0;
+      position: relative;
+      top: 15px;
+      .authen-title {
+        font: bold 11px Tahoma;
+        color: #094e95;
+      }
+    }
+  }
+}

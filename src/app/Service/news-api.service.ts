@@ -115,7 +115,9 @@ export class NewsApiService {
   lyTuongSongApi(): Observable<any> {
     return this.http.get(this.lyTuongSongApiUrl)
   }
-
+  getData(): Observable<any>{
+    return  this.http.get('https://collabclothingbackendapi.azurewebsites.net/api/Banners');
+  }
 
 
 }
