@@ -4,6 +4,14 @@
 /* PC with min screen */
 /* Tablet */
 /* Mobile */
+@keyframes cloudMovement {
+  from {
+    margin-left: -55px;
+  }
+  to {
+    margin-left: 65px;
+  }
+}
 .body .body-content {
   width: 1160px;
   margin: 20px auto 0;
@@ -246,6 +254,7 @@
 .body .body-content .box-content .box-left .box-cate-home .box-cate-container .box-cate-title h2 a {
   font-size: 20px;
   color: #197ade;
+  text-transform: uppercase;
 }
 .body .body-content .box-content .box-left .box-cate-home .box-cate-container .box-cate-title ul.sub-cate {
   margin-left: auto;
@@ -319,7 +328,7 @@
 }
 .body .body-content .box-content .box-left .box-cate-home .box-cate-container .box-cate-detail .news-left .sub-news li h3 .title {
   color: #000;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 1.46;
   font-weight: 400;
 }
@@ -372,7 +381,8 @@
   float: right;
   margin-left: 30px;
   position: fixed;
-  right: 100px;
+  right: calc(50% - 640px);
+  z-index: 100;
 }
 .body .body-content .top-news {
   background: #fff;
@@ -729,8 +739,41 @@ ul {
   height: 130px;
 }
 
+.weatherWidgetRow {
+  display: block;
+  margin: 0 auto;
+  width: fit-content;
+}
+
+.sun {
+  margin-top: 10px;
+  color: yellow;
+  filter: drop-shadow(1px 1px 10px yellow);
+}
+
+.moon {
+  margin-top: 10px;
+  color: white;
+  filter: drop-shadow(1px 1px 10px white);
+}
+
+.cloudDiv {
+  margin-top: -40px;
+}
+
+.cloud {
+  color: rgb(104, 175, 197);
+  filter: drop-shadow(1px 1px 5px rgb(104, 175, 197));
+  animation-name: cloudMovement;
+  animation-iteration-count: infinite;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+}
+
 @media (max-width: 1023px) {
   .box-right {
+    display: none;
     display: none;
   }
 
