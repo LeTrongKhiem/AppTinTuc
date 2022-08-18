@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-straighttalk',
   templateUrl: './straighttalk.component.html',
-  styleUrls: ['./straighttalk.component.css','../domestic/domestic.component.css','../app.component.css']
+  styleUrls: ['./straighttalk.component.scss', '../commoncomponent/commoncomponent.component.css','../app.component.css']
 })
 export class StraighttalkComponent implements OnInit {
 
