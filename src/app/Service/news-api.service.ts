@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-
+import axios from "axios";
 
 @Injectable({
   providedIn: 'root'
@@ -116,6 +116,9 @@ export class NewsApiService {
     return this.http.get(this.lyTuongSongApiUrl)
   }
 
-
+  getDataHtml(parameter: string) {
+    const CORS_PROXY = "https://calm-spire-97456.herokuapp.com/"
+      return axios(CORS_PROXY  + parameter)
+  }
 
 }

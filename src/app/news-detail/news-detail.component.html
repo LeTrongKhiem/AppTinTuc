@@ -1,17 +1,41 @@
-<section class="body">
+<!--<section class="body">-->
+<!--  <div class="body-content">-->
+<!--    <div-->
+<!--      style=" overflow: hidden; left: 0px; top: 0px;  width:800px; height:600%;">-->
+<!--      <div style="overflow: hidden; margin-top: -200px; margin-left: -25px;">-->
+<!--      </div>-->
+<!--      <iframe #iframe [src]="url" scrolling="no"-->
+<!--              style="height: 2000px; border: 0px none; width: 800px; margin-top: -300px; margin-left: -24px; ">-->
+<!--      </iframe>-->
+<!--    </div>-->
+<!--    <app-comment></app-comment>-->
+
+<!--  </div>-->
+<!--</section>-->
+<!--<section class="body-detail">-->
+<!--  <div class="body-content w1160">-->
+<!--    <div class="fl w520 mg_r50">-->
+<!--      <h1 #title class="title-content" data-field="title"></h1>-->
+<!--      <h2 #sapoDetail class="sapo-detail" data-field="sapo">-->
+
+<!--      </h2>-->
+<!--      <div #divID class="content-news-detail old-news"></div>-->
+<!--      <div class="clearfix"></div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
+
+<section class="body-detail">
   <div class="body-content">
-    <div
-      style=" overflow: hidden; left: 0px; top: 0px;  width:800px; height:600%;">
-      <div style="overflow: hidden; margin-top: -200px; margin-left: -25px;">
-      </div>
-      <iframe #iframe [src]="url" scrolling="no"
-              style="height: 2000px; border: 0px none; width: 800px; margin-top: -300px; margin-left: -24px; ">
-      </iframe>
-    </div>
+    <h1 #title class="title-content" data-field="title"></h1>
+    <h2 #sapoDetail class="sapo-detail" data-field="sapo"></h2>
+    <div #divID class="content-news-detail old-news"></div>
     <app-comment></app-comment>
 
   </div>
-
+  <div class="box-right">
+    <app-right-catelory></app-right-catelory>
+  </div>
 </section>
 
 

@@ -48,6 +48,9 @@
   .body-content .cate-left .list-news-container .cate-list-news ul.list-news li.news-item .news-info{
     width: 265px;
   }
+  .body-detail .body-content {
+    width:  800px;
+  }
 
 }
 
@@ -141,5 +144,9 @@
   .comment-container .comment-list .comment-item .comment-content,
   .comment-container .comment-input-container .text-comment .text-input textarea{
     width: 100%;
+  }
+  .body-detail .body-content {
+    width:  400px;
+    float: left;
   }
 }

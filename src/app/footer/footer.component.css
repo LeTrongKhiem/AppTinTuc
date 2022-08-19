@@ -1,9 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-}
+
 .clearfix:after {
   content: "";
   visibility: hidden;
@@ -240,4 +235,12 @@
   font: normal 13px/normal Roboto-Medium;
   line-height: 23px;
   display: block;
+}
+.clearfix:after {
+  content: "";
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+  font-size: 0;
 }
