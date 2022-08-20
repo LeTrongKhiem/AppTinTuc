@@ -9,5 +9,5 @@ import {GoogleLoginProvider, SocialAuthService, SocialUser} from "angularx-socia
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'ProjectAngular';
+  title = 'NewsApp';
 }
