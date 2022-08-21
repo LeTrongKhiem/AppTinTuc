@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-
+import axios from "axios";
 
 @Injectable({
   providedIn: 'root'
@@ -115,9 +115,10 @@ export class NewsApiService {
   lyTuongSongApi(): Observable<any> {
     return this.http.get(this.lyTuongSongApiUrl)
   }
-  getData(): Observable<any>{
-    return  this.http.get('https://collabclothingbackendapi.azurewebsites.net/api/Banners');
-  }
 
+  getDataHtml(parameter: string) {
+    const CORS_PROXY = "https://calm-spire-97456.herokuapp.com/"
+      return axios(CORS_PROXY  + parameter)
+  }
 
 }

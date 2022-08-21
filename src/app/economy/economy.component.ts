@@ -4,7 +4,7 @@ import {NewsApiService} from "../Service/news-api.service";
 @Component({
   selector: 'app-economy',
   templateUrl: './economy.component.html',
-  styleUrls: ['./economy.component.scss','../domestic/domestic.component.css','../app.component.css','../reponsiveCategory.css']
+  styleUrls: ['./economy.component.scss','../domestic/domestic.component.scss','../app.component.css','../reponsiveCategory.css']
 })
 export class EconomyComponent implements OnInit {
 

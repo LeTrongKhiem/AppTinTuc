@@ -39,7 +39,7 @@ const routes: Routes = [
   {path: 'dang-ky', component: RegisterComponent},
   {path: 'dang-nhap', component: LoginComponent},
   {path: 'search/:searchTerm', component: ListNewsSearchComponent},
-  {path: 'detail/:link', component: NewsDetailComponent},
+  // {path: 'detail/:link', component: NewsDetailComponent},
   {path: 'cong-nghe', component: TechnologyComponent},
   {path: 'the-thao', component: SportsComponent},
   {path: 'du-lich-xanh', component: GreentourismComponent},
@@ -51,11 +51,17 @@ const routes: Routes = [
   {path: 'tin-doc-quyen', component: ExclusivenewsComponent},
   {path: 'cong-doan', component: UnionComponent},
   {path: 'ban-doc', component: YouReadComponent},
-  {path: 'kinh-te', component: EconomyComponent}
+  {path: 'kinh-te', component: EconomyComponent},
+  {
+    path: 'detail/:detail',
+    component: NewsDetailComponent
+  }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    onSameUrlNavigation: 'reload'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
