@@ -12,7 +12,9 @@ export class DomesticComponent implements OnInit {
   totalLength:any;
   page:number=1;
   number = Math.floor(Math.random() * 10) + 1;
-  constructor(private service: NewsApiService) { }
+  constructor(private service: NewsApiService) {
+
+  }
   ngOnInit(): void {
     this.getItems();
   }
