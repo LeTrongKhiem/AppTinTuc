@@ -34,7 +34,7 @@ export class HomeComponent implements OnInit {
   duLichXanhReuslt: any = [];
   phuNuReuslt: any = [];
   thiTruongReuslt: any = [];
-
+  data:any =[];
 
   todayString: string = new Date().toLocaleDateString('vi');
 
@@ -97,6 +97,10 @@ export class HomeComponent implements OnInit {
     })
     this.service.thiTruongtApi().subscribe((result) => {
       this.thiTruongReuslt = result.items;
+    })
+    this.service.getData().subscribe((result) => {
+      this.data = result;
+      console.log("data",this.data)
     })
 
     this.WeatherData = {

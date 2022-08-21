@@ -1,10 +1,12 @@
 
 .body {
   .body-content {
+
     width: 1160px;
     margin: 20px auto 0;
     text-decoration: none;
     .hot-news {
+
       .icon-hot-news {
         background-image: url(https://static.mediacdn.vn/nld/web_images/spritesV8.png);
         display: block;
@@ -985,12 +987,4 @@ ul {
     width: 100%;
     height: auto;
   }
-}
-@keyframes cloudMovement {
-  from {
-    margin-left: -55px;
-  }
-  to {
-    margin-left: 65px;
-  }
-}
+

@@ -49,7 +49,10 @@
   clear: both;
   font-size: 0;
 }
+
 .box-right{
   float: left;
   position: sticky;
 }
+
+
